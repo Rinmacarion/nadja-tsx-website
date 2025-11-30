@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Mail } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 import { Link } from 'react-router-dom';
-import nadjaProfile from '/assets/nadja.png';
+import nadjaProfile from '/nadja.png';
 
 const Hero: React.FC = () => {
 
