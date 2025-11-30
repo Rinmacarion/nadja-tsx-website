@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Mail } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 import { Link } from 'react-router-dom';
-import nadjaProfile from '/nadja.png';
 
 const Hero: React.FC = () => {
 
@@ -53,7 +52,7 @@ const Hero: React.FC = () => {
           <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
             <div className="absolute inset-0 bg-academic-200 rounded-full blur-2xl opacity-50 transform translate-x-4 translate-y-4"></div>
             <img 
-              src={profileImage}
+              src="/assets/nadja.png"
               alt={PERSONAL_INFO.name}
               className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white"
             />
