@@ -4,7 +4,7 @@ import { Mail, Phone, Twitter, Send, ArrowRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import contactImageSrc from '../assets/nadjaeeg.png';
+import contactImageSrc from '/assets/nadjaeeg.png';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
