@@ -4,7 +4,6 @@ import { Mail, Phone, Twitter, Send, ArrowRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import contactImageSrc from '/nadjaeeg.png';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -67,7 +66,7 @@ const ContactPage: React.FC = () => {
               <div className="relative z-10 flex-grow">
                 <div className="mb-8 rounded-xl overflow-hidden border-4 border-white/10 shadow-lg">
                     <img 
-                      src={contactImageSrc} 
+                      src="/assets/nadjaeeg.png"
                       alt="Research Group Photo" 
                       className="w-full h-64 object-cover object-top"
                     />
