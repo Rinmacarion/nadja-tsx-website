@@ -249,3 +249,51 @@ export const PUBLICATIONS: Publication[] = [
     link: "#"
   }
 ];
+
+export const BLOG_POSTS = [
+  {
+    id: 'b1',
+    title: 'Introduction to Sequential Sampling Models',
+    excerpt: 'A concise overview of sequential sampling models (DDM, LBA) and practical implementation tips.',
+    content: 'Sequential sampling models (SSMs) like the Drift Diffusion Model provide a mechanistic account of choice and response time data. This post introduces the concept, typical parameters, and where to get started with open-source toolboxes such as HDDM and PyDDM.',
+    category: 'Sequential Sampling Modeling',
+    date: '2025-11-01',
+    slug: 'ssm-intro'
+  },
+  {
+    id: 'b2',
+    title: 'Hierarchical/Multilevel Modeling: What and Why',
+    excerpt: 'Why hierarchical models help you pool information across participants and improve parameter estimates.',
+    content: 'Hierarchical models allow partial pooling across subjects or conditions, yielding more stable estimates while accounting for between-subject variability. This post contrasts Bayesian vs Frequentist approaches and shows simple examples.',
+    category: 'Hierarchical/Multilevel Modeling',
+    date: '2025-10-20',
+    slug: 'hierarchical-why'
+  },
+  {
+    id: 'b3',
+    title: 'Toolbox Walkthrough: Using PyMC for Hierarchical Models',
+    excerpt: 'A short guide to setting up hierarchical Bayesian models in PyMC, with tips to speed up sampling and diagnostics.',
+    content: 'PyMC makes hierarchical Bayesian modeling approachable. This post covers model structure, priors, diagnostics (R-hat, ESS), and simple reparameterizations to improve sampling.',
+    category: 'Computational Toolboxes',
+    date: '2025-09-15',
+    slug: 'pymc-hierarchical'
+  },
+  {
+    id: 'b4',
+    title: 'Modeling Technicalities: Parameter Recovery Best Practices',
+    excerpt: 'Practical tips to run parameter recovery studies and what to watch for when interpreting fit results.',
+    content: 'Parameter recovery is essential for checking identifiability. This post walks through simulated data workflows, priors, and evaluation metrics to ensure your model parameters are recoverable.',
+    category: 'Modeling Technicalities',
+    date: '2025-08-30',
+    slug: 'parameter-recovery'
+  },
+  {
+    id: 'b5',
+    title: 'Applying Machine Learning with Behavioral Data',
+    excerpt: 'How to combine feature engineering from behavioral measures with ML algorithms for predictive modeling.',
+    content: 'This post discusses feature extraction from RT and accuracy data, simple pipelines using scikit-learn, and cautions about leakage and overfitting in small-sample neuroscience datasets.',
+    category: 'Machine Learning Algorithms',
+    date: '2025-07-10',
+    slug: 'ml-behavioral'
+  }
+];
