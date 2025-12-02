@@ -54,7 +54,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Childers, R.K.", "Lu, J.", "Gemma, R.", "Zhu, R."],
     abstract: "In: Thomas, A., Meyer, M., Zank, M. (eds) Serious Games. A platform designed to model and train adaptability in human-AI interaction.",
     tags: ["Serious Games", "Human-AI Interaction", "Neurocomputational Modeling"],
-    link: "#"
+    link: "https://link.springer.com/chapter/10.1007/978-3-032-10518-9_23",
+    pdf: "https://osf.io/preprints/psyarxiv/5rq98_v1"
   },
   {
     id: 'p2',
@@ -64,7 +65,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Rac-Lubashevsky, R.", "Bera, K.", "Roberts, A.", "Loder, A.", "Boudewyn, M.A.", "Carter, C.S.", "Erickson, M.", "Gold, J.", "Luck, S.J.", "Ragland, J.D.", "Yonelinas, A.P", "MacDonald III, A.W.", "Barch, D.M.", "Frank, M.J."],
     abstract: "Uncovering distinct neurocomputational mechanisms underlying learning impairments across psychopathologies using model-based EEG phenotyping.",
     tags: ["EEG", "Computational Psychiatry", "Learning Impairments", "Phenotyping"],
-    link: "#"
+    link: "",
+    pdf: "https://www.biorxiv.org/content/10.1101/2025.11.01.685815v1"
   },
   {
     id: 'p3',
@@ -74,7 +76,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Pine, D.S."],
     abstract: "Discussing the transition from symptom-based heterogeneity to mechanism-based profiling in youth ADHD using computational psychiatry approaches.",
     tags: ["ADHD", "Computational Psychiatry", "Youth", "Mechanism-Based Profiling"],
-    link: "#"
+    link: "https://www.nature.com/articles/s41386-025-02254-5"
   },
   {
     id: 'p4',
@@ -84,7 +86,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Cole, C.R.", "Ging-Jehli, N.R.", "Suarez, J.V.", "Greenlee, J.D.", "Wessel, J.R.", "Espinoza, A.I.", "Zhang, J.", "Cavanagh, J.F.", "Narayanan N.S."],
     abstract: "Investigating the effects of theta-frequency subthalamic nucleus stimulation on decision thresholds.",
     tags: ["Brain Stimulation", "Subthalamic Nucleus", "Decision Making"],
-    link: "#"
+    link: "https://journals.plos.org/Plosbiology/article?id=10.1371/journal.pbio.3002978"
   },
   {
     id: 'p5',
@@ -94,7 +96,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Cavanagh, J.F.", "Ahn, M.", "Segar, D.J.", "Asaad, W.F.", "Frank, M.J."],
     abstract: "Elucidating the distinct computational roles of basal ganglia components in decision-making dynamics under conflict and uncertainty.",
     tags: ["Basal Ganglia", "Decision Making", "Uncertainty", "Conflict"],
-    link: "#"
+    link: "https://journals.plos.org/Plosbiology/article?id=10.1371/journal.pbio.3002978"
   },
   {
     id: 'p6',
@@ -104,7 +106,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Strittmatter, Y.", "Spitzer, W.H.", "Ging-Jehli, N.R.", "Musslick, S."],
     abstract: "Presenting a jsPsych touchscreen extension to facilitate behavioral research on touch-enabled interfaces.",
     tags: ["jsPsych", "Touchscreen", "Behavioral Research", "Methods"],
-    link: "#"
+    link: "https://link.springer.com/article/10.3758/s13428-024-02454-9",
+    pdf: "https://osf.io/preprints/psyarxiv/akzwj"
   },
   {
     id: 'p7',
@@ -114,7 +117,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Kuhn, M.", "Blank, J.M.", "Chanthrakumar, P.", "Steinberger, D.C.", "Yu, Z.", "Herrington, T.D.", "Dillon, D.G.", "Pizzagalli, D.A.", "Frank, M.J."],
     abstract: "Identifying cognitive signatures of depression, anhedonia, and affective states through computational modeling and neurocognitive testing.",
     tags: ["Depression", "Anhedonia", "Computational Modeling", "Neurocognitive Testing"],
-    link: "#"
+    link: "https://www.sciencedirect.com/science/article/pii/S2451902224000569?casa_token=USIyjCmNw_kAAAAA:vFjKnBuoTiCaHAljwBGgBAHwd6sDzHl-xFuGq67O6uSJ0o26gG74SaPcd1sC-32cmlipNLk",
+    pdf: "https://ski.clps.brown.edu/papers/GingJehliKuhnEtAl.pdf"
   },
   {
     id: 'p8',
@@ -124,7 +128,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Arnold, L.E.", "Van Zandt, T."],
     abstract: "Exploring cognitive and attentional mechanisms of cooperation and their implications for incentive designs and computational psychiatry.",
     tags: ["Cooperation", "Attention", "Incentives", "Computational Psychiatry"],
-    link: "#"
+    link: "https://link.springer.com/article/10.3758/s13415-023-01129-w",
+    pdf: "https://www.gingjehli.com/_files/ugd/2d0ae9_0e3a5ac0fddb488b93eeb975749397ee.pdf"
   },
   {
     id: 'p9',
@@ -134,7 +139,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Painter, Q.A.", "Kraemer, H.", "Roley-Roberts, M.E.", "Panchyshyn, C.", "deBeus, R.", "Arnold, L.E."],
     abstract: "Applying Diffusion Decision Model Analysis to understand the cognitive effects of neurofeedback for ADHD.",
     tags: ["ADHD", "Neurofeedback", "Diffusion Decision Model"],
-    link: "#"
+    link: "https://psycnet.apa.org/record/2024-26051-001",
+    pdf: "https://www.gingjehli.com/_files/ugd/2d0ae9_3b9dca8259bf4bcdac818cb72b31eee8.pdf"
   },
   {
     id: 'p10',
@@ -144,7 +150,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Kraemer, H.", "Arnold, L.E.", "Roley Roberts, M.E.", "deBeus, R."],
     abstract: "A computational modeling analysis of a randomized clinical trial showing how latent cognitive components moderate neurofeedback response in ADHD.",
     tags: ["ADHD", "Neurofeedback", "Clinical Trial", "Computational Modeling"],
-    link: "#"
+    link: "https://www.tandfonline.com/doi/abs/10.1080/13803395.2023.2206637",
+    pdf: "https://www.gingjehli.com/_files/ugd/2d0ae9_97b85b723d5f45348bdc9a576ce271d3.pdf"
   },
   {
     id: 'p11',
@@ -154,7 +161,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Roley-Robert, M.E.", "Bergman, R.", "Pan, X.", "Tan, Y.", "Hendrix, K.", "deBeus, R.", "Kerson, C.", "Arns, M.", "Ging-Jehli, N.R.", "Connor, S.", "Shrader, C.", "Arnold, L.E."],
     abstract: "Investigating how comorbid anxiety and disruptive behavior disorders moderate the neurofeedback effect in children with ADHD.",
     tags: ["ADHD", "Anxiety", "Neurofeedback", "Comorbidities"],
-    link: "#"
+    link: "https://pubmed.ncbi.nlm.nih.gov/36526924/"
   },
   {
     id: 'p12',
@@ -164,7 +171,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging Jehli, N.R.", "Ratcliff, R.", "Arnold, L.E."],
     abstract: "A systematic review advocating for the improvement of neurocognitive testing in ADHD research using computational psychiatry methods.",
     tags: ["ADHD", "Systematic Review", "Neurocognitive Testing", "Computational Psychiatry"],
-    link: "#"
+    link: "https://psycnet.apa.org/record/2020-99592-001",
+    pdf: "https://www.researchgate.net/profile/Nadja_Ging_Jehli"
   },
   {
     id: 'p13',
@@ -174,7 +182,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Arnold, L.E.", "Roley-Roberts, M.E.", "deBeus, R."],
     abstract: "Using diffusion decision model analysis to characterize underlying cognitive components of ADHD presentations and co-morbid diagnoses.",
     tags: ["ADHD", "Diffusion Decision Model", "Comorbidities"],
-    link: "#"
+    link: "https://doi.org/10.1177/10870547211020087",
+    pdf: "https://www.researchgate.net/publication/351427873_Characterizing_underlying_cognitive_components_of_ADHD_presentations_and_co-morbid_diagnoses_-A_diffusion_decision_model_analysis"
   },
   {
     id: 'p14',
@@ -184,7 +193,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Ratcliff, R."],
     abstract: "Analyzing the effects of aging in a task-switch paradigm using the diffusion decision model.",
     tags: ["Aging", "Task-Switching", "Diffusion Decision Model"],
-    link: "#"
+    link: "https://link.growkudos.com/1js1cz9dxj4",
+    pdf: "https://www.gingjehli.com/_files/ugd/2d0ae9_5abe5bccc9d24d22bdb54d12963505c7.pdf"
   },
   {
     id: 'p15',
@@ -194,7 +204,8 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Deepa, M.", "Hollway J.", "Hurt, E.", "Moone, S.", "Arnold, L.E."],
     abstract: "A study exploring the effects of cholesterol supplementation on autistic symptoms in children with low cholesterol.",
     tags: ["Autism", "Cholesterol", "Supplementation", "Children"],
-    link: "#"
+    link: "",
+    pdf: "https://www.gingjehli.com/_files/ugd/2d0ae9_cb058a9660db428286a192ce8391eabe.pdf"
   },
   {
     id: 'p16',
@@ -204,7 +215,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Ging-Jehli, N.R.", "Schneider, F.H.", "Weber, R.A."],
     abstract: "Investigating self-serving strategic beliefs in economic games.",
     tags: ["Behavioral Economics", "Game Theory", "Beliefs"],
-    link: "#"
+    link: "https://www.sciencedirect.com/science/article/abs/pii/S0899825620300713"
   },
   {
     id: 'p17',
@@ -214,7 +225,7 @@ export const PUBLICATIONS: Publication[] = [
     authors: ["Davis, A. L.", "Jehli, N.R.", "Miller, J.H.", "Weber, R.A."],
     abstract: "Examining generosity across different contexts.",
     tags: ["Behavioral Economics", "Generosity", "Working Paper"],
-    link: "#"
+    link: ""
   },
   // Under Review
   {

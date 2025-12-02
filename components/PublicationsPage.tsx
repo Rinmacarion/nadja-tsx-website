@@ -83,21 +83,30 @@ const PublicationsPage: React.FC = () => {
                                             {pub.link && (
                                                 <a 
                                                     href={pub.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
                                                     className="p-2 text-slate-400 hover:text-academic-600 hover:bg-academic-50 rounded-lg transition-colors flex items-center justify-center gap-2 md:gap-0"
                                                     title="View Article"
                                                 >
                                                     <ExternalLink size={20} />
+                                                    <span className="hidden md:inline text-sm">View article</span>
                                                     <span className="md:hidden text-sm">View</span>
                                                 </a>
                                             )}
-                                            {/* Placeholder for PDF download */}
-                                            <button 
-                                                className="p-2 text-slate-400 hover:text-academic-600 hover:bg-academic-50 rounded-lg transition-colors flex items-center justify-center gap-2 md:gap-0"
-                                                title="Download PDF"
-                                            >
-                                                <Download size={20} />
-                                                <span className="md:hidden text-sm">PDF</span>
-                                            </button>
+                                            {/* PDF download (opens in new tab) */}
+                                            {pub.pdf && (
+                                                <a
+                                                    href={pub.pdf}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="p-2 text-slate-400 hover:text-academic-600 hover:bg-academic-50 rounded-lg transition-colors flex items-center justify-center gap-2 md:gap-0"
+                                                    title="View Preprint"
+                                                >
+                                                    <Download size={20} />
+                                                    <span className="hidden md:inline text-sm">View preprint</span>
+                                                    <span className="md:hidden text-sm">Preprint</span>
+                                                </a>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -106,6 +115,53 @@ const PublicationsPage: React.FC = () => {
                     </motion.div>
                 ))}
             </div>
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: years.length * 0.1 }}
+                className="mt-12"
+            >
+                <div className="flex items-center gap-4 mb-6">
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight">ARTICLES UNDER REVIEW</h3>
+                    <div className="h-px bg-slate-200 flex-grow"></div>
+                </div>
+
+                <div className="space-y-4">
+                    <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                        <p className="text-slate-800 text-sm leading-relaxed">
+                            Ziwei, C., Ging-Jehli, N.R., Tarlow, M., Kim, J., Chase, H.W., Bonar, L., Stiffler, R., Grattery, A., Graur, S., Frank, M.J., Phillips, M.L., Shenhav, A. (submitted). A Novel Approach-Avoidance Task to Study Decision Making Under Outcome Uncertainty.
+                        </p>
+                    </div>
+
+                    <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                        <p className="text-slate-800 text-sm leading-relaxed">
+                            Ging-Jehli, N.R., Arnold, L.E., Sellers J., Van Zandt, T. (submitted). Broader visual processing and distinct pupil dynamics facilitate resolving perceptual conflict and compensate for ADHD distractibility.
+                        </p>
+                    </div>
+
+                    <div className="h-6"></div>
+
+                    <div className="flex items-center gap-4 mb-6">
+                        <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight">CURRENT PROJECTS</h3>
+                        <div className="h-px bg-slate-200 flex-grow"></div>
+                    </div>
+
+                    <div className="space-y-4">
+                        <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <p className="text-slate-800 text-sm leading-relaxed">A unified modeling approach to characterize disorder-specific and transdiagnostic features across cognitive domains and over time</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <p className="text-slate-800 text-sm leading-relaxed">Neuronal and attentional signatures of attention-deficit/hyperactivity disorder (ADHD) within a novel cognitive flexibility task</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <p className="text-slate-800 text-sm leading-relaxed">Neurocognitive study using own developed cognitive flexibility paradigm and a new joint-modeling approach to integrate behavioral responses, eye tracking, and EEG</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <p className="text-slate-800 text-sm leading-relaxed">Applying the Diffusion Decision Model and Machine Learning Algorithms to the Neuropsychological Test Performances and EEG resting state activity in an ADHD Sample from the MTA study</p>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
         </div>
       </main>
       

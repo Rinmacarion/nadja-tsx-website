@@ -6,6 +6,7 @@ export interface Publication {
   authors: string[];
   abstract: string;
   link?: string;
+  pdf?: string;
   tags: string[];
 }
 
