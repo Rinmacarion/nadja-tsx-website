@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { BLOG_POSTS } from '../constants';
-import { Download } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CATEGORIES = [
   'All',
-  'Sequential Sampling Modeling',
+  'Sequential Modeling',
   'Hierarchical/Multilevel Modeling',
   'Computational Toolboxes',
   'Modeling Technicalities',
@@ -16,9 +16,8 @@ const CATEGORIES = [
 
 const BlogPage: React.FC = () => {
   const [active, setActive] = useState('All');
-  const [expanded, setExpanded] = useState<string | null>(null);
 
-  const posts = BLOG_POSTS.filter((p: any) => active === 'All' ? true : p.category === active);
+  const posts = BLOG_POSTS.filter((p: any) => active === 'All' ? true : p.tags.includes(active));
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans flex flex-col">
@@ -88,19 +87,11 @@ const BlogPage: React.FC = () => {
                 <div className="flex items-start justify-between">
                   <div className="flex-grow">
                     <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight">{post.title}</h3>
-                    <div className="text-sm text-slate-500 mb-3">{post.date} • <span className="italic">{post.category}</span></div>
-                    <p className="text-slate-700 mb-3">{post.excerpt}</p>
-                    {expanded === post.id && (
-                      <div className="text-slate-700 border-t pt-3">{post.content}</div>
-                    )}
-                  </div>
-                  <div className="flex-shrink-0 ml-4">
-                    <button
-                      onClick={() => setExpanded(expanded === post.id ? null : post.id)}
-                      className="py-2 px-3 bg-academic-50 text-academic-700 rounded-md text-sm font-medium"
-                    >
-                      {expanded === post.id ? 'Show less' : 'Read more'}
-                    </button>
+                    <div className="text-sm text-slate-500 mb-3">{post.date} • <span className="italic">{post.tags.join(', ')}</span></div>
+                    <p className="text-slate-700 mb-3">{post.content.substring(0, 150)}...</p>
+                    <Link to={`/blog/${post.id}`} className="text-blue-600 hover:underline">
+                      Read more
+                    </Link>
                   </div>
                 </div>
               </div>

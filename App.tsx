@@ -11,6 +11,7 @@ import PublicationsPage from './components/PublicationsPage';
 import ResearchAreasPage from './components/ResearchAreasPage';
 import ContactPage from './components/ContactPage';
 import BlogPage from './components/BlogPage';
+import DiffusionDecisionModelBlog from './components/DiffusionDecisionModelBlog';
 
 const Home: React.FC = () => (
   <>
@@ -33,7 +34,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/publications" element={<PublicationsPage />} />
-              <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<DiffusionDecisionModelBlog />} />
           <Route path="/research" element={<ResearchAreasPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
