@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -18,6 +18,24 @@ const BlogPage: React.FC = () => {
   const [active, setActive] = useState('All');
 
   const posts = BLOG_POSTS.filter((p: any) => active === 'All' ? true : p.tags.includes(active));
+
+  useEffect(() => {
+    // Dev helper: log diffusion post content to confirm which BLOG_POSTS the running app loaded
+    const diffusion = BLOG_POSTS.find((p: any) => p.id === 'diffusion-ddm');
+    if (diffusion) console.log('DEV: diffusion post content:', diffusion.content);
+  }, []);
+
+  const makePreview = (post: any) => {
+    const source = post.content || post.excerpt || '';
+    const lines = source.split(/\r?\n/).map((l: string) => l.trim()).filter((l: string) => l.length > 0);
+    if (lines.length > 0) {
+      const previewLines = lines.slice(0, 3);
+      // join sentences inline separated by a single space (no extra line breaks)
+      return <>{previewLines.join(' ')}{lines.length > 3 ? '...' : ''}</>;
+    }
+    if (source.length > 200) return <>{source.substring(0, 200)}...</>;
+    return <>{source}</>;
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans flex flex-col">
@@ -88,7 +106,7 @@ const BlogPage: React.FC = () => {
                   <div className="flex-grow">
                     <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight">{post.title}</h3>
                     <div className="text-sm text-slate-500 mb-3">{post.date} • <span className="italic">{post.tags.join(', ')}</span></div>
-                    <p className="text-slate-700 mb-3">{post.content.substring(0, 150)}...</p>
+                    <div className="text-slate-700 mb-3">{makePreview(post)}</div>
                     <Link to={`/blog/${post.id}`} className="text-blue-600 hover:underline">
                       Read more
                     </Link>
