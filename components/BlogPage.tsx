@@ -26,15 +26,16 @@ const BlogPage: React.FC = () => {
   }, []);
 
   const makePreview = (post: any) => {
-    const source = post.content || post.excerpt || '';
-    const lines = source.split(/\r?\n/).map((l: string) => l.trim()).filter((l: string) => l.length > 0);
-    if (lines.length > 0) {
-      const previewLines = lines.slice(0, 3);
-      // join sentences inline separated by a single space (no extra line breaks)
-      return <>{previewLines.join(' ')}{lines.length > 3 ? '...' : ''}</>;
+    if (post.excerpt) {
+      return <>{post.excerpt}</>;
     }
-    if (source.length > 200) return <>{source.substring(0, 200)}...</>;
-    return <>{source}</>;
+    
+    if (post.content) {
+      const preview = post.content.substring(0, 300);
+      return <>{preview}{post.content.length > 300 ? '...' : ''}</>;
+    }
+
+    return null;
   };
 
   return (

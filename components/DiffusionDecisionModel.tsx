@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { BLOG_POSTS } from '../constants';
+import './VibrantStyles.css';
 
 const DiffusionDecisionModel: React.FC = () => {
     const navigate = useNavigate();
@@ -134,7 +135,6 @@ const DiffusionDecisionModel: React.FC = () => {
                                         <li>By simulating latent decision-making processes, the DDM offers quantifiable and testable predictions, capturing observable behaviors with these parameters.</li>
                                         <li>Each model parameter has a well-established psychological significance, grounded in a century of cognitive neuroscience and psychology research. It’s important to note that the above description of the mental meaning of each parameter are generic and the precise meaning of each parameter needs to be interpreted within the context of the task specifics (see for details: Ging-Jehli et al., 2021).</li>
                                     </ol>
-                                    <p className="mb-4">In my next blog post, I will detail how each parameter uniquely influences behavioral data.</p>
                                     <h2 className="text-2xl font-semibold mt-8 mb-3 text-stone-800 border-b border-stone-300 pb-1">Selected References:</h2>
                                     <ol className="list-none ml-0 space-y-2 text-sm">
                                         <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[1]</span><div><span className="italic">Sequential Sampling Models in Cognitive Neuroscience: Advantages, Applications, and Extensions</span>. Forstmann, B. U., Ratcliff, R., & Wagenmakers, E.-J. (2016). Annual Review of Psychology, 67(1), 641–666.</div></li>
@@ -198,6 +198,178 @@ const DiffusionDecisionModel: React.FC = () => {
                                     </div>
                                 </div>
                             </>
+                        ) : POST_ID === 'ddm-variability' ? (
+                            // Specialized rendering for the ddm-variability post
+                            <>
+                                <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-stone-900">{post.title}</h1>
+
+                                <div className="mb-6">
+                                    <button
+                                        onClick={() => navigate('/blog')}
+                                        className="py-2 px-4 bg-academic-800 text-white rounded-md text-sm"
+                                    >
+                                        ← Back to posts
+                                    </button>
+                                </div>
+
+                                <div className="flex items-center mb-6">
+                                    <p className="mr-4 text-sm text-stone-600">Rate this post:</p>
+                                    <div className="flex items-center">
+                                        {[1,2,3,4,5].map((s) => {
+                                            const filled = (hover ?? Math.round(avgRating)) >= s;
+                                            return (
+                                                <Star
+                                                    key={s}
+                                                    className={`cursor-pointer w-5 h-5 transition-colors ${filled ? 'text-yellow-500' : 'text-stone-300'}`}
+                                                    onMouseEnter={() => setHover(s)}
+                                                    onMouseLeave={() => setHover(null)}
+                                                    onClick={() => addRating(s)}
+                                                />
+                                            );
+                                        })}
+                                    </div>
+                                    <span className="ml-3 text-sm text-stone-500">{avgRating.toFixed(1)} | {ratingList.length} Rating{ratingList.length === 1 ? '' : 's'}</span>
+                                </div>
+
+                                <div className="prose max-w-none text-stone-700 leading-relaxed space-y-4">
+                                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                                </div>
+
+                                <div className="pt-6 border-t border-stone-200">
+                                    <h3 className="text-lg font-semibold mb-3">Comments</h3>
+
+                                    {comments.length === 0 ? (
+                                        <p className="text-sm text-stone-600 mb-4">Be the first to comment on this post.</p>
+                                    ) : (
+                                        <div className="space-y-4 mb-4">
+                                            {comments.map((c, idx) => (
+                                                <div key={idx} className="bg-white p-3 rounded border border-slate-100">
+                                                    <div className="text-sm text-stone-700 font-medium">{c.author} <span className="text-xs text-stone-500 ml-2">{new Date(c.date).toLocaleString()}</span></div>
+                                                    <div className="text-sm text-stone-700 mt-1">{c.text}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    <div className="space-y-2">
+                                        <input
+                                            type="text"
+                                            value={authorInput}
+                                            onChange={(e) => setAuthorInput(e.target.value)}
+                                            placeholder="Your name (optional)"
+                                            className="w-full p-2 border border-slate-200 rounded"
+                                        />
+                                        <textarea
+                                            value={textInput}
+                                            onChange={(e) => setTextInput(e.target.value)}
+                                            placeholder="Write a comment..."
+                                            className="w-full p-2 border border-slate-200 rounded h-24"
+                                        />
+                                        <div className="flex justify-end">
+                                            <button
+                                                onClick={submitComment}
+                                                className="py-2 px-4 bg-academic-800 text-white rounded-md text-sm"
+                                            >
+                                                Submit Comment
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className="mt-6 flex justify-end">
+                                        <button
+                                            onClick={() => navigate('/blog')}
+                                            className="py-2 px-4 bg-academic-800 text-white rounded-md text-sm"
+                                        >
+                                            ← Back to posts
+                                        </button>
+                                    </div>
+                                </div>
+                            </>
+                        ) : POST_ID === 'ssm-overview' ? (
+                            // Specialized rendering for the ssm-overview post
+                            <>
+                                <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-stone-900">{post.title}</h1>
+
+                                <div className="mb-6">
+                                    <button
+                                        onClick={() => navigate('/blog')}
+                                        className="py-2 px-4 bg-academic-800 text-white rounded-md text-sm"
+                                    >
+                                        ← Back to posts
+                                    </button>
+                                </div>
+
+                                <div className="flex items-center mb-6">
+                                    <p className="mr-4 text-sm text-stone-600">Rate this post:</p>
+                                    <div className="flex items-center">
+                                        {[1,2,3,4,5].map((s) => {
+                                            const filled = (hover ?? Math.round(avgRating)) >= s;
+                                            return (
+                                                <Star
+                                                    key={s}
+                                                    className={`cursor-pointer w-5 h-5 transition-colors ${filled ? 'text-yellow-500' : 'text-stone-300'}`}
+                                                    onMouseEnter={() => setHover(s)}
+                                                    onMouseLeave={() => setHover(null)}
+                                                    onClick={() => addRating(s)}
+                                                />
+                                            );
+                                        })}
+                                    </div>
+                                    <span className="ml-3 text-sm text-stone-500">{avgRating.toFixed(1)} | {ratingList.length} Rating{ratingList.length === 1 ? '' : 's'}</span>
+                                </div>
+
+                                <div className="prose max-w-none text-stone-700 leading-relaxed space-y-4">
+                                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                                </div>
+
+                                <div className="pt-6 border-t border-stone-200">
+                                    <h3 className="text-lg font-semibold mb-3">Comments</h3>
+
+                                    {comments.length === 0 ? (
+                                        <p className="text-sm text-stone-600 mb-4">Be the first to comment on this post.</p>
+                                    ) : (
+                                        <div className="space-y-4 mb-4">
+                                            {comments.map((c, idx) => (
+                                                <div key={idx} className="bg-white p-3 rounded border border-slate-100">
+                                                    <div className="text-sm text-stone-700 font-medium">{c.author} <span className="text-xs text-stone-500 ml-2">{new Date(c.date).toLocaleString()}</span></div>
+                                                    <div className="text-sm text-stone-700 mt-1">{c.text}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    <div className="bg-white p-4 rounded border border-stone-200">
+                                        <input
+                                            type="text"
+                                            placeholder="Your name (optional)"
+                                            value={authorInput}
+                                            onChange={(e) => setAuthorInput(e.target.value)}
+                                            className="w-full p-2 border border-stone-300 rounded text-sm mb-2"
+                                        />
+                                        <textarea
+                                            placeholder="Your comment..."
+                                            value={textInput}
+                                            onChange={(e) => setTextInput(e.target.value)}
+                                            rows={3}
+                                            className="w-full p-2 border border-stone-300 rounded text-sm"
+                                        />
+                                        <button
+                                            onClick={submitComment}
+                                            className="mt-2 py-2 px-4 bg-academic-800 text-white rounded text-sm"
+                                        >
+                                            Post Comment
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className="mt-8">
+                                    <button
+                                        onClick={() => navigate('/blog')}
+                                        className="py-2 px-4 bg-academic-800 text-white rounded-md text-sm"
+                                    >
+                                        ← Back to posts
+                                    </button>
+                                </div>
+                            </>
                         ) : POST_ID === 'ddm-deep-dive' ? (
                             // Specialized rendering for the ddm deep dive post with parameter images
                             <>
@@ -248,21 +420,51 @@ const DiffusionDecisionModel: React.FC = () => {
                                             const flushBufferAsParagraph = (keyBase: string) => {
                                                 if (buffer.length === 0) return;
                                                 const text = buffer.join(' ').trim();
-                                                elements.push(<p key={`p-${keyBase}-${elements.length}`} className="mb-4">{text}</p>);
-                                                // images based on paragraph content
-                                                if (text.includes('Ratcliff, 1978') && /2016|Ratcliff et al\./.test(text)) {
-                                                    elements.push(<div key={`img-drift-${elements.length}`} className="my-4"><img src="/assets/drift%20rates.JPG" alt="Drift rates" className="w-full rounded shadow-md" /></div>);
-                                                }
-                                                if (text.includes('Changes in boundary separation are often influenced') || text.includes('Changes in boundary separation are often')) {
-                                                    elements.push(<div key={`img-boundary-${elements.length}`} className="my-4"><img src="/assets/boundary%20separation.JPG" alt="Boundary separation" className="w-full rounded shadow-md" /></div>);
-                                                }
-                                                if (text.includes('influencing the frequency of the different stimulus occurrence') || text.includes('frequency of the different stimulus')) {
-                                                    elements.push(<div key={`img-start-${elements.length}`} className="my-4"><img src="/assets/starting%20point.JPG" alt="Starting point" className="w-full rounded shadow-md" /></div>);
-                                                }
-                                                if (text.includes('Essentially, as nondecision time increases') || text.includes('nondecision time')) {
-                                                    elements.push(<div key={`img-nondec-${elements.length}`} className="my-4"><img src="/assets/nondecision%20time.JPG" alt="Nondecision time" className="w-full rounded shadow-md" /></div>);
+                                                const isDriftRatePara = text.includes('Ratcliff, 1978') && /2016|Ratcliff et al\./.test(text);
+                                                const isBoundaryPara = text.includes('Changes in boundary separation are often influenced') || text.includes('Changes in boundary separation are often');
+                                                const isStartingPointPara = text.includes('influencing the frequency of the different stimulus occurrence') || text.includes('frequency of the different stimulus');
+                                                const isNonDecisionPara = text.includes('Essentially, as nondecision time increases') || text.includes('nondecision time');
+
+                                                if (isDriftRatePara) {
+                                                    elements.push(
+                                                        <div key={`flex-drift-${elements.length}`} className="md:flex items-start my-4">
+                                                            <p className="md:w-2/3 md:mr-4 mb-4 md:mb-0">{text}</p>
+                                                            <div className="md:w-1/3">
+                                                                <img src="/assets/drift%20rates.JPG" alt="Drift rates" className="w-full rounded shadow-md" />
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                } else if (isBoundaryPara) {
+                                                    elements.push(
+                                                        <div key={`flex-boundary-${elements.length}`} className="md:flex items-start my-4">
+                                                            <p className="md:w-2/3 md:mr-4 mb-4 md:mb-0">{text}</p>
+                                                            <div className="md:w-1/3">
+                                                                <img src="/assets/boundary%20separation.JPG" alt="Boundary separation" className="w-full rounded shadow-md" />
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                } else if (isStartingPointPara) {
+                                                    elements.push(
+                                                        <div key={`flex-starting-point-${elements.length}`} className="md:flex items-start my-4">
+                                                            <p className="md:w-2/3 md:mr-4 mb-4 md:mb-0">{text}</p>
+                                                            <div className="md:w-1/3">
+                                                                <img src="/assets/starting%20point.JPG" alt="Starting point" className="w-full rounded shadow-md" />
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                } else if (isNonDecisionPara) {
+                                                    elements.push(
+                                                        <div key={`flex-nondecision-${elements.length}`} className="md:flex items-start my-4">
+                                                            <p className="md:w-2/3 md:mr-4 mb-4 md:mb-0">{text}</p>
+                                                            <div className="md:w-1/3">
+                                                                <img src="/assets/nondecision%20time.JPG" alt="Nondecision time" className="w-full rounded shadow-md" />
+                                                            </div>
+                                                        </div>
+                                                    );
                                                     elements.push(<h2 key={`summary-${elements.length}`} className="text-2xl font-semibold mt-8 mb-3 text-stone-800 border-b border-stone-300 pb-1">Summary</h2>);
                                                     elements.push(<div key={`img-all-${elements.length}`} className="my-4"><img src="/assets/all%20together.JPG" alt="All together" className="w-full rounded shadow-md" /></div>);
+                                                } else {
+                                                    elements.push(<p key={`p-${keyBase}-${elements.length}`} className="mb-4">{text}</p>);
                                                 }
                                                 buffer = [];
                                             };
@@ -307,13 +509,13 @@ const DiffusionDecisionModel: React.FC = () => {
 
                                 <h2 className="text-2xl font-semibold mt-8 mb-3 text-stone-800 border-b border-stone-300 pb-1">Selected References</h2>
                                 <ol className="list-none ml-0 space-y-3 text-sm">
-                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[1]</span><div>Ging-Jehli, N. R., Arnold, L. E., Roley-Roberts, M. E., & deBeus, R. (2022). Characterizing Underlying Cognitive Components of ADHD Presentations and Co-morbid Diagnoses: A Diffusion Decision Model Analysis. Journal of Attention Disorders, 26(5), 706–722. https://doi.org/10.1177/10870547211020087</div></li>
-                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[2]</span><div>Ging-Jehli, N. R., Kuhn, M., Blank, J. M., Chanthrakumar, P., Steinberger, D. C., Yu, Z., Herrington, T. M., Dillon, D. G., Pizzagalli, D. A., & Frank, M. J. (2024). Cognitive signatures of depressive and anhedonic symptoms, and affective states, using computational modeling and neurocognitive testing. Biological Psychiatry: Cognitive Neuroscience and Neuroimaging. https://doi.org/10.1016/j.bpsc.2024.02.005</div></li>
-                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[3]</span><div>Ging-Jehli, N. R., & Ratcliff, R. (2020). Effects of aging in a task-switch paradigm with the diffusion decision model. Psychology and Aging, 35(6), 850–865. https://doi.org/10.1037/pag0000562</div></li>
-                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[4]</span><div>Ging-Jehli, N. R., Ratcliff, R., & Arnold, L. E. (2021). Improving neurocognitive testing using computational psychiatry—A systematic review for ADHD. Psychological Bulletin, 147(2), 169–231. https://doi.org/10.1037/bul0000319</div></li>
-                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[5]</span><div>Ratcliff, R. (1978). A theory of memory retrieval. Psychological Review, 85(2), 59–108. https://doi.org/10.1037/0033-295X.85.2.59</div></li>
-                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[6]</span><div>Ratcliff, R., Smith, P. L., Brown, S. D., & McKoon, G. (2016). Diffusion Decision Model: Current Issues and History. Trends in Cognitive Sciences, 20(4), 260–281. https://doi.org/10.1016/j.tics.2016.01.007</div></li>
-                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[7]</span><div>Smith, P. L., & Ratcliff, R. (2004). Psychology and neurobiology of simple decisions. Trends in Neurosciences, 27(3), 161–168. https://doi.org/10.1016/j.tins.2004.01.006</div></li>
+                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[1]</span><div>Ging-Jehli, N. R., Arnold, L. E., Roley-Roberts, M. E., & deBeus, R. (2022). Characterizing Underlying Cognitive Components of ADHD Presentations and Co-morbid Diagnoses: A Diffusion Decision Model Analysis. Journal of Attention Disorders, 26(5), 706–722. <a href="https://doi.org/10.1177/10870547211020087" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://doi.org/10.1177/10870547211020087</a></div></li>
+                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[2]</span><div>Ging-Jehli, N. R., Kuhn, M., Blank, J. M., Chanthrakumar, P., Steinberger, D. C., Yu, Z., Herrington, T. M., Dillon, D. G., Pizzagalli, D. A., & Frank, M. J. (2024). Cognitive signatures of depressive and anhedonic symptoms, and affective states, using computational modeling and neurocognitive testing. Biological Psychiatry: Cognitive Neuroscience and Neuroimaging. <a href="https://doi.org/10.1016/j.bpsc.2024.02.005" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://doi.org/10.1016/j.bpsc.2024.02.005</a></div></li>
+                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[3]</span><div>Ging-Jehli, N. R., & Ratcliff, R. (2020). Effects of aging in a task-switch paradigm with the diffusion decision model. Psychology and Aging, 35(6), 850–865. <a href="https://doi.org/10.1037/pag0000562" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://doi.org/10.1037/pag0000562</a></div></li>
+                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[4]</span><div>Ging-Jehli, N. R., Ratcliff, R., & Arnold, L. E. (2021). Improving neurocognitive testing using computational psychiatry—A systematic review for ADHD. Psychological Bulletin, 147(2), 169–231. <a href="https://doi.org/10.1037/bul0000319" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://doi.org/10.1037/bul0000319</a></div></li>
+                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[5]</span><div>Ratcliff, R. (1978). A theory of memory retrieval. Psychological Review, 85(2), 59–108. <a href="https://doi.org/10.1037/0033-295X.85.2.59" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://doi.org/10.1037/0033-295X.85.2.59</a></div></li>
+                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[6]</span><div>Ratcliff, R., Smith, P. L., Brown, S. D., & McKoon, G. (2016). Diffusion Decision Model: Current Issues and History. Trends in Cognitive Sciences, 20(4), 260–281. <a href="https://doi.org/10.1016/j.tics.2016.01.007" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://doi.org/10.1016/j.tics.2016.01.007</a></div></li>
+                                    <li className="flex"><span className="mr-3 font-mono text-sm text-stone-700">[7]</span><div>Smith, P. L., & Ratcliff, R. (2004). Psychology and neurobiology of simple decisions. Trends in Neurosciences, 27(3), 161–168. <a href="https://doi.org/10.1016/j.tins.2004.01.006" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://doi.org/10.1016/j.tins.2004.01.006</a></div></li>
                                 </ol>
 
                                 <div className="pt-6 border-t border-stone-200">
@@ -395,9 +597,15 @@ const DiffusionDecisionModel: React.FC = () => {
                                 </div>
 
                                 <div className="prose max-w-none text-stone-700">
-                                    {post.content.split(/\n\s*\n/).map((para: string, idx: number) => (
-                                        <p key={idx} className="mb-4">{para}</p>
-                                    ))}
+                                    {post.content.split(/\n\s*\n/).map((para: string, idx: number) => {
+                                        if (para.startsWith('<h2>') && para.endsWith('</h2>')) {
+                                            return <h2 key={idx} className="text-2xl font-semibold mt-8 mb-3 text-stone-800 border-b border-stone-300 pb-1">{para.substring(4, para.length - 5)}</h2>;
+                                        }
+                                        if (para.startsWith('<h3>') && para.endsWith('</h3>')) {
+                                            return <h3 key={idx} className="text-xl font-semibold mt-6 mb-2 text-stone-800">{para.substring(4, para.length - 5)}</h3>;
+                                        }
+                                        return <p key={idx} className="mb-4">{para}</p>
+                                    })}
                                 </div>
 
                                 <div className="pt-6 border-t border-stone-200">
