@@ -67,7 +67,7 @@ const BlogPage: React.FC = () => {
           >
             <h2 className="text-2xl font-semibold text-slate-900 mb-3">Practical Tutorials</h2>
             <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-              <p className="text-slate-700">I currently provide tutorials and code snippets on my GitHub account. I will soon add more tutorials and code snippets for different modeling toolboxes.</p>
+              <p className="text-slate-700">I currently provide tutorials and code snippets on my <a href="https://github.com/gingjehli" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub account</a>. I will soon add more tutorials and code snippets for different modeling toolboxes.</p>
             </div>
           </motion.div>
 
@@ -97,7 +97,21 @@ const BlogPage: React.FC = () => {
           <div className="space-y-6">
             {posts.length === 0 && (
               <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                <p className="text-slate-800">No posts yet — category: <strong>{active}</strong>.</p>
+                {active === 'Computational Toolboxes' ? (
+                  <div>
+                    <p className="text-slate-800 mb-4">
+                      In this blog, I will offer a comprehensive overview of various modeling packages, including STAN, BRMS, DMC, HDDM, and the updated HSSM. You can already access some of the tutorials on my GitHub account. These tutorials will be regularly updated and expanded.
+                    </p>
+                  </div>
+                ) : active === 'Machine Learning Algorithms' ? (
+                  <div>
+                    <p className="text-slate-800 mb-4">
+                      In this category, I will explore a variety of supervised and unsupervised machine learning techniques, detailing their applications and nuances.
+                    </p>
+                  </div>
+                ) : (
+                  <p className="text-slate-800">No posts yet — category: <strong>{active}</strong>.</p>
+                )}
               </div>
             )}
 

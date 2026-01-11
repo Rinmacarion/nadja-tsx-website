@@ -370,6 +370,178 @@ const DiffusionDecisionModel: React.FC = () => {
                                     </button>
                                 </div>
                             </>
+                        ) : POST_ID === 'bayesian-vs-frequentist' ? (
+                            // Specialized rendering for the bayesian-vs-frequentist post
+                            <>
+                                <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-stone-900">{post.title}</h1>
+
+                                <div className="mb-6">
+                                    <button
+                                        onClick={() => navigate('/blog')}
+                                        className="py-2 px-4 bg-academic-800 text-white rounded-md text-sm"
+                                    >
+                                        ← Back to posts
+                                    </button>
+                                </div>
+
+                                <div className="flex items-center mb-6">
+                                    <p className="mr-4 text-sm text-stone-600">Rate this post:</p>
+                                    <div className="flex items-center">
+                                        {[1,2,3,4,5].map((s) => {
+                                            const filled = (hover ?? Math.round(avgRating)) >= s;
+                                            return (
+                                                <Star
+                                                    key={s}
+                                                    className={`cursor-pointer w-5 h-5 transition-colors ${filled ? 'text-yellow-500' : 'text-stone-300'}`}
+                                                    onMouseEnter={() => setHover(s)}
+                                                    onMouseLeave={() => setHover(null)}
+                                                    onClick={() => addRating(s)}
+                                                />
+                                            );
+                                        })}
+                                    </div>
+                                    <span className="ml-3 text-sm text-stone-500">{avgRating.toFixed(1)} | {ratingList.length} Rating{ratingList.length === 1 ? '' : 's'}</span>
+                                </div>
+
+                                <div className="prose max-w-none text-stone-700 leading-relaxed space-y-4">
+                                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                                </div>
+
+                                <div className="pt-6 border-t border-stone-200">
+                                    <h3 className="text-lg font-semibold mb-3">Comments</h3>
+
+                                    {comments.length === 0 ? (
+                                        <p className="text-sm text-stone-600 mb-4">Be the first to comment on this post.</p>
+                                    ) : (
+                                        <div className="space-y-4 mb-4">
+                                            {comments.map((c, idx) => (
+                                                <div key={idx} className="bg-white p-3 rounded border border-slate-100">
+                                                    <div className="text-sm text-stone-700 font-medium">{c.author} <span className="text-xs text-stone-500 ml-2">{new Date(c.date).toLocaleString()}</span></div>
+                                                    <div className="text-sm text-stone-700 mt-1">{c.text}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    <div className="bg-white p-4 rounded border border-stone-200">
+                                        <input
+                                            type="text"
+                                            placeholder="Your name (optional)"
+                                            value={authorInput}
+                                            onChange={(e) => setAuthorInput(e.target.value)}
+                                            className="w-full p-2 border border-stone-300 rounded text-sm mb-2"
+                                        />
+                                        <textarea
+                                            placeholder="Your comment..."
+                                            value={textInput}
+                                            onChange={(e) => setTextInput(e.target.value)}
+                                            rows={3}
+                                            className="w-full p-2 border border-stone-300 rounded text-sm"
+                                        />
+                                        <button
+                                            onClick={submitComment}
+                                            className="mt-2 py-2 px-4 bg-academic-800 text-white rounded text-sm"
+                                        >
+                                            Post Comment
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className="mt-8">
+                                    <button
+                                        onClick={() => navigate('/blog')}
+                                        className="py-2 px-4 bg-academic-800 text-white rounded-md text-sm"
+                                    >
+                                        ← Back to posts
+                                    </button>
+                                </div>
+                            </>
+                        ) : POST_ID === 'setting-priors' ? (
+                            // Specialized rendering for the setting-priors post
+                            <>
+                                <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-stone-900">{post.title}</h1>
+
+                                <div className="mb-6">
+                                    <button
+                                        onClick={() => navigate('/blog')}
+                                        className="py-2 px-4 bg-academic-800 text-white rounded-md text-sm"
+                                    >
+                                        ← Back to posts
+                                    </button>
+                                </div>
+
+                                <div className="flex items-center mb-6">
+                                    <p className="mr-4 text-sm text-stone-600">Rate this post:</p>
+                                    <div className="flex items-center">
+                                        {[1,2,3,4,5].map((s) => {
+                                            const filled = (hover ?? Math.round(avgRating)) >= s;
+                                            return (
+                                                <Star
+                                                    key={s}
+                                                    className={`cursor-pointer w-5 h-5 transition-colors ${filled ? 'text-yellow-500' : 'text-stone-300'}`}
+                                                    onMouseEnter={() => setHover(s)}
+                                                    onMouseLeave={() => setHover(null)}
+                                                    onClick={() => addRating(s)}
+                                                />
+                                            );
+                                        })}
+                                    </div>
+                                    <span className="ml-3 text-sm text-stone-500">{avgRating.toFixed(1)} | {ratingList.length} Rating{ratingList.length === 1 ? '' : 's'}</span>
+                                </div>
+
+                                <div className="prose max-w-none text-stone-700 leading-relaxed space-y-4">
+                                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                                </div>
+
+                                <div className="pt-6 border-t border-stone-200">
+                                    <h3 className="text-lg font-semibold mb-3">Comments</h3>
+
+                                    {comments.length === 0 ? (
+                                        <p className="text-sm text-stone-600 mb-4">Be the first to comment on this post.</p>
+                                    ) : (
+                                        <div className="space-y-4 mb-4">
+                                            {comments.map((c, idx) => (
+                                                <div key={idx} className="bg-white p-3 rounded border border-slate-100">
+                                                    <div className="text-sm text-stone-700 font-medium">{c.author} <span className="text-xs text-stone-500 ml-2">{new Date(c.date).toLocaleString()}</span></div>
+                                                    <div className="text-sm text-stone-700 mt-1">{c.text}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    <div className="bg-white p-4 rounded border border-stone-200">
+                                        <input
+                                            type="text"
+                                            placeholder="Your name (optional)"
+                                            value={authorInput}
+                                            onChange={(e) => setAuthorInput(e.target.value)}
+                                            className="w-full p-2 border border-stone-300 rounded text-sm mb-2"
+                                        />
+                                        <textarea
+                                            placeholder="Your comment..."
+                                            value={textInput}
+                                            onChange={(e) => setTextInput(e.target.value)}
+                                            rows={3}
+                                            className="w-full p-2 border border-stone-300 rounded text-sm"
+                                        />
+                                        <button
+                                            onClick={submitComment}
+                                            className="mt-2 py-2 px-4 bg-academic-800 text-white rounded text-sm"
+                                        >
+                                            Post Comment
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className="mt-8">
+                                    <button
+                                        onClick={() => navigate('/blog')}
+                                        className="py-2 px-4 bg-academic-800 text-white rounded-md text-sm"
+                                    >
+                                        ← Back to posts
+                                    </button>
+                                </div>
+                            </>
                         ) : POST_ID === 'ddm-deep-dive' ? (
                             // Specialized rendering for the ddm deep dive post with parameter images
                             <>

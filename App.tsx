@@ -12,6 +12,7 @@ import ResearchAreasPage from './components/ResearchAreasPage';
 import ContactPage from './components/ContactPage';
 import BlogPage from './components/BlogPage';
 import DiffusionDecisionModel from './components/DiffusionDecisionModel';
+import GearshiftPlatform from './components/GearshiftPlatform';
 
 const Home: React.FC = () => (
   <>
@@ -38,6 +39,7 @@ function App() {
           <Route path="/blog/:id" element={<DiffusionDecisionModel />} />
           <Route path="/research" element={<ResearchAreasPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/gearshift" element={<GearshiftPlatform />} />
         </Routes>
       </div>
     </HashRouter>
