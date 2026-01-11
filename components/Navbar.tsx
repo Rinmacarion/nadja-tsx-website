@@ -44,6 +44,7 @@ const Navbar: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'Research', href: '/research' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Computational Psychiatry', href: '/computational-psychiatry' },
     { name: 'Gearshift Platform', href: '/gearshift' },
     { name: 'Publications', href: '/publications' },
     { name: 'Contact', href: '/contact' },

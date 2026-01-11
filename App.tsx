@@ -13,6 +13,7 @@ import ContactPage from './components/ContactPage';
 import BlogPage from './components/BlogPage';
 import DiffusionDecisionModel from './components/DiffusionDecisionModel';
 import GearshiftPlatform from './components/GearshiftPlatform';
+import ComputationalPsychiatry from './components/ComputationalPsychiatry';
 
 const Home: React.FC = () => (
   <>
@@ -40,6 +41,7 @@ function App() {
           <Route path="/research" element={<ResearchAreasPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/gearshift" element={<GearshiftPlatform />} />
+          <Route path="/computational-psychiatry" element={<ComputationalPsychiatry />} />
         </Routes>
       </div>
     </HashRouter>
