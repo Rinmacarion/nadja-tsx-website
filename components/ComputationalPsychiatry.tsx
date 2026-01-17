@@ -59,15 +59,11 @@ const ComputationalPsychiatry: React.FC = () => {
 
             <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm mb-8">
               <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                To pursue these aims, I am using a multidisciplinary approach that consists of clinical questionnaires, behavioral tests, and physiological measures such as electroencephalography (EEG) and eye tracking. To integrate these different measures into one framework, I am using computational modeling and machine learning. In so doing, I am implementing the Research Domain Criteria (RDoC) approach of the National Institute of Mental Health into practice.
-              </p>
-
-              <p className="text-sm text-slate-600 italic mb-6">
-                Figure 1 summarizes the objectives and the methodological approach of my research program.
+                To pursue these aims, I am using a multidisciplinary approach that consists of clinical questionnaires, behavioral tests, and physiological measures such as electroencephalography (EEG) and eye tracking. To integrate these different measures into one framework, I am using computational modeling and machine learning. In so doing, I am implementing the Research Domain Criteria (RDoC) approach of the National Institute of Mental Health into practice. Figure 1 summarizes the objectives and the methodological approach of my research program.
               </p>
 
               <img 
-                src="/assets/Objectives and methodological approach of my research program.jpg" 
+                src="/assets/holistic test environment.png" 
                 alt="Figure 1: Objectives and methodological approach of my research program" 
                 className="w-full rounded-lg shadow-md mb-6 max-w-4xl mx-auto"
                 style={{ objectFit: 'contain', backfaceVisibility: 'hidden' }}
@@ -76,13 +72,13 @@ const ComputationalPsychiatry: React.FC = () => {
               <p className="text-sm text-slate-600 font-semibold mb-4">
                 Figure 1. Objectives and methodological approach of my research program.
               </p>
-            </div>
 
-            <div className="bg-amber-50 p-6 rounded-lg border border-amber-100 mb-8">
-              <p className="text-slate-700 leading-relaxed text-sm">
+              <p className="text-slate-700 leading-relaxed text-sm mb-4">
                 <span className="font-semibold">"Comorbidities":</span> ADHD and frequently co-occurring disorders such as anxiety and depression. <span className="font-semibold">"Persistor":</span> a child, diagnosed with ADHD, who maintains an ADHD diagnosis into adulthood. <span className="font-semibold">"Desistor":</span> a child, diagnosed with ADHD, who sufficiently improves to not maintain an ADHD diagnosis into adulthood. <span className="font-semibold">"Controls":</span> a child without ADHD.
               </p>
             </div>
+
+
           </motion.div>
 
           {/* Significance Section */}
@@ -152,13 +148,30 @@ const ComputationalPsychiatry: React.FC = () => {
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">Computational Modeling</h3>
 
               <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm">
-                <p className="text-slate-700 leading-relaxed mb-6">
-                  So far, I mostly focused on the diffusion decision model which belongs to the class of sequential sampling models (SSMs). These models can be used to decompose behavioral performance into distinct mental components involved in cognitive processing. SSMs are based on the most dominant theory of how people make decisions: Specifically, decisions (such as those in cognitive tests) are a result of processes that have a starting point and that evolve by sequentially accumulating (noisy) evidence for response options up to a criterion at which a choice is initiated.
-                </p>
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  <div className="flex-1">
+                    <p className="text-slate-700 leading-relaxed mb-6">
+                      So far, I mostly focused on the diffusion decision model which belongs to the class of sequential sampling models (SSMs). These models can be used to decompose behavioral performance into distinct mental components involved in cognitive processing. SSMs are based on the most dominant theory of how people make decisions: Specifically, decisions (such as those in cognitive tests) are a result of processes that have a starting point and that evolve by sequentially accumulating (noisy) evidence for response options up to a criterion at which a choice is initiated.
+                    </p>
 
-                <p className="text-slate-700 leading-relaxed mb-6">
-                  SSMs are well-established and account for behavior from a range of tests. They utilize more information than conventional statistics (e.g., average reaction times) because parameters are derived from the simultaneous consideration of accuracy and the entire reaction time (RT) distributions for corrects and errors.
-                </p>
+                    <p className="text-slate-700 leading-relaxed mb-6">
+                      SSMs are well-established and account for behavior from a range of tests. They utilize more information than conventional statistics (e.g., average reaction times) because parameters are derived from the simultaneous consideration of accuracy and the entire reaction time (RT) distributions for corrects and errors.
+                    </p>
+                  </div>
+
+                  <div className="flex-1">
+                    <img 
+                      src="/assets/the diffusion decision model.jpg" 
+                      alt="Figure 2: The diffusion decision model" 
+                      className="w-full rounded-lg shadow-md mb-4"
+                      style={{ objectFit: 'contain', backfaceVisibility: 'hidden' }}
+                    />
+
+                    <p className="text-sm text-slate-600 font-semibold">
+                      Figure 2. The diffusion decision model.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -167,13 +180,30 @@ const ComputationalPsychiatry: React.FC = () => {
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">Joint-Modeling Approach</h3>
 
               <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm">
-                <p className="text-slate-700 leading-relaxed mb-6">
-                  I use a hierarchical Bayesian framework to establish a link between clinical, behavioral and physiological measures. For example: if one hypothesizes a direct link between physiological and behavioral data, the observed physiological patterns are then used to replace the model parameters. This creates a model with predictions about the behavioral data.
-                </p>
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  <div className="flex-1">
+                    <p className="text-slate-700 leading-relaxed mb-6">
+                      I use a hierarchical Bayesian framework to establish a link between clinical, behavioral and physiological measures. For example: if one hypothesizes a direct link between physiological and behavioral data, the observed physiological patterns are then used to replace the model parameters. This creates a model with predictions about the behavioral data.
+                    </p>
 
-                <p className="text-slate-700 leading-relaxed">
-                  There exist different possible linking functions; each function assumes a different brain-behavior interaction and is tested as to how well it accounts for empirical data. I focus on gaussian process regression and single-trial logistic regression (machine learning algorithms) as possible linking functions.
-                </p>
+                    <p className="text-slate-700 leading-relaxed">
+                      There exist different possible linking functions; each function assumes a different brain-behavior interaction and is tested as to how well it accounts for empirical data. I focus on gaussian process regression and single-trial logistic regression (machine learning algorithms) as possible linking functions.
+                    </p>
+                  </div>
+
+                  <div className="flex-1">
+                    <img 
+                      src="/assets/joint modeling approach.png" 
+                      alt="Figure 3: Joint-modeling approach" 
+                      className="w-full rounded-lg shadow-md mb-4"
+                      style={{ objectFit: 'contain', backfaceVisibility: 'hidden' }}
+                    />
+
+                    <p className="text-sm text-slate-600 font-semibold">
+                      Figure 3. Joint-modeling approach.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -187,30 +217,30 @@ const ComputationalPsychiatry: React.FC = () => {
           >
             <h2 className="text-3xl font-semibold text-slate-900 mb-6">References</h2>
 
-            <ol className="space-y-3 text-slate-700 text-sm leading-relaxed list-decimal list-inside">
-              <li>National Institute of Mental Health. The National Institute of Mental Health (NIMH) Research Domain Criteria (RDoC) initiative. https://www.nimh.nih.gov/research/research-funded-by-nimh/rdoc/index.shtml</li>
-              <li>Wahlstedt, C., Thorell, L. B., & Bohlin, G. (2009). Heterogeneity in ADHD: Neuropsychological pathways, comorbidity and symptom domains. Journal of abnormal child psychology, 37(4), 551-564.</li>
-              <li>Ging-Jehli NR, Ratcliff R, Arnold LE. Improving neurocognitive testing using computational psychiatry-A systematic review for ADHD. Psychol Bull. 2021 Feb;147(2):169-231.</li>
-              <li>Nigg, J. T., Willcutt, E. G., Doyle, A. E., & Sonuga-Barke, E. J. (2005). Causal heterogeneity in attention-deficit/hyperactivity disorder: do we need neuropsychologically impaired subtypes?. Biological psychiatry, 57(11), 1224-1230.</li>
-              <li>Nikolas, M. A., Marshall, P., & Hoelzle, J. B. (2019). The role of neurocognitive tests in the assessment of adult attention-deficit/hyperactivity disorder. Psychological assessment, 31(5), 685-698.</li>
-              <li>Bennett D, Silverstein SM, Niv Y. The Two Cultures of Computational Psychiatry. JAMA Psychiatry. 2019 Jun 1;76(6):563-564.</li>
-              <li>Huys QJM. Advancing Clinical Improvements for Patients Using the Theory-Driven and Data-Driven Branches of Computational Psychiatry. JAMA Psychiatry. 2018 Mar 1;75(3):225-226.</li>
-              <li>Liu S, Dolan RJ, Heinz A. Translation of Computational Psychiatry in the Context of Addiction. JAMA Psychiatry. 2020 Jul 1.</li>
-              <li>Ratcliff R. A theory of memory retrieval. Psychological Review. 1978; 85:59–108.</li>
-              <li>Kofler, M. J., Irwin, L. N., Soto, E. F., Groves, N. B., Harmon, S. L., & Sarver, D. E. (2019). Executive functioning heterogeneity in pediatric ADHD. Journal of Abnormal Child Psychology, 47(2), 273–286.</li>
-              <li>Woods, S. P., Lovejoy, D. W., and Ball, J. D. (2002). Neuropsychological characteristics of adults with ADHD: A comprehensive review of initial studies. The Clinical Neuropsychologist, 16(1), 12-34.</li>
-              <li>Forstmann, B. U., Ratcliff, R., & Wagenmakers, E. J. (2016). Sequential sampling models in cognitive neuroscience: Advantages, applications, and extensions. Annual review of psychology, 67.</li>
-              <li>Turner, B. M., Palestro, J. J., Miletić, S., & Forstmann, B. U. (2019). Advances in techniques for imposing reciprocity in brain-behavior relations. Neuroscience & Biobehavioral Reviews, 102, 327-336.</li>
-              <li>Busemeyer, J. R., & Townsend, J. T. (1992). Fundamental derivations from decision field theory. Mathematical Social Sciences, 23, 255–282.</li>
-              <li>Logan, G. D., Van Zandt, T., Verbruggen, F., & Wagenmakers, E.-J. (2014). On the ability to inhibit thought and action: General and special theories of an act of control. Psychological Review,121(1),66-95.</li>
-              <li>Ratcliff, R., & Smith, P. L. (2004). A comparison of sequential sampling models for two-choice reaction time. Psychological review, 111(2), 333.</li>
-              <li>Van Zandt, T., & Ratcliff, R. (1995). Statistical mimicking of reaction time data: Single-process models, parameter variability, and mixtures. Psychonomic Bulletin & Review, 2(1), 20-54.</li>
-              <li>Ziegler, S., Pedersen, M. L., Mowinckel, A. M., & Biele, G. (2016). Modelling ADHD: a review of ADHD theories through their predictions for computational models of decision-making and reinforcement learning. Neuroscience & Biobehavioral Reviews, 71, 633-656.</li>
-              <li>Turner, B. M., Forstmann, B. U., Love, B. C., Palmeri, T. J., & Van Maanen, L. (2017). Approaches to analysis in model-based cognitive neuroscience. Journal of Mathematical Psychology, 76, 65-79.</li>
-              <li>Turner, B. M., Palestro, J. J., Miletić, S., & Forstmann, B. U. (2019). Advances in techniques for imposing reciprocity in brain-behavior relations. Neuroscience & Biobehavioral Reviews, 102, 327-336.</li>
-              <li>Turner, B. M., & Van Zandt, T. (2018). Approximating Bayesian inference through model simulation. Trends in Cognitive Sciences, 22(9), 826-840.</li>
-              <li>Turner, B. M., Van Maanen, L., & Forstmann, B. U. (2015). Informing cognitive abstractions through neuroimaging: The neural drift diffusion model. Psychological review, 122(2), 312.</li>
-              <li>Bahg, G., Evans, D. G., Galdo, M., & Turner, B. M. (2020). Gaussian process linking functions for mind, brain, and behavior. Proceedings of the National Academy of Sciences, 117(47), 29398-29406.</li>
+            <ol className="list-none ml-0 space-y-2 text-sm">
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[1]</span><div><span className="italic">The National Institute of Mental Health (NIMH) Research Domain Criteria (RDoC) initiative</span>. National Institute of Mental Health. https://www.nimh.nih.gov/research/research-funded-by-nimh/rdoc/index.shtml</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[2]</span><div><span className="italic">Heterogeneity in ADHD: Neuropsychological pathways, comorbidity and symptom domains</span>. Wahlstedt, C., Thorell, L. B., & Bohlin, G. (2009). Journal of abnormal child psychology, 37(4), 551-564.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[3]</span><div><span className="italic">Improving neurocognitive testing using computational psychiatry—A systematic review for ADHD</span>. Ging-Jehli NR, Ratcliff R, Arnold LE. (2021). Psychological Bulletin, 147(2), 169-231.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[4]</span><div><span className="italic">Causal heterogeneity in attention-deficit/hyperactivity disorder: do we need neuropsychologically impaired subtypes?</span>. Nigg, J. T., Willcutt, E. G., Doyle, A. E., & Sonuga-Barke, E. J. (2005). Biological psychiatry, 57(11), 1224-1230.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[5]</span><div><span className="italic">The role of neurocognitive tests in the assessment of adult attention-deficit/hyperactivity disorder</span>. Nikolas, M. A., Marshall, P., & Hoelzle, J. B. (2019). Psychological assessment, 31(5), 685-698.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[6]</span><div><span className="italic">The Two Cultures of Computational Psychiatry</span>. Bennett D, Silverstein SM, Niv Y. (2019). JAMA Psychiatry, 76(6), 563-564.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[7]</span><div><span className="italic">Advancing Clinical Improvements for Patients Using the Theory-Driven and Data-Driven Branches of Computational Psychiatry</span>. Huys QJM. (2018). JAMA Psychiatry, 75(3), 225-226.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[8]</span><div><span className="italic">Translation of Computational Psychiatry in the Context of Addiction</span>. Liu S, Dolan RJ, Heinz A. (2020). JAMA Psychiatry.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[9]</span><div><span className="italic">A theory of memory retrieval</span>. Ratcliff R. (1978). Psychological Review, 85, 59–108.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[10]</span><div><span className="italic">Executive functioning heterogeneity in pediatric ADHD</span>. Kofler, M. J., Irwin, L. N., Soto, E. F., Groves, N. B., Harmon, S. L., & Sarver, D. E. (2019). Journal of Abnormal Child Psychology, 47(2), 273–286.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[11]</span><div><span className="italic">Neuropsychological characteristics of adults with ADHD: A comprehensive review of initial studies</span>. Woods, S. P., Lovejoy, D. W., and Ball, J. D. (2002). The Clinical Neuropsychologist, 16(1), 12-34.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[12]</span><div><span className="italic">Sequential sampling models in cognitive neuroscience: Advantages, applications, and extensions</span>. Forstmann, B. U., Ratcliff, R., & Wagenmakers, E. J. (2016). Annual review of psychology, 67.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[13]</span><div><span className="italic">Advances in techniques for imposing reciprocity in brain-behavior relations</span>. Turner, B. M., Palestro, J. J., Miletić, S., & Forstmann, B. U. (2019). Neuroscience & Biobehavioral Reviews, 102, 327-336.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[14]</span><div><span className="italic">Fundamental derivations from decision field theory</span>. Busemeyer, J. R., & Townsend, J. T. (1992). Mathematical Social Sciences, 23, 255–282.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[15]</span><div><span className="italic">On the ability to inhibit thought and action: General and special theories of an act of control</span>. Logan, G. D., Van Zandt, T., Verbruggen, F., & Wagenmakers, E.-J. (2014). Psychological Review,121(1),66-95.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[16]</span><div><span className="italic">A comparison of sequential sampling models for two-choice reaction time</span>. Ratcliff, R., & Smith, P. L. (2004). Psychological review, 111(2), 333.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[17]</span><div><span className="italic">Statistical mimicking of reaction time data: Single-process models, parameter variability, and mixtures</span>. Van Zandt, T., & Ratcliff, R. (1995). Psychonomic Bulletin & Review, 2(1), 20-54.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[18]</span><div><span className="italic">Modelling ADHD: a review of ADHD theories through their predictions for computational models of decision-making and reinforcement learning</span>. Ziegler, S., Pedersen, M. L., Mowinckel, A. M., & Biele, G. (2016). Neuroscience & Biobehavioral Reviews, 71, 633-656.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[19]</span><div><span className="italic">Approaches to analysis in model-based cognitive neuroscience</span>. Turner, B. M., Forstmann, B. U., Love, B. C., Palmeri, T. J., & Van Maanen, L. (2017). Journal of Mathematical Psychology, 76, 65-79.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[20]</span><div><span className="italic">Advances in techniques for imposing reciprocity in brain-behavior relations</span>. Turner, B. M., Palestro, J. J., Miletić, S., & Forstmann, B. U. (2019). Neuroscience & Biobehavioral Reviews, 102, 327-336.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[21]</span><div><span className="italic">Approximating Bayesian inference through model simulation</span>. Turner, B. M., & Van Zandt, T. (2018). Trends in Cognitive Sciences, 22(9), 826-840.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[22]</span><div><span className="italic">Informing cognitive abstractions through neuroimaging: The neural drift diffusion model</span>. Turner, B. M., Van Maanen, L., & Forstmann, B. U. (2015). Psychological review, 122(2), 312.</div></li>
+              <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[23]</span><div><span className="italic">Gaussian process linking functions for mind, brain, and behavior</span>. Bahg, G., Evans, D. G., Galdo, M., & Turner, B. M. (2020). Proceedings of the National Academy of Sciences, 117(47), 29398-29406.</div></li>
             </ol>
           </motion.div>
         </div>
