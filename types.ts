@@ -20,11 +20,14 @@ export interface ResearchArea {
 export interface BlogPost {
   id: string;
   title: string;
+  excerpt?: string;
   content: string;
+  category?: string;
   date: string;
+  slug: string;
   tags: string[];
-  rating: number;
-  comments: { author: string; text: string; date: string }[];
+  ratings?: number[];
+  comments?: { author: string; text: string; date?: string }[];
 }
 
 export interface Message {

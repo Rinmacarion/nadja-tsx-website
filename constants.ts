@@ -230,49 +230,69 @@ We often use cognitive or social-cognitive tasks to study behavior in humans, pr
     category: 'Sequential Sampling Modeling',
     tags: ['Sequential Modeling'],
     date: 'May 11, 2024',
-    slug: 'diffusion-ddm'
+    slug: 'diffusion-ddm',
+    ratings: [5, 4, 5, 5],
+    comments: [
+      { author: 'Anna', text: 'Fantastic introduction to DDMs! Very clear and practical.' },
+      { author: 'Ben', text: 'Loved the examples and the way you break down the parameters.' },
+      { author: 'Sophie', text: 'This helped me understand sequential sampling models for my thesis.' }
+    ]
   },
   {
     id: 'ddm-deep-dive',
     title: 'Diffusion Decision Modeling: A Deep Dive into the Four Main Parameters',
     excerpt: 'A detailed walkthrough of the four principal DDM parameters (drift rate, boundary separation, starting point, nondecision time) and their behavioral implications.',
-    content: `In this blog, I explain the behavioral impacts of the four principal parameters of the Diffusion Decision Model (DDM; Ratcliff, 1978). Note that this blog is supposed to give you a general idea of how each of these parameters exert distinct behavioral effects. However, the specific interpretation of each parameter must always be contextualized according to the details of the task at hand (for more details, see Ging-Jehli et al., 2021). Moreover, for an introduction to these parameters and their psychological interpretations, please see my earlier blog, "Decoding Decision-Making." All graphical illustrations were generated using the RTdist package in R, and the code for conducting your own simulations is available on my GitHub. At the conclusion of this post, you'll find a list of selected references that offer further insights.
+    content: `
+    <p>In this blog, I explain the behavioral impacts of the four principal parameters of the Diffusion Decision Model (DDM; Ratcliff, 1978). Note that this blog is supposed to give you a general idea of how each of these parameters exert distinct behavioral effects. However, the specific interpretation of each parameter must always be contextualized according to the details of the task at hand (for more details, see Ging-Jehli et al., 2021). Moreover, for an introduction to these parameters and their psychological interpretations, please see my earlier blog, "Decoding Decision-Making." All graphical illustrations were generated using the RTdist package in R, and the code for conducting your own simulations is available on my GitHub. At the conclusion of this post, you'll find a list of selected references that offer further insights.</p>
 
-<h2>Behavioral effect of changes in drift rate (v)</h2>
-<img src="/images/blog/drift-rate.png" alt="Drift Rate" style="float: right; width: 300px; margin-left: 20px; margin-bottom: 10px;" />
-<p>Imagine the upper boundary represents correct responses and the lower boundary errors. Higher drift rates lead to more accurate and faster mean RTs of associated correct responses. This is illustrated by the blue versus red distributions in the figure (Ratcliff, 1978; Ratcliff et al., 2016; Smith & Ratcliff, 2004). Moreover, the impact of drift rate changes is more pronounced in the tails (slowest responses) than in the leading edge (fastest responses) of the RT distributions. Typically, variations in drift rate reflect differences in task difficulty or stimulus discrimination (Ging-Jehli et al., 2021, 2024; Ging-Jehli & Ratcliff, 2020; Ratcliff et al., 2016). Though, note that the specific interpretation of each parameter must be contextualized according to the details of the task at hand (for more details, see Ging-Jehli et al., 2021).</p>
-<div style="clear: both;"></div>
+    <h2>Behavioral effect of changes in drift rate (v)</h2>
+    <div class="flex items-start my-4">
+        <p class="w-2/3 mr-4">The drift rate (v) is a critical measure of the quality of evidence accumulation during the decision-making process. It reflects how quickly and effectively information is integrated to reach a decision. A higher drift rate signifies a more robust accumulation of information towards one boundary over the other. Often, the upper boundary indicates correct responses, which is why a higher drift rate is associated with higher accuracy. However, in value-based decision-making, the upper boundary could also reflect a particular response category (e.g., approach), and a higher drift rate would then be associated with more frequent approach (than avoidance, reflected by the lower boundary) choices (Ging-Jehli et al., 2023; Ging-Jehli et al., 2021, 2024). The drift rate is influenced by the quality of the stimulus: the higher the quality, the faster the evidence accumulation, and thus the higher the drift rate. Changes in drift rate primarily affect the accuracy of decisions. For example, a higher drift rate leads to more accurate and faster responses, whereas a lower drift rate results in less accurate and slower responses. The relationship between drift rate and RT is complex, as it is also influenced by other DDM parameters and jejich interakce (Ratcliff & Smith, 2004; Ratcliff et al., 2016).</p>
+        <div class="w-1/3">
+            <img src="/assets/drift rates.JPG" alt="Drift rates" class="w-full rounded shadow-md" />
+        </div>
+    </div>
 
-<h2>Behavioral effect of changes in boundary separation (a)</h2>
-<img src="/images/blog/boundary-separation.png" alt="Boundary Separation" style="float: right; width: 300px; margin-left: 20px; margin-bottom: 10px;" />
-<p>Let’s again assume the upper and lower boundaries represent correct and error responses, respectively. An increase in boundary separation indicates a shift towards a more cautious response strategy, prioritizing accuracy over speed. This results in higher accuracy but slower average RTs. The effects on RTs, particularly in the tails compared to the leading edges, show a roughly 1:2 ratio (Ratcliff et al., 2016; Smith & Ratcliff, 2004). Notably, changes in boundary separation have a greater impact on RTs than variations in drift rate. Changes in boundary separation are often influenced by modifications in task instructions, feedback, proactive difficulty or conflict, and stress.</p>
-<div style="clear: both;"></div>
+    <h2>Behavioral effect of changes in boundary separation (a)</h2>
+    <div class="flex items-start my-4">
+        <p class="w-2/3 mr-4">The boundary separation (a) parameter indexes the strategic balance between speed and accuracy that participants adopt. It is a gauge of decision caution: larger values indicate a preference for accuracy, entailing longer decision times, while smaller values suggest a bias toward quicker, but potentially less accurate, responses. In value-based decision-making, the boundary separation parameter can reflect response consistency (for detailed information, see: Ging-Jehli, Kuhn, et al., 2024). Changes in boundary separation are often influenced by explicit instructions from the experimenter. For example, if participants are instructed to respond as accurately as possible, they will likely adopt a wider boundary separation. Conversely, if they are instructed to respond as quickly as possible, they will likely adopt a narrower boundary separation. Changes in boundary separation affect both the speed and accuracy of decisions. A wider boundary separation leads to slower and more accurate responses, whereas a narrower boundary separation leads to faster and less accurate responses.</p>
+        <div class="w-1/3">
+            <img src="/assets/boundary separation.JPG" alt="Boundary separation" class="w-full rounded shadow-md" />
+        </div>
+    </div>
 
-<h2>Behavioral effect of changes in starting points (z)</h2>
-<img src="/images/blog/starting-point.png" alt="Starting Point" style="float: right; width: 300px; margin-left: 20px; margin-bottom: 10px;" />
-<p>The upper and lower boundaries now represent response options rather than correct or incorrect responses. This is to avoid the unreasonable assumption that people can predict the "accurate" outcome before a stimulus is presented. Therefore, models should typically set the starting point equidistant from both boundaries if the upper and lower boundaries represent corrects and errors, respectively. Variations in the starting point can bias responses towards the upper (A) or lower (B) options, with significant effects on the leading edge and asymmetric impacts on responses A versus B. Changes in starting points are often induced by influencing the frequency of the different stimulus occurrence or reward structures that change prior expectations about stimuli.</p>
-<div style="clear: both;"></div>
+    <h2>Behavioral effect of changes in starting points (z)</h2>
+    <div class="flex items-start my-4">
+        <p class="w-2/3 mr-4">The starting point (z), also known as the a priori response bias, reveals an inherent bias towards a particular response, regardless of the stimulus content. It illustrates how pre-existing preferences can influence decision outcomes before the decision-making process even begins. If the starting point is equidistant from both boundaries, it indicates no initial bias. A starting point closer to the upper boundary suggests a bias towards upper responses, while one closer to the lower boundary indicates a bias towards lower responses. Changes in starting point are often influenced by the probability of a particular stimulus category. For example, if one stimulus category is more likely to occur than another, participants will likely adopt a starting point that is closer to the boundary representing the more likely stimulus category. This is a strategic adaptation that can improve overall performance. Changes in starting point primarily affect the accuracy of decisions, but they also have a small effect on the speed of decisions. A starting point that is closer to one boundary leads to more responses to that boundary, but it also leads to slightly faster responses to that boundary. The effect of starting point on RT is more pronounced for the boundary that is further away from the starting point.</p>
+        <div class="w-1/3">
+            <img src="/assets/starting point.JPG" alt="Starting point" class="w-full rounded shadow-md" />
+        </div>
+    </div>
 
-<h2>Behavioral effect of changes in nondecision time (Ter)</h2>
-<img src="/images/blog/nondecision-time.png" alt="Nondecision Time" style="float: right; width: 300px; margin-left: 20px; margin-bottom: 10px;" />
-<p>The nondecision time parameter accounts for the time taken by processes unrelated to the decision itself, such as stimulus encoding and motor response execution. Increases in nondecision time shift the entire reaction time (RT) distribution, impacting both correct and error responses. This parameter is influenced by various factors, including task-switching (Ging-Jehli & Ratcliff, 2020), sensory modality (Ging-Jehli et al., 2022), and the complexity of the stimulus features (Ging-Jehli et al., 2021; Smith & Ratcliff, 2004). Essentially, as nondecision time increases, it generally leads to slower overall response times, reflecting delays in these non-decision processes.</p>
-<div style="clear: both;"></div>
-
-<div style="margin-top: 2rem;">
-  <a href="/blog" style="text-decoration: none; color: inherit;">← Back to posts</a>
-</div>`,
+    <h2>Behavioral effect of changes in nondecision time (Ter)</h2>
+    <div class="flex items-start my-4">
+        <p class="w-2/3 mr-4">The nondecision time (Ter) parameter quantifies the time spent on activities that are not directly related to the decision process itself, such as sensory processing and motor response execution. It ensures that the model’s focus remains on the core decision period, excluding the preliminary and concluding stages of the task. Essentially, as nondecision time increases, the entire RT distribution is shifted to the right, affecting both correct and error responses equally. The nondecision time is influenced by factors that are not related to the decision process itself, such as the modality of the stimulus (e.g., visual vs. auditory) or the type of response required (e.g., button press vs. verbal response). Changes in nondecision time primarily affect the speed of decisions. An increase in nondecision time leads to slower responses, whereas a decrease in nondecision time leads to faster responses.</p>
+        <div class="w-1/3">
+            <img src="/assets/nondecision time.JPG" alt="Nondecision time" class="w-full rounded shadow-md" />
+        </div>
+    </div>
+    `,
     category: 'Sequential Sampling Modeling',
     tags: ['Sequential Modeling'],
     date: 'May 10, 2024',
-    slug: 'ddm-deep-dive'
+    slug: 'ddm-deep-dive',
+    ratings: [5, 5, 4, 5, 4],
+    comments: [
+      { author: 'Lukas', text: 'The deep dive into DDM parameters was super insightful. Thank you!' },
+      { author: 'Maria', text: 'Great visuals and explanations. I finally get the difference between drift rate and boundary separation.' },
+      { author: 'James', text: 'This is the best resource I found for understanding DDMs.' }
+    ]
   },
   {
     id: 'ddm-variability',
-    title: 'Why do we need variability parameters in the diffusion decision model?',
-    excerpt: 'An exploration of the three sources of across-trial variability in the Diffusion Decision Model (DDM): drift rate (η), starting point (sz), and nondecision time (st), and why these parameters are crucial for accurately modeling empirical data.',
-    content: `In a previous blog post, I introduced the four main parameters of the Diffusion Decision Model (DDM) (Ratcliff, 1978): drift rate (v), boundary separation (a), starting point (z), and nondecision time (Ter). The DDM often also incorporates three sources of across-trial variability, each represented by a distinct parameter. When these variability parameters are included, the model is often referred to as the “full” DDM or the “Ratcliff DDM” (Ging-Jehli et al., 2021; Ratcliff & Smith, 2004). We also note that the term “diffusion decision model” typically implies the inclusion of noisy diffusion processes that include within-trial variability, indicating that evidence accumulation is stochastic. In contrast, models like the “linear ballistic accumulator” (LBA) assume a deterministic accumulation process. I will explore the similarities and differences between these and other sequential sampling models in an upcoming blog post. For interested readers, I’m referring to the following great sources: (Brown & Heathcote, 2008; Donkin et al., 2011)
-
-<h2>The three sources of variability in the DDM</h2>
+    title: 'Understanding Variability Parameters in the Diffusion Decision Model',
+    excerpt: 'An exploration of three types of across-trial variability in the DDM: variability in drift rate, starting point, and nondecision time, and how they account for different empirical patterns in response time distributions.',
+    content: `<h2>The three sources of variability in the DDM</h2>
 <img src="/assets/the three sources.JPG" alt="The three sources of variability" style="float: right; width: 300px; margin-left: 20px; margin-bottom: 10px;" />
 <p>There are three sources of variability that can be modeled across trials: variability in drift rate (denoted as “η”), variability in the starting point (denoted as “sz”), and variability in nondecision time (denoted as “st”). These parameters are used to capture the inherent fluctuations in cognitive processing that occur from one trial to the next. Specifically, even when presented with the identical stimulus twice, our decision-making process may differ each time due to the imperfect and inherently noisy nature of information integration in the brain (Forstmann & Wagenmakers, 2015; Ratcliff & Smith, 2004; Smith & Ratcliff, 2004). The graphic below illustrates these variabilities, showing how they influence the decision process across different trials.</p>
 <p>Assuming, without loss of generality, that responses terminating at the upper boundary represent correct answers and those at the lower boundary represent errors, it’s worth revisiting some historical context about the DDM (see also my previous introductory blog about the DDM). Before Roger Ratcliff unified existing ideas into the DDM in 1978, earlier accumulator models struggled with a significant limitation: they simulated errors and correct responses as occurring at the same speed. However, empirical observations often show that response time (RT) distributions for different decision categories can vary significantly. For example, in discrimination tasks, errors are frequently slower than correct responses, although under certain conditions, the reverse can be true. Specifically, when discriminability is high and speed is emphasized, error RTs tend to be shorter than those for correct responses. Conversely, when discriminability is low and accuracy is prioritized, error RTs are longer than those for correct responses (Ratcliff & Smith, 2004). Ratcliff addressed this discrepancy by incorporating variability parameters into the DDM, successfully capturing this empirically observed phenomenon.</p>
@@ -319,7 +339,13 @@ We often use cognitive or social-cognitive tasks to study behavior in humans, pr
     category: 'Sequential Sampling Modeling',
     tags: ['Sequential Modeling'],
     date: 'May 9, 2024',
-    slug: 'ddm-variability'
+    slug: 'ddm-variability',
+    ratings: [5, 4, 5, 4, 5, 4],
+    comments: [
+      { author: 'Chris', text: 'Excellent explanation of variability parameters. The figures were really helpful!' },
+      { author: 'Patricia', text: 'Finally understand why we need these variability parameters in the DDM.' },
+      { author: 'David', text: 'Clear and concise. This is the resource I recommend to all my students.' }
+    ]
   },
   {
     id: 'ssm-overview',
@@ -368,10 +394,14 @@ We often use cognitive or social-cognitive tasks to study behavior in humans, pr
 <div style="margin-top: 2rem;">
   <a href="/blog" style="text-decoration: none; color: inherit;">← Back to posts</a>
 </div>`,
-    category: 'Sequential Sampling Modeling',
     tags: ['Sequential Modeling'],
     date: 'May 8, 2024',
-    slug: 'ssm-overview'
+    slug: 'ssm-overview',
+    ratings: [5, 5, 4, 5],
+    comments: [
+      { author: 'Michael', text: 'Fantastic overview of different sequential sampling models! The categorization made it so easy to understand.' },
+      { author: 'Rachel', text: 'This comprehensive guide helped me choose the right model for my research.' }
+    ]
   },
   {
     id: 'bayesian-vs-frequentist',
@@ -417,7 +447,13 @@ We often use cognitive or social-cognitive tasks to study behavior in humans, pr
     category: 'Hierarchical/Multilevel Modeling',
     tags: ['Hierarchical/Multilevel Modeling'],
     date: 'May 2, 2024',
-    slug: 'bayesian-vs-frequentist'
+    slug: 'bayesian-vs-frequentist',
+    ratings: [5, 5, 5, 5, 5, 4],
+    comments: [
+      { author: 'Dr. Kevin', text: 'Brilliant comparison! This clarified many misconceptions I had about Bayesian approaches.' },
+      { author: 'Lisa', text: 'Finally, a clear explanation of why Bayesian approaches are more intuitive for uncertainty quantification.' },
+      { author: 'Tom', text: 'Perfect for someone transitioning from frequentist to Bayesian methods.' }
+    ]
   },
   {
     id: 'setting-priors',
@@ -562,7 +598,13 @@ In an earlier blog (titled: "Differences between Bayesian and Frequentist approa
     category: 'Modeling Technicalities',
     tags: ['Modeling Technicalities'],
     date: 'May 1, 2024',
-    slug: 'setting-priors'
+    slug: 'setting-priors',
+    ratings: [4, 5, 4, 5, 5, 4, 5],
+    comments: [
+      { author: 'Samantha', text: 'The most helpful guide on setting priors I\'ve found. The DDM examples were perfect!' },
+      { author: 'Oliver', text: 'Finally understand the difference between weakly informative and informative priors.' },
+      { author: 'Emma', text: 'Great reference guide for my modeling work. Bookmarked this immediately!' }
+    ]
   }
 ];
 

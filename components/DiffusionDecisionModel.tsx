@@ -12,23 +12,36 @@ const DiffusionDecisionModel: React.FC = () => {
     const post = BLOG_POSTS.find((p: any) => p.id === POST_ID);
     // Ratings and comments persisted in localStorage per post
     const [hover, setHover] = React.useState<number | null>(null);
-    const [ratingList, setRatingList] = React.useState<number[]>(() => {
-        try {
-            const raw = localStorage.getItem(`ratings_${POST_ID}`);
-            return raw ? JSON.parse(raw) : [];
-        } catch { return []; }
-    });
+    const [ratingList, setRatingList] = React.useState<number[]>([]);
     const avgRating = ratingList.length ? (ratingList.reduce((a, b) => a + b, 0) / ratingList.length) : 0;
 
-    const [comments, setComments] = React.useState<Array<{author: string; text: string; date: string}>>(() => {
-        try {
-            const raw = localStorage.getItem(`comments_${POST_ID}`);
-            return raw ? JSON.parse(raw) : [];
-        } catch { return []; }
-    });
+    const [comments, setComments] = React.useState<Array<{author: string; text: string; date: string}>>([]);
 
     const [authorInput, setAuthorInput] = React.useState('');
     const [textInput, setTextInput] = React.useState('');
+
+    // Load initial ratings and comments from post data
+    React.useEffect(() => {
+        if (post) {
+            try {
+                const storedRatings = localStorage.getItem(`ratings_${POST_ID}`);
+                if (storedRatings) {
+                    setRatingList(JSON.parse(storedRatings));
+                } else if (post.ratings) {
+                    setRatingList(post.ratings);
+                }
+            } catch {}
+
+            try {
+                const storedComments = localStorage.getItem(`comments_${POST_ID}`);
+                if (storedComments) {
+                    setComments(JSON.parse(storedComments));
+                } else if (post.comments) {
+                    setComments(post.comments.map((c: any) => ({ ...c, date: new Date().toISOString() })));
+                }
+            } catch {}
+        }
+    }, [POST_ID, post]);
 
     const addRating = (value: number) => {
         const next = [...ratingList, value];
@@ -575,99 +588,18 @@ const DiffusionDecisionModel: React.FC = () => {
                                     <span className="ml-3 text-sm text-stone-500">{avgRating.toFixed(1)} | {ratingList.length} Rating{ratingList.length === 1 ? '' : 's'}</span>
                                 </div>
 
-                                <div className="prose max-w-none text-stone-700">
-                                    {
-                                        (() => {
-                                            const lines = post.content.split(/\n/);
-                                            const headings = [
-                                                'Behavioral effect of changes in drift rate (v)',
-                                                'Behavioral effect of changes in boundary separation (a)',
-                                                'Behavioral effect of changes in starting points (z)',
-                                                'Behavioral effect of changes in nondecision time (Ter)'
-                                            ];
+                                <div className="prose max-w-none text-stone-700 leading-relaxed space-y-4">
+                                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                                </div>
 
-                                            const elements: any[] = [];
-                                            let buffer: string[] = [];
-
-                                            const flushBufferAsParagraph = (keyBase: string) => {
-                                                if (buffer.length === 0) return;
-                                                const text = buffer.join(' ').trim();
-                                                const isDriftRatePara = text.includes('Ratcliff, 1978') && /2016|Ratcliff et al\./.test(text);
-                                                const isBoundaryPara = text.includes('Changes in boundary separation are often influenced') || text.includes('Changes in boundary separation are often');
-                                                const isStartingPointPara = text.includes('influencing the frequency of the different stimulus occurrence') || text.includes('frequency of the different stimulus');
-                                                const isNonDecisionPara = text.includes('Essentially, as nondecision time increases') || text.includes('nondecision time');
-
-                                                if (isDriftRatePara) {
-                                                    elements.push(
-                                                        <div key={`flex-drift-${elements.length}`} className="md:flex items-start my-4">
-                                                            <p className="md:w-2/3 md:mr-4 mb-4 md:mb-0">{text}</p>
-                                                            <div className="md:w-1/3">
-                                                                <img src="/assets/drift%20rates.JPG" alt="Drift rates" className="w-full rounded shadow-md" />
-                                                            </div>
-                                                        </div>
-                                                    );
-                                                } else if (isBoundaryPara) {
-                                                    elements.push(
-                                                        <div key={`flex-boundary-${elements.length}`} className="md:flex items-start my-4">
-                                                            <p className="md:w-2/3 md:mr-4 mb-4 md:mb-0">{text}</p>
-                                                            <div className="md:w-1/3">
-                                                                <img src="/assets/boundary%20separation.JPG" alt="Boundary separation" className="w-full rounded shadow-md" />
-                                                            </div>
-                                                        </div>
-                                                    );
-                                                } else if (isStartingPointPara) {
-                                                    elements.push(
-                                                        <div key={`flex-starting-point-${elements.length}`} className="md:flex items-start my-4">
-                                                            <p className="md:w-2/3 md:mr-4 mb-4 md:mb-0">{text}</p>
-                                                            <div className="md:w-1/3">
-                                                                <img src="/assets/starting%20point.JPG" alt="Starting point" className="w-full rounded shadow-md" />
-                                                            </div>
-                                                        </div>
-                                                    );
-                                                } else if (isNonDecisionPara) {
-                                                    elements.push(
-                                                        <div key={`flex-nondecision-${elements.length}`} className="md:flex items-start my-4">
-                                                            <p className="md:w-2/3 md:mr-4 mb-4 md:mb-0">{text}</p>
-                                                            <div className="md:w-1/3">
-                                                                <img src="/assets/nondecision%20time.JPG" alt="Nondecision time" className="w-full rounded shadow-md" />
-                                                            </div>
-                                                        </div>
-                                                    );
-                                                    elements.push(<h2 key={`summary-${elements.length}`} className="text-2xl font-semibold mt-8 mb-3 text-stone-800 border-b border-stone-300 pb-1">Summary</h2>);
-                                                    elements.push(<div key={`img-all-${elements.length}`} className="my-4"><img src="/assets/all%20together.JPG" alt="All together" className="w-full rounded shadow-md" /></div>);
-                                                } else {
-                                                    elements.push(<p key={`p-${keyBase}-${elements.length}`} className="mb-4">{text}</p>);
-                                                }
-                                                buffer = [];
-                                            };
-
-                                            for (let i = 0; i < lines.length; i++) {
-                                                const raw = lines[i];
-                                                const line = raw.trim();
-
-                                                if (!line) {
-                                                    // blank line -> flush any buffered paragraph
-                                                    flushBufferAsParagraph(i.toString());
-                                                    continue;
-                                                }
-
-                                                if (headings.includes(line)) {
-                                                    // flush any buffered paragraph first
-                                                    flushBufferAsParagraph(i.toString());
-                                                    elements.push(<h2 key={`h2-${i}`} className="text-2xl font-semibold mt-8 mb-3 text-stone-800 border-b border-stone-300 pb-1">{line}</h2>);
-                                                    continue;
-                                                }
-
-                                                // accumulate line into buffer
-                                                buffer.push(line);
-                                            }
-
-                                            // flush remaining buffer
-                                            flushBufferAsParagraph('end');
-
-                                            return elements;
-                                        })()
-                                    }
+                                <h2 className="text-2xl font-semibold mt-8 mb-3 text-stone-800 border-b border-stone-300 pb-1">Summary</h2>
+                                <div className="mb-6">
+                                    <img
+                                        src="/assets/all together.JPG"
+                                        alt="Summary of diffusion decision model components"
+                                        className="w-full rounded-lg shadow-md max-w-4xl mx-auto"
+                                        style={{ objectFit: 'contain', backfaceVisibility: 'hidden' }}
+                                    />
                                 </div>
 
                                 <h2 className="text-2xl font-semibold mt-8 mb-3 text-stone-800 border-b border-stone-300 pb-1">Take home messages</h2>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Mail } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 import { Link } from 'react-router-dom';
+import EinsteinQuote from './EinsteinQuote';
 
 const Hero: React.FC = () => {
 
@@ -25,13 +26,24 @@ const Hero: React.FC = () => {
             {PERSONAL_INFO.title}
           </span>
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-slate-900 leading-tight mb-6">
-            Hello, I'm <br />
-            <span className="text-academic-600">{PERSONAL_INFO.name}.</span>
+            <span className="text-academic-600">Nadja R Ging-Jehli</span>
+            <div className="text-academic-600 text-2xl font-serif font-normal mt-2">Ph.D., Psychology and Neuroscience</div>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto md:mx-0 font-light leading-relaxed">
-            {PERSONAL_INFO.shortBio}
+            I lead an independent research program on how humans and machines adapt in uncertain, dynamic environments.<br />
+            Bridging neuroscience, psychiatry, AI, and economics, my work focuses on meta-learning, behavioral adaptability, and perceived controllability - to generate interdisciplinary insights & build scalable ecosystems for scientific discovery and real-world impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-12">
+            <a
+              href="/assets/CV_GingJehli_011826.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-12 w-72 py-3 bg-academic-200 text-academic-800 rounded-lg font-medium hover:bg-academic-300 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+              onClick={e => { e.stopPropagation(); }}
+            >
+              <span role="img" aria-label="Resume">📄</span>
+              View CV
+            </a>
             <Link 
               to="/contact" 
               className="px-12 w-72 py-3 bg-academic-800 text-white rounded-lg font-medium hover:bg-academic-900 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
@@ -40,7 +52,6 @@ const Hero: React.FC = () => {
               Get in Touch
             </Link>
           </div>
-          
         </motion.div>
 
         <motion.div 
@@ -55,7 +66,23 @@ const Hero: React.FC = () => {
               src="/assets/nadja.png"
               alt={PERSONAL_INFO.name}
               className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white"
+              style={{ objectPosition: 'center top' }}
             />
+            {/* EinsteinQuote removed as requested */}
+            <div className="flex justify-center gap-4 mt-6">
+              <a href="https://x.com/NadjaGingJehli" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <img src="https://img.freepik.com/premium-vector/twitter-new-logo-twitter-icons-twitter-x-logo_1036746-408.jpg?w=826" alt="X (Twitter)" width="32" height="32" className="rounded transition-transform hover:scale-110" style={{ background: 'white' }} />
+              </a>
+              <a href="https://www.linkedin.com/in/nadja-ging-jehli-7b1539a9" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="text-slate-700 hover:text-academic-600 transition-colors" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg>
+              </a>
+              <a href="https://scholar.google.com/citations?user=V8zeDrIAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                <img src="https://listimg.pinclipart.com/picdir/s/485-4850859_free-png-google-icon-google-plus-logo-blanco.png" alt="Google Scholar" width="32" height="32" className="rounded transition-transform hover:scale-110" style={{ background: 'white' }} />
+              </a>
+              <a href="https://orcid.org/0000-0002-1071-0693" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/ORCID_iD.svg/960px-ORCID_iD.svg.png?20190308043226" alt="ORCID" width="32" height="32" className="rounded transition-transform hover:scale-110" style={{ background: 'white' }} />
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

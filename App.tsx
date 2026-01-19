@@ -15,6 +15,7 @@ import DiffusionDecisionModel from './components/DiffusionDecisionModel';
 import GearshiftPlatform from './components/GearshiftPlatform';
 import ComputationalPsychiatry from './components/ComputationalPsychiatry';
 import BehavioralEconomics from './components/BehavioralEconomics';
+import EinsteinQuote from './components/EinsteinQuote';
 
 const Home: React.FC = () => (
   <>
