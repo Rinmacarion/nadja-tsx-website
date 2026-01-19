@@ -27,7 +27,6 @@ const Home: React.FC = () => (
       <Publications />
     </main>
     <Footer />
-    <Assistant />
   </>
 );
 
