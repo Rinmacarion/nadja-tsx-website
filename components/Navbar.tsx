@@ -43,11 +43,11 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Research', href: '/research' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Computational Psychiatry', href: '/computational-psychiatry' },
-    { name: 'Gearshift Platform', href: '/gearshift' },
-    { name: 'Behavioral Economics', href: '/behavioral-economics' },
     { name: 'Publications', href: '/publications' },
+    { name: 'Modeling Hub', href: '/blog' },
+    { name: 'Gearshift Fellowship', href: '/gearshift' },
+    { name: 'Computational Psychiatry', href: '/computational-psychiatry' },
+    { name: 'Behavioral Economics', href: '/behavioral-economics' },
     { name: 'Contact', href: '/contact' },
   ];
 

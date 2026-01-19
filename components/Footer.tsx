@@ -23,7 +23,8 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
             <div className="flex flex-col md:items-end gap-2">
               <a href={PERSONAL_INFO.socials.linkedin} className="hover:text-white transition-colors">LinkedIn</a>
-              <a href={PERSONAL_INFO.socials.twitter} className="hover:text-white transition-colors">Twitter / X</a>
+              <a href={PERSONAL_INFO.socials.twitter} className="hover:text-white transition-colors">X</a>
+              <a href="https://bsky.app/profile/nadja.bsky.social" className="hover:text-white transition-colors">BlueSky</a>
               <a href={PERSONAL_INFO.socials.scholar} className="hover:text-white transition-colors">Google Scholar</a>
               <a href="#" className="hover:text-white transition-colors">ResearchGate</a>
             </div>

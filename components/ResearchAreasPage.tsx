@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Compass, BrainCircuit, Terminal } from 'lucide-react';
+import { Brain, BarChart, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -30,13 +30,13 @@ const ResearchAreasPage: React.FC = () => {
                 
                 <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed text-justify">
                     <p className="mb-6">
-                        My research addresses current interconnected challenges in (social)cognitive neuroscience (CN) and computational psychiatry (CP): 1. developing multidimensional assessments across cognitive, social, and affective domains; 2. unifying computational models across analytical levels; and 3. translating research tools into clinical applications. Tackling these challenges is vital for a deeper understanding of mind-behavior relationships and the dysfunctionalities associated with mental health conditions.
+                        Adaptability begins where certainty ends: the moment when the mind decides whether to persist, let go, or shift gears. My research program develops a mechanistic science of adaptive intelligence. Namely, how humans maintain agency, infer controllability, allocate effort, and flexibly update beliefs when demands change across cognitive, affective, and social contexts. I investigate why and how these mechanisms break down, producing mental and behavioral rigidity across neurodevelopmental, anxiety, and mood disorders. Ultimately, my goal is to build a unified understanding of adaptive intelligence to explain how mind, motivation, and meaning recalibrate under uncertainty and how these processes can be strengthened to support mental health across the lifespan.
                     </p>
                     <p className="mb-6">
-                        From a neuroscientific perspective, my focus is on developing innovative analytical frameworks. This includes the combination of (biologically inspired) neurocomputational models with sequential sampling models of behavior. In so doing, I aim to identify new mental trade-offs and provide psychological interpretation of physiological measures.
+                        Psychiatry needs models that explain why symptoms fluctuate, when interventions work, and which mechanisms to target for each individual and for how long. My approach integrates computational cognitive modeling (reinforcement learning, hierarchical inference, sequential sampling), generative AI (deep learning, agent-based systems), and adaptive serious-game environments that dynamically reconfigure based on cognitive-affective theories. This unified framework allows me to study clinical constructs (e.g., avoidance, uncertainty intolerance, and effort-reward tradeoffs), typically examined in isolation, within a single mechanistic system. A central focus is meta-control and meta-learning: how people adapt strategies over time, how maladaptive patterns emerge, and how fragile or illusory senses of control contribute to clinical rigidity. My approach aims to generate multidimensional adaptability profiles that predict real-world symptom trajectories and guide just-in-time interventions.
                     </p>
                     <p className="mb-6">
-                        From a clinical perspective, I apply these integrative strategies in the context of attention-deficit hyperactivity disorder (ADHD) and mood-related disorders and possible other frequent comorbidities such as substance use disorder. The complexity and co-occurrence of these disorders present unique diagnostic and therapeutic challenges. My goal is to create methodologies that not only differentiate neurocognitive dysfunctions across various phenotypes but also enable more personalized and effective treatments. I emphasize the examination of individual differences, and the advantage of linking biomedical, neuronal, and behavioral measures using computational models.
+                        What distinguishes my program is the integration of psychiatry, psychology, neuroscience, and AI into a single modeling architecture. I use generative AI not as a tool, but as an experimental model system: artificial agents that instantiate cognitive, affective, and motivational processes presumed to underlie psychopathology. These agents allow me to disentangle how interacting mechanisms jointly shape a person's sense of control in complex environments and to design adaptive interventions that strengthen the processes that falter. They also offer a principled way to formalize implicit clinical knowledge into testable computational theories. My unique integration of generative AI as model systems and computational cognitive models to dissect mental health mechanisms directly aligns with Michigan's vision for generative AI-informed computational psychiatry and the integrative nature of this cluster hire. I am excited to contribute to the department of psychiatry and to the broader interdisciplinary collaborations across psychology, cognitive science, and the Weinberg Institute.
                     </p>
                     <p className="font-medium text-academic-700 italic text-center mt-8">
                         My theory-driven and model-based research is organized into three avenues outlined below.
@@ -47,6 +47,7 @@ const ResearchAreasPage: React.FC = () => {
             <div className="space-y-16">
                 {/* Avenue 1 */}
                 <motion.section 
+                    id="assessment-world"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -55,11 +56,11 @@ const ResearchAreasPage: React.FC = () => {
                 >
                     <div className="flex items-center gap-4 mb-6">
                         <div className="p-3 bg-academic-100 text-academic-700 rounded-lg">
-                            <Compass size={32} />
+                            <Globe size={32} />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-serif font-bold text-slate-900">Creating a multidimensional “assessment world”</h2>
-                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Compass Pointing North</span>
+                            <h2 className="text-2xl font-serif font-bold text-slate-900">Creating a multidimensional "assessment world"</h2>
+                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Interdisciplinary Bridging</span>
                         </div>
                     </div>
                     <div className="prose prose-slate text-slate-600 leading-relaxed text-justify max-w-none">
@@ -71,6 +72,7 @@ const ResearchAreasPage: React.FC = () => {
 
                 {/* Avenue 2 */}
                 <motion.section 
+                    id="joint-modeling"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -79,11 +81,11 @@ const ResearchAreasPage: React.FC = () => {
                 >
                     <div className="flex items-center gap-4 mb-6">
                         <div className="p-3 bg-academic-100 text-academic-700 rounded-lg">
-                            <BrainCircuit size={32} />
+                            <BarChart size={32} />
                         </div>
                         <div>
                             <h2 className="text-2xl font-serif font-bold text-slate-900 leading-tight">Utilizing and enhancing joint-modeling approaches to combine behavioral and physiological measures</h2>
-                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Brain Sketch</span>
+                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Meta-Learning & AI</span>
                         </div>
                     </div>
                     <div className="prose prose-slate text-slate-600 leading-relaxed text-justify max-w-none">
@@ -95,6 +97,7 @@ const ResearchAreasPage: React.FC = () => {
 
                 {/* Avenue 3 */}
                 <motion.section 
+                    id="psychiatric-tools"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -103,11 +106,11 @@ const ResearchAreasPage: React.FC = () => {
                 >
                     <div className="flex items-center gap-4 mb-6">
                         <div className="p-3 bg-academic-100 text-academic-700 rounded-lg">
-                            <Terminal size={32} />
+                            <Brain size={32} />
                         </div>
                         <div>
                             <h2 className="text-2xl font-serif font-bold text-slate-900">Assessing the practical usefulness of computational psychiatric tools</h2>
-                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Programming Console</span>
+                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Behavioral Adaptability</span>
                         </div>
                     </div>
                     <div className="prose prose-slate text-slate-600 leading-relaxed text-justify max-w-none">

@@ -595,7 +595,7 @@ const DiffusionDecisionModel: React.FC = () => {
                                 <h2 className="text-2xl font-semibold mt-8 mb-3 text-stone-800 border-b border-stone-300 pb-1">Summary</h2>
                                 <div className="mb-6">
                                     <img
-                                        src="/assets/all together.JPG"
+                                        src="/assets/all together 2.png"
                                         alt="Summary of diffusion decision model components"
                                         className="w-full rounded-lg shadow-md max-w-4xl mx-auto"
                                         style={{ objectFit: 'contain', backfaceVisibility: 'hidden' }}

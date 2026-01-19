@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Twitter, Send, ArrowRight } from 'lucide-react';
+import { Mail, Phone, Send, ArrowRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -95,15 +95,6 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                     <div className="p-3 bg-white/10 rounded-lg">
-                      <Twitter size={20} className="text-academic-200" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-academic-300 uppercase tracking-wider font-semibold">Twitter</p>
-                      <a href={PERSONAL_INFO.socials.twitter} className="text-lg hover:text-academic-200 transition-colors">{PERSONAL_INFO.socials.twitterHandle}</a>
-                    </div>
-                  </div>
                 </div>
 
                 <div className="mt-12 pt-8 border-t border-white/20">

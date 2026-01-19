@@ -1,5 +1,5 @@
-import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -31,9 +31,22 @@ const Home: React.FC = () => (
   </>
 );
 
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Immediately scroll to top, override any scroll restoration
+    window.history.scrollRestoration = 'manual';
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-slate-50 font-sans">
         <Routes>
           <Route path="/" element={<Home />} />

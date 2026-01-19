@@ -7,7 +7,7 @@ import { PERSONAL_INFO } from '../constants';
 
 const GearshiftPlatform: React.FC = () => {
   const handleEmailClick = (subject: string) => {
-    const emailAddress = PERSONAL_INFO.email;
+    const emailAddress = "gearshiftfellowship@gmail.com";
     const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}`;
     window.location.href = mailtoLink;
   };
@@ -16,53 +16,47 @@ const GearshiftPlatform: React.FC = () => {
       <Navbar />
 
       <main className="flex-grow pt-28 pb-16">
-        <div className="container mx-auto px-6 max-w-4xl">
-          {/* Header */}
+        <div className="container mx-auto px-6 max-w-3xl">
+          {/* Hero Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-12 text-center"
+            className="mb-16"
           >
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
-              <div className="md:w-56 flex-shrink-0">
-                <img 
-                  src="/assets/gearshift fellowship.jpg" 
-                  alt="Gearshift Fellowship" 
-                  className="w-full rounded-lg shadow-md"
-                />
-              </div>
-              <div>
-                <h1 className="font-serif text-5xl md:text-6xl font-bold text-slate-900 mb-6">Gearshift Platform</h1>
-              </div>
-              <div className="md:w-56 flex-shrink-0">
-                <img 
-                  src="/assets/gearshift fellowship.jpg" 
-                  alt="Gearshift Fellowship" 
-                  className="w-full rounded-lg shadow-md"
-                />
-              </div>
+            {/* Hero Image at Top */}
+            <div className="w-full flex justify-center mb-8">
+              <img
+                src="/assets/gearshift%20fellowship.jpg"
+                alt="Gearshift Fellowship"
+                className="w-full max-w-xs md:max-w-md rounded-2xl shadow-xl border-4 border-white"
+                loading="eager"
+              />
             </div>
-            
-            <div className="mb-8">
-              <h2 className="text-2xl font-semibold text-slate-800 mb-4">One Platform. Three Missions.</h2>
-              <p className="text-xl text-academic-700 font-medium mb-4">
+            {/* Hero Content below image */}
+            <div className="w-full flex flex-col items-center text-center">
+              <h2 className="text-xl md:text-2xl font-semibold text-slate-800 mb-2">One Platform. Three Missions.</h2>
+              <p className="text-lg md:text-xl text-academic-700 font-medium mb-6">
                 Advancing science. Empowering clinicians. Driving real-world impact.
               </p>
-            </div>
-
-            <div className="space-y-6 text-left">
-              <p className="text-lg text-slate-700 leading-relaxed">
-                <span className="font-semibold text-slate-900">How do humans and AI agents adapt in a fast, ever-changing world?</span>
-              </p>
-
-              <p className="text-lg text-slate-700 leading-relaxed">
-                <span className="font-semibold text-slate-900">How do we decide when to persist, when to let go, and when to shift gears?</span>
-              </p>
-
-              <p className="text-lg text-slate-700 leading-relaxed">
-                <span className="font-semibold text-slate-900">Why do we sometimes get stuck - and when does that evolve into rigidity linked to psychiatric conditions - and how do we best cope with it?</span>
-              </p>
+              {/* Three Missions as Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full mb-6">
+                <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center border border-slate-100">
+                  <Lightbulb className="w-8 h-8 text-academic-600 mb-2" />
+                  <span className="font-semibold text-slate-900 mb-1">Adaptation</span>
+                  <span className="text-slate-700 text-sm">How do humans and AI agents adapt in a fast, ever-changing world?</span>
+                </div>
+                <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center border border-slate-100">
+                  <Users className="w-8 h-8 text-blue-600 mb-2" />
+                  <span className="font-semibold text-slate-900 mb-1">Decision-Making</span>
+                  <span className="text-slate-700 text-sm">How do we decide when to persist, let go, or shift gears?</span>
+                </div>
+                <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center border border-slate-100">
+                  <Heart className="w-8 h-8 text-red-500 mb-2" />
+                  <span className="font-semibold text-slate-900 mb-1">Resilience</span>
+                  <span className="text-slate-700 text-sm">Why do we get stuck, and how do we best cope with it?</span>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -82,8 +76,18 @@ const GearshiftPlatform: React.FC = () => {
             </p>
 
             <p className="text-slate-600 italic">
-              This 2-minute video introduces a novel digital platform designed to support clinicians, accelerate scientific discovery, and open new frontiers for mental health innovation.
+              This 5-minute video introduces a novel digital platform designed to support clinicians, accelerate scientific discovery, and open new frontiers for mental health innovation.
             </p>
+            <div className="flex justify-center my-6">
+              <video
+                src="/assets/GF01_VersionClinical_GingJehli.mp4"
+                controls
+                className="rounded-xl shadow-lg w-full max-w-2xl"
+                poster="/assets/gearshift%20fellowship.jpg"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </motion.div>
 
           {/* Learn More Section */}
@@ -143,7 +147,7 @@ const GearshiftPlatform: React.FC = () => {
                   I'm looking for collaborators to help advance the theoretical and empirical foundation of this platform. Let's publish, build, and explore the mechanisms together.
                 </p>
                 <button 
-                  onClick={() => handleEmailClick('Collaboration on Gearshift Platform')}
+                  onClick={() => handleEmailClick('Collaboration on Gearshift Fellowship')}
                   className="w-full bg-academic-600 hover:bg-academic-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
                 >
                   Let's collaborate!
@@ -163,7 +167,7 @@ const GearshiftPlatform: React.FC = () => {
                   I'm looking for clinical partners interested in validation studies, pilot testing, or integration into care workflows.
                 </p>
                 <button 
-                  onClick={() => handleEmailClick('Pilot Interest - Gearshift Platform')}
+                  onClick={() => handleEmailClick('Pilot Interest - Gearshift Fellowship')}
                   className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
                 >
                   Join a Pilot!
@@ -183,7 +187,7 @@ const GearshiftPlatform: React.FC = () => {
                   Whether through seed funding, research partnerships, or a faculty position - I'm building long-term, impact-driven collaborations.
                 </p>
                 <button 
-                  onClick={() => handleEmailClick('Partnership & Funding Interest - Gearshift Platform')}
+                  onClick={() => handleEmailClick('Partnership & Funding Interest - Gearshift Fellowship')}
                   className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
                 >
                   Let's connect!

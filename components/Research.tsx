@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, BarChart, Globe, Users } from 'lucide-react';
 import { RESEARCH_AREAS } from '../constants';
+import { Link } from 'react-router-dom';
 
 const iconMap = {
   Brain: Brain,
@@ -32,12 +33,12 @@ const Research: React.FC = () => {
                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-100 group flex flex-col"
               >
                 <div className="w-12 h-12 bg-academic-100 rounded-lg flex items-center justify-center mb-6 text-academic-700 group-hover:bg-academic-600 group-hover:text-white transition-colors duration-300 flex-shrink-0">
-                  <Icon size={24} />
+                  <Link to="/research" title={`See more about ${area.title}`}>
+                    <Icon size={24} />
+                  </Link>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3 font-serif">{area.title}</h3>
-                <p className="text-slate-600 leading-relaxed flex-grow">
-                  {area.description}
-                </p>
+                <p className="text-slate-600 leading-relaxed flex-grow" dangerouslySetInnerHTML={{ __html: area.description }} />
               </motion.div>
             );
           })}

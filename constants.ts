@@ -27,19 +27,19 @@ export const RESEARCH_AREAS: ResearchArea[] = [
   {
     id: '1',
     title: 'Behavioral Adaptability',
-    description: 'Investigating how humans and artificial agents navigate uncertainty by adapting their decision-making and coping strategies across non-social and social environments. This includes studying when agents hold on to control, when they let go, and how rigid or flexible patterns emerge—especially in the context of mood, anxiety, ADHD, and autism-related conditions.',
+    description: 'I <b>investigate</b> how humans and artificial agents navigate uncertainty by adapting their decision-making and coping strategies. My work focuses on when agents hold on to control versus when they let go, and how these patterns emerge in the context of mood, anxiety, ADHD, and autism.',
     iconName: 'Brain'
   },
   {
     id: '2',
     title: 'Meta-Learning & AI',
-    description: 'Developing computational and neural network models to explain how humans and AI systems balance the trade-off between adaptability and the motivation to control outcomes. These models reveal the mechanisms shaping cognitive flexibility, structure-learning, and learning-to-learn processes in dynamic, unpredictable settings.',
+    description: 'I <b>develop</b> computational and neural network models to explain how we balance the trade-off between adaptability and the motivation to control outcomes. These models reveal the mechanisms shaping cognitive flexibility and "learning-to-learn" processes in dynamic, unpredictable settings.',
     iconName: 'BarChart'
   },
   {
     id: '3',
-    title: 'Interdisciplinary Ecosystems',
-    description: 'Using engineered game environments and machine-learning tools to build a comprehensive, multi-level understanding of adaptability—integrating neuroscientific, cognitive, affective, and psychiatric perspectives. This ecosystem helps uncover pathways into and out of mental health conditions, while informing the design of more adaptive, human-aligned AI systems.',
+    title: 'Interdisciplinary Bridging',
+    description: 'I <b>bridge</b> the gap between psychology, psychiatry, and neuroscience to build a new generation of adaptive AI. By integrating biomarkers like EEG and eye-tracking into social-cognitive paradigms, I translate mechanistic research into clinical tools that improve neurocognitive testing and foster real-world resilience.',
     iconName: 'Globe'
   }
 ];

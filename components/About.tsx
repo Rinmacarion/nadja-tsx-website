@@ -44,12 +44,16 @@ const About: React.FC = () => {
                 <span className="block text-base text-slate-500 font-medium mt-1">Industry Leadership & Consulting</span>
               </div>
               <div className="flex-1 min-w-[180px] text-center">
-                <span className="block text-3xl font-bold text-academic-600">35+</span>
+                <span className="block text-3xl font-bold text-academic-600">17+</span>
                 <span className="block text-base text-slate-500 font-medium mt-1">Peer-Reviewed Publications</span>
               </div>
               <div className="flex-1 min-w-[180px] text-center">
+                <span className="block text-3xl font-bold text-academic-600">22</span>
+                <span className="block text-base text-slate-500 font-medium mt-1">Conference Proceedings</span>
+              </div>
+              <div className="flex-1 min-w-[180px] text-center">
                 <span className="block text-3xl font-bold text-academic-600">17</span>
-                <span className="block text-base text-slate-500 font-medium mt-1">Prestigious Awards</span>
+                <span className="block text-base text-slate-500 font-medium mt-1">Prestigious Awards & Fellowships</span>
               </div>
             </div>
           </div>

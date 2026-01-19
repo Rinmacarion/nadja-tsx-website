@@ -14,7 +14,6 @@ const Publications: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-slate-100 pb-4">
           <div>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-2">Selected Publications</h2>
-            <p className="text-slate-500">A selection of recent peer-reviewed articles.</p>
           </div>
           <div className="flex gap-4 mt-4 md:mt-0">
             <Link 
