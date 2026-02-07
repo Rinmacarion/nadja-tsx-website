@@ -16,6 +16,8 @@ import GearshiftPlatform from './components/GearshiftPlatform';
 import ComputationalPsychiatry from './components/ComputationalPsychiatry';
 import BehavioralEconomics from './components/BehavioralEconomics';
 import EinsteinQuote from './components/EinsteinQuote';
+import WhatIsGF from './pages/WhatIsGF';
+import Leadership from './pages/Leadership';
 
 const Home: React.FC = () => (
   <>
@@ -57,6 +59,8 @@ function App() {
           <Route path="/gearshift" element={<GearshiftPlatform />} />
           <Route path="/computational-psychiatry" element={<ComputationalPsychiatry />} />
           <Route path="/behavioral-economics" element={<BehavioralEconomics />} />
+          <Route path="/what-is-gf" element={<WhatIsGF />} />
+          <Route path="/leadership" element={<Leadership />} />
         </Routes>
       </div>
     </HashRouter>
