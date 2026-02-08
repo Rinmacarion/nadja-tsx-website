@@ -28,7 +28,8 @@ const Hero: React.FC = () => {
             <div className="text-academic-600 text-2xl font-serif font-normal mt-2">Ph.D., Psychology and Neuroscience</div>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto md:mx-0 font-light leading-relaxed">
-            I build theories and tools that help humans and intelligent systems adapt when the world is uncertain. My work sits at the intersection of neuroscience, psychology, psychiatry, and artificial intelligence, guided by one central question: How do minds maintain agency, staying flexible, resilient, and in control as the world changes?
+            I lead an independent research program on how humans and machines adapt in uncertain, dynamic environments.<br />
+            Bridging neuroscience, psychiatry, AI, and economics, my work focuses on meta-learning, behavioral adaptability, and perceived controllability - to generate interdisciplinary insights & build scalable ecosystems for scientific discovery and real-world impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-12">
             <a

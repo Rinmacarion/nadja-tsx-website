@@ -27,7 +27,7 @@ const About: React.FC = () => {
           <div className="bg-academic-50 border border-academic-200 rounded-xl shadow-md p-8 mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-academic-700 mb-6 text-center">My Mission</h2>
             <p className="mb-6 text-base text-slate-700">
-              I build theories and tools that help humans and intelligent systems adapt when the world is uncertain. My work sits at the intersection of neuroscience, psychology, psychiatry, and artificial intelligence, guided by one central question:
+              I build theories and models that help humans and intelligent systems adapt when the world is uncertain. My work sits at the intersection of neuroscience, psychology, psychiatry, and artificial intelligence, guided by one central question:
               <br />
               <span className="font-semibold text-academic-700">How do minds maintain agency, staying flexible, resilient, and in control as the world changes?</span>
               <br /><br />
