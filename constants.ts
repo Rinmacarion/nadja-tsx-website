@@ -194,27 +194,7 @@ export const PUBLICATIONS: Publication[] = [
     tags: ["Behavioral Economics", "Generosity", "Working Paper"],
     link: ""
   },
-  // Under Review
-  {
-    id: 'ur1',
-    title: "A Novel Approach-Avoidance Task to Study Decision Making Under Outcome Uncertainty",
-    journal: "Submitted",
-    year: 2025,
-    authors: ["Ziwei, C.", "Ging-Jehli, N.R.", "Tarlow, M.", "Kim, J.", "Chase, H.W.", "Bonar, L.", "Stiffler, R.", "Grattery, A.", "Graur, S.", "Frank, M.J.", "Phillips, M.L.", "Shenhav, A."],
-    abstract: "Article under review describing a novel approach-avoidance task.",
-    tags: ["Decision Making", "Uncertainty", "Approach-Avoidance", "Under Review"],
-    link: "#"
-  },
-  {
-    id: 'ur2',
-    title: "Broader visual processing and distinct pupil dynamics facilitate resolving perceptual conflict and compensate for ADHD distractibility",
-    journal: "Submitted",
-    year: 2025,
-    authors: ["Ging-Jehli, N.R.", "Arnold, L.E.", "Sellers J.", "Van Zandt, T."],
-    abstract: "Article under review on visual processing, pupil dynamics, and ADHD distractibility.",
-    tags: ["ADHD", "Visual Processing", "Pupillometry", "Under Review"],
-    link: "#"
-  }
+  // Under Review publications removed as requested
 ];
 
 export const BLOG_POSTS: BlogPost[] = [

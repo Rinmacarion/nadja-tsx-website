@@ -148,6 +148,9 @@ const PublicationsPage: React.FC = () => {
 
                     <div className="space-y-4">
                         <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <p className="text-slate-800 text-sm leading-relaxed">Generative Archetypes of Adaptive Intelligence. Integrating cognitive mechanisms with adaptive AI</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
                             <p className="text-slate-800 text-sm leading-relaxed">A unified modeling approach to characterize disorder-specific and transdiagnostic features across cognitive domains and over time</p>
                         </div>
                         <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
@@ -155,9 +158,6 @@ const PublicationsPage: React.FC = () => {
                         </div>
                         <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
                             <p className="text-slate-800 text-sm leading-relaxed">Neurocognitive study using own developed cognitive flexibility paradigm and a new joint-modeling approach to integrate behavioral responses, eye tracking, and EEG</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                            <p className="text-slate-800 text-sm leading-relaxed">Applying the Diffusion Decision Model and Machine Learning Algorithms to the Neuropsychological Test Performances and EEG resting state activity in an ADHD Sample from the MTA study</p>
                         </div>
                     </div>
                 </div>

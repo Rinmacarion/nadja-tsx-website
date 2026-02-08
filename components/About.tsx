@@ -74,15 +74,7 @@ const About: React.FC = () => {
                 <span>Self-driven first-generation academic and college student</span>
               </li>
             </ul>
-            <p className="mb-6">
-              My unique combination of expertise in computational modeling, neuroscience, psychology, and game-theory economics, supplemented by clinical experience and industry-honed leadership and project management skills, positions me distinctively for spearheading innovative research in Cognitive Neuroscience and Computational Psychiatry. Throughout my graduate studies, I have effectively self-funded my research through multiple fellowships. My work has primarily focused on bridging gaps in neurocognitive testing for ADHD, where I have developed and piloted mechanistic tasks integrating physiological measures such as eye-tracking and EEG. This endeavor also involved the creation of custom hardware and software solutions. My research endeavors are evidenced by a robust publication record, underscoring my dedication to ADHD research alongside my postdoctoral responsibilities.
-            </p>
-            <p className="mb-6">
-              In my postdoctoral role, I have applied my computational modeling expertise to multiple Conte Center grants focused on neurocognitive testing for depression, bipolar disorder, and obsessive-compulsive disorder. Additionally, my work with intracranial recordings in Parkinson’s disease patients has significantly deepened my understanding of the basal ganglia's role in cognitive control. Overall, I have gained experience in various computational modeling approaches across multiple cognitive domains and from clinical and non-clinical datasets and across species.
-            </p>
-            <p className="mb-6">
-              As dedicated first-generation academic, I focus on theory-driven and model-based research with foundational and applied components. I am aspiring to a professorship where I can lead cross-disciplinary research teams. My program will bridge various academic fields and foster partnerships across different departments and institutions. It will also extend to collaborations with industry and societal stakeholders to translate research into practical solutions.
-            </p>
+            {/* Removed biographical paragraphs as requested */}
           </div>
           
           <div className="mt-12">
@@ -90,14 +82,7 @@ const About: React.FC = () => {
               A Bridge Between Academia and Industry
             </h3>
             <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-12 border-t border-slate-100 pt-8">
-              <div className="flex-1 min-w-[180px] text-center">
-                <span className="block text-3xl font-bold text-academic-600">12 <span className='text-lg font-normal'>Years</span></span>
-                <span className="block text-base text-slate-500 font-medium mt-1">Academic Research & Teaching</span>
-              </div>
-              <div className="flex-1 min-w-[180px] text-center">
-                <span className="block text-3xl font-bold text-academic-600">8 <span className='text-lg font-normal'>Years</span></span>
-                <span className="block text-base text-slate-500 font-medium mt-1">Industry Leadership & Consulting</span>
-              </div>
+              {/* Removed: 12 Years Academic Research & Teaching */}
               <div className="flex-1 min-w-[180px] text-center">
                 <span className="block text-3xl font-bold text-academic-600">17+</span>
                 <span className="block text-base text-slate-500 font-medium mt-1">Peer-Reviewed Publications</span>
@@ -108,7 +93,11 @@ const About: React.FC = () => {
               </div>
               <div className="flex-1 min-w-[180px] text-center">
                 <span className="block text-3xl font-bold text-academic-600">17</span>
-                <span className="block text-base text-slate-500 font-medium mt-1">Prestigious Awards & Fellowships</span>
+                <span className="block text-base text-slate-500 font-medium mt-1">Awards & Fellowships</span>
+              </div>
+              <div className="flex-1 min-w-[180px] text-center">
+                <span className="block text-3xl font-bold text-academic-600">8 <span className='text-lg font-normal'>Years</span></span>
+                <span className="block text-base text-slate-500 font-medium mt-1">Industry Leadership & Consulting</span>
               </div>
             </div>
           </div>
