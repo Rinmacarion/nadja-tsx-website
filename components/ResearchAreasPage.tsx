@@ -29,14 +29,14 @@ const ResearchAreasPage: React.FC = () => {
                 <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-8 text-center">Research Areas</h1>
                 
                 <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed text-justify">
-                    <p className="mb-6">
+                    <p className="mb-6 font-medium text-academic-700 italic text-center">
                         Adaptability begins where certainty ends: in the moment the mind decides whether to persist, let go, or shift gears.
                     </p>
                     <p className="mb-6">
                         My research develops a mechanistic science of adaptive intelligence: how humans maintain agency, infer controllability, allocate effort, and update beliefs as cognitive, affective, and social demands change. I study why these processes sometimes fail, producing rigidity in thought and behavior across neurodevelopmental, anxiety, and mood conditions. My goal is to understand how minds recalibrate under uncertainty; and how those mechanisms can be strengthened to support mental health across the lifespan.
                     </p>
                     <p className="mb-6">
-                        Psychiatry needs models that explain not just what symptoms look like, but why they fluctuate, when interventions work, and which mechanisms to target for each individual. To address this, I integrate computational cognitive modeling (reinforcement learning, hierarchical inference, sequential sampling), generative AI, and adaptive serious-game environments that dynamically reconfigure based on theory. This unified framework allows me to study processes like avoidance, uncertainty intolerance, and effort–reward trade-offs within a single mechanistic system rather than in isolation.
+                        Real-world applications, for example psychiatry, needs models that explain not just what symptoms look like, but why they fluctuate, when interventions work, and which mechanisms to target for each individual. To address this, I integrate computational cognitive modeling (reinforcement learning, hierarchical inference, sequential sampling), generative AI, and adaptive serious-game environments that dynamically reconfigure based on theory. This unified framework allows me to study processes like avoidance, uncertainty intolerance, and effort–reward trade-offs within a single mechanistic system rather than in isolation.
                     </p>
                     <p className="mb-6">
                         What distinguishes my program is treating generative AI as an experimental model system, not just a tool. I build artificial agents that instantiate cognitive, affective, and motivational processes, allowing interacting mechanisms to be tested, perturbed, and translated into adaptive interventions. Together, this approach generates multidimensional adaptability profiles that predict real-world outcomes and guide personalized, just-in-time care.
@@ -91,7 +91,7 @@ const ResearchAreasPage: React.FC = () => {
                         </div>
                         <div>
                             <h2 className="text-2xl font-serif font-bold text-slate-900 leading-tight">Joint Modeling of Brain, Behavior & Physiology</h2>
-                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Meta-Learning & AI</span>
+                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Meta-Learning & Agentic AI</span>
                         </div>
                     </div>
                     <div className="prose prose-slate text-slate-600 leading-relaxed text-justify max-w-none">

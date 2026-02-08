@@ -33,7 +33,7 @@ export const RESEARCH_AREAS: ResearchArea[] = [
   },
   {
     id: '2',
-    title: 'Meta-Learning & AI',
+    title: 'Meta-Learning & Agentic AI',
     description: 'I <b>develop</b> mechanistic computational models and adaptive AI agents to explain how systems learn to learn. Namely, how they infer structure, update strategies, and regulate control across changing environments. These models formalize the trade-off between flexibility and stability, revealing how meta-learning shapes reasoning, decision-making, and long-term adaptation.',
     iconName: 'BarChart'
   },
