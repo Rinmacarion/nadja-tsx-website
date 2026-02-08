@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Mail } from 'lucide-react';
@@ -103,3 +104,6 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+=======
+How minds, biological and artificial, navigate uncertainty and change
+>>>>>>> parent of f6f6b6f (Restore Hero.tsx to working React component format)
