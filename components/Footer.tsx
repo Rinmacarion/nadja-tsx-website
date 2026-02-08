@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               <a href={PERSONAL_INFO.socials.twitter} className="hover:text-white transition-colors">X</a>
               <a href="https://bsky.app/profile/nadja.bsky.social" className="hover:text-white transition-colors">BlueSky</a>
               <a href={PERSONAL_INFO.socials.scholar} className="hover:text-white transition-colors">Google Scholar</a>
-              <a href="#" className="hover:text-white transition-colors">ResearchGate</a>
+              <a href={PERSONAL_INFO.socials.researchgate} className="hover:text-white transition-colors">ResearchGate</a>
             </div>
           </div>
         </div>

@@ -26,16 +26,19 @@ const About: React.FC = () => {
           </div>
           <div className="bg-academic-50 border border-academic-200 rounded-xl shadow-md p-8 mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-academic-700 mb-6 text-center">My Mission</h2>
-            <p className="mb-6 text-lg text-slate-700">
-              My work contributes to an emerging research ecosystem centered on meta-learning, behavioral adaptability, and perceived controllability as core drivers of human and machine intelligence - unifying approaches from neuroscience, psychiatry, AI, and behavioral economics. My mission is threefold:
-            </p>
-            <ol className="mb-6 list-decimal pl-6 text-slate-700 text-base">
-              <li>Advance a mechanistic understanding of how humans and agents adapt in uncertain, dynamic environments — with a focus on how cognitive, affective, and social signals shape learning and control.</li>
-              <li>Develop a next-generation platform for experimental, computational, and translational science — that embeds structure learning, meta-reasoning, and ecological complexity.</li>
-              <li>Translate these innovations into scalable, real-world systems that improve mental health care, support clinical decision-making, and inform human-aligned AI.</li>
-            </ol>
-            <p className="text-lg text-slate-700">
-              Through <Link to="/gearshift" className="text-academic-600 font-semibold underline hover:text-academic-800 transition-colors">Gearshift Fellowship</Link>, I aim to build not just a platform, but an ecosystem for co-evolving adaptive minds — bridging scientific discovery, clinical application, and responsible technology.
+            <p className="mb-6 text-base text-slate-700">
+              I build tools and theories that help humans and intelligent systems adapt when the world is uncertain. My work sits at the intersection of neuroscience, psychology, psychiatry, and artificial intelligence, guided by one central question:
+              <span className="font-semibold text-academic-700">How do minds maintain agency, staying flexible, resilient, and in control as the world changes?</span>
+              <br /><br />
+              My mission is threefold:
+              <br /><br />
+              <span className="font-bold">1. Reveal mechanisms.</span> Understand how cognitive and affective processes are instantiated in neurocomputational systems, and how they shape learning, reasoning, and decision-making under uncertainty. Enabling people to form, update, and act on meaningful models of the world.
+              <br /><br />
+              <span className="font-bold">2. Build ecological environments.</span> Create next-generation experimental and computational platforms that embed structure learning, meta-reasoning, and real-world complexity, allowing adaptive behavior to be measured and modeled at scale.
+              <br /><br />
+              <span className="font-bold">3. Translate impact.</span> Transform these insights into scalable systems that improve mental health care, support clinical decision-making, and enable human-aligned AI.
+              <br /><br />
+              Through <Link to="/gearshift" className="text-academic-600 font-semibold underline hover:text-academic-800 transition-colors">Gearshift Fellowship</Link>, I am building not just a research tool, but an ecosystem where scientists, clinicians, engineers, and participants co-evolve adaptive intelligence together.
             </p>
           </div>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">About Me</h2>
@@ -43,11 +46,11 @@ const About: React.FC = () => {
             <ul className="mb-8 pl-0">
               <li className="flex items-center gap-3 mb-4">
                 <Brain className="text-academic-600 w-6 h-6" />
-                <span>Researcher in computational psychiatry and model-based neuroscience</span>
+                <span>Computational neuroscientist and psychologist studying the neurocomputational mechanisms of learning, decision-making, and adaptability.</span>
               </li>
               <li className="flex items-center gap-3 mb-4">
                 <Microscope className="text-academic-600 w-6 h-6" />
-                <span>Bridging clinical neuroscience, mathematical psychology, and behavioral economics</span>
+                <span>Founder and Principal Investigator of Gearshift Fellowship, a scalable experimental and computational platform integrating neuroscience, psychiatry, and AI.</span>
               </li>
               <li className="flex items-center gap-3 mb-4">
                 <Users className="text-academic-600 w-6 h-6" />
@@ -67,7 +70,7 @@ const About: React.FC = () => {
               </li>
               <li className="flex items-center gap-3 mb-4">
                 <Briefcase className="text-academic-600 w-6 h-6" />
-                <span>Entrepreneurially inclined with a decade of industry experience in finance and consulting</span>
+                <span>Entrepreneurially inclined with a decade of industry experience in banking and consulting informs a strong focus on implementation, scalability, and real-world impact.</span>
               </li>
               <li className="flex items-center gap-3 mb-4">
                 <GraduationCap className="text-academic-600 w-6 h-6" />

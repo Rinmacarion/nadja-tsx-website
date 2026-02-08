@@ -83,6 +83,9 @@ const Hero: React.FC = () => {
               <a href="https://bsky.app/profile/nadjagingjehli.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
                 <img src="/assets/Bluesky_Logo.jpg" alt="Bluesky" width="32" height="32" className="rounded transition-transform hover:scale-110" />
               </a>
+              <a href="https://www.researchgate.net/profile/Nadja-Ging-Jehli" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" width="32" height="32" className="rounded transition-transform hover:scale-110" style={{ background: 'white' }} />
+              </a>
             </div>
           </div>
         </motion.div>
