@@ -1,7 +1,7 @@
 import { Publication, ResearchArea, BlogPost } from './types';
 
 export const PERSONAL_INFO = {
-  name: "Nadja Ging Jehli",
+  name: "Nadja R Ging-Jehli",
   title: "Leader & Cognitive Scientist Building the Future of Adaptive Systems",
   department: "Department of Behavioral Economics",
   university: "University of Excellence", // Placeholder

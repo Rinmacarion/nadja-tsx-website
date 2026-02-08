@@ -5,9 +5,11 @@ const Footer: React.FC = () => {
   return (
     <footer id="contact" className="bg-slate-900 text-slate-300 py-16">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-3 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-serif font-bold text-white mb-6">{PERSONAL_INFO.name}</h3>
+            <div className="flex items-center mb-6">
+              <h3 className="text-2xl font-serif font-bold text-white">{PERSONAL_INFO.name}</h3>
+            </div>
             {/* Department and university removed as requested */}
             <a 
               href={`mailto:${PERSONAL_INFO.email}`} 
@@ -15,6 +17,13 @@ const Footer: React.FC = () => {
             >
               Contact Me
             </a>
+          </div>
+          <div className="flex justify-center">
+            <img
+              src="/assets/Jehlifish.png"
+              alt="Jehlifish emblem"
+              className="h-28 w-auto rounded-2xl shadow-xl"
+            />
           </div>
           <div className="md:text-right">
             <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>

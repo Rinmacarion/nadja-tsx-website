@@ -59,16 +59,19 @@ const ResearchAreasPage: React.FC = () => {
                 >
                     <div className="flex items-center gap-4 mb-6">
                         <div className="p-3 bg-academic-100 text-academic-700 rounded-lg">
-                            <Globe size={32} />
+                            <Brain size={32} />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-serif font-bold text-slate-900">Creating a multidimensional "assessment world"</h2>
-                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Interdisciplinary Bridging</span>
+                            <h2 className="text-2xl font-serif font-bold text-slate-900">From Integrative Theory to Real-World Utility</h2>
+                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Behavioral Adaptability & Agency</span>
                         </div>
                     </div>
                     <div className="prose prose-slate text-slate-600 leading-relaxed text-justify max-w-none">
                         <p>
-                            I am eager to develop new cognitive and social-cognitive laboratory paradigms to improve current (neuro)cognitive testing for mental health conditions. I place a strong emphasis on integrating biomarkers such as those collected with eye-tracking and electroencephalogram (EEG) and to develop paradigms suitable for the application of computational models. I also place a strong emphasis on social cognition and on incorporating the latest research from cognitive psychology. I started this line of research as part of my dissertation, and with the help of my first research grant as part of my past Swiss National Science Foundation fellowship.
+                            At the core of my work is a fundamental question: How do minds decide when to persist, let go, or shift strategies as the world changes? How do cognitive, affective, and meta-cognitive processes together construct a sense of agency under uncertainty?
+                        </p>
+                        <p>
+                            I develop integrative theories of agency that explain how motivation, learning, and meta-cognition interact to shape controllability beliefs and guide adaptive behavior. In this framework, adaptability is not a fixed trait, but a dynamic process that emerges from interacting neurocomputational mechanisms. This framework treats adaptability not as a trait, but as a dynamic process that emerges from interacting neurocomputational mechanisms. Building on this foundation, I use computational modeling, machine learning, and generative AI to identify mechanistic phenotypes across clinical populations, linking latent cognitive–affective processes to symptoms and treatment response in mood, anxiety, and neurodevelopmental conditions. These approaches enable computational psychiatry to move beyond descriptive categories toward actionable, mechanism-based markers that inform personalized care.
                         </p>
                     </div>
                 </motion.section>
@@ -87,13 +90,19 @@ const ResearchAreasPage: React.FC = () => {
                             <BarChart size={32} />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-serif font-bold text-slate-900 leading-tight">Utilizing and enhancing joint-modeling approaches to combine behavioral and physiological measures</h2>
+                            <h2 className="text-2xl font-serif font-bold text-slate-900 leading-tight">Joint Modeling of Brain, Behavior & Physiology</h2>
                             <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Meta-Learning & AI</span>
                         </div>
                     </div>
                     <div className="prose prose-slate text-slate-600 leading-relaxed text-justify max-w-none">
                         <p>
-                            To date, the links between physiological measures (e.g., task-evoked pupil responses, EEG event-related potentials, blood-oxygen-level-dependent signals) and behavior are not well understood. Computational modeling can help to establish a link between latent mental components and neurophysiological components. In this line of research, I will use and enhance joint-modeling approaches that will integrate different sources of individual differences (e.g., genetics, environmental factors, cognitive abilities) into one modeling framework. This will initially involve using existing clinical datasets to examine how individual differences in behavior relate to individual differences in physiological measures. Aside from utilizing existing clinical datasets, I am also eager to collect data from improved neurocognitive tests as part of new studies and treatment interventions.
+                            Understanding adaptive behavior requires models that explain not only what choices people make, but how they learn to learn. Namely, how they infer structure, update strategies, and regulate control across changing environments. I develop mechanistic computational models and generative AI agents that formalize these meta-learning processes, treating artificial agents as experimental model systems for cognitive, affective, and motivational mechanisms.
+                        </p>
+                        <p>
+                            This approach allows interacting processes (e.g., learning, uncertainty estimation, effort allocation, and controllability inference) to be tested, perturbed, and combined within a unified computational architecture. By instantiating theory directly in generative systems, I aim to define a new, mechanism-based paradigm for computational psychiatry that links formal models of adaptive intelligence to real-world behavior.
+                        </p>
+                        <p>
+                            To ground these models biologically, I further integrate behavioral data with neural and physiological signals, including EEG, eye-tracking, and pupillometry, using joint generative frameworks that connect latent cognitive processes to observable biomarkers. Together, these multimodal models provide a holistic account of how individual differences emerge across brain, behavior, and mental health.
                         </p>
                     </div>
                 </motion.section>
@@ -109,16 +118,19 @@ const ResearchAreasPage: React.FC = () => {
                 >
                     <div className="flex items-center gap-4 mb-6">
                         <div className="p-3 bg-academic-100 text-academic-700 rounded-lg">
-                            <Brain size={32} />
+                            <Globe size={32} />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-serif font-bold text-slate-900">Assessing the practical usefulness of computational psychiatric tools</h2>
-                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Behavioral Adaptability</span>
+                            <h2 className="text-2xl font-serif font-bold text-slate-900">Ecological Assessment Platforms</h2>
+                            <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Translational Systems & Clinical Integration</span>
                         </div>
                     </div>
                     <div className="prose prose-slate text-slate-600 leading-relaxed text-justify max-w-none">
                         <p>
-                            Computational psychiatry is a nascent field that needs to prove its usefulness for medical doctors and clinicians not only for diagnostic purposes but also for selecting and tailoring treatments. Therefore, I have applied computational modeling and machine learning to existing datasets from clinical treatments to examine different phenotypes of ADHD, e.g., subjects with ADHD and depression, autism, etc. In another study, I found that cognitive components (identified by pre-treatment cognitive testing and computational modeling) predicted the efficacy of neurofeedback therapy for ADHD patients. Further research is needed to replicate these exploratory results and to examine the usefulness of these computational psychiatric tools. I look forward to eventually making these tools accessible to researchers and clinicians with different backgrounds and skill sets. However, there are multiple barriers that we first need to overcome, some of which have been summarized in a Psychological Bulletin article by me, Dr. Ratcliff, and Dr. Arnold (see: <Link to="/publications" className="text-academic-600 font-medium hover:text-academic-800 underline decoration-academic-300 underline-offset-2">publications</Link>). As part of my dissertation, I have created improved neurocognitive tests in the domain of selective attention, cognitive control, cognitive flexibility, and social cognition. I am eager to use these novel tasks in future studies, to assess the robustness of the results and to replicate them in other samples. I am always open to discuss about how to improve neurocognitive testing, and to collaborate in future studies, please <a href="#contact" onClick={scrollToContact} className="text-academic-600 font-medium hover:text-academic-800 underline decoration-academic-300 underline-offset-2">contact me</a> if you would like to hear more.
+                            Traditional neurocognitive tests focus on single constructs and are not suited to study dynamics between them. Consequently, they miss to capture how people function in real-world, dynamic environments. I design ecologically valid behavioral and social-cognitive environments that integrate computational models with biomarkers, enabling adaptability to be measured as it unfolds in realistic contexts.
+                        </p>
+                        <p>
+                            These environments form the foundation of scalable digital assessment platforms, including Gearshift Fellowship, that function as research infrastructure rather than isolated tasks. By embedding mechanistic models directly into interactive systems, this work supports continuous, multidimensional phenotyping, personalized intervention, and real-time adaptation. Together, these platforms translate theory into practice, bridging neuroscience, psychiatry, psychology, and AI to enable mechanism-driven mental health care at scale.
                         </p>
                     </div>
                 </motion.section>
