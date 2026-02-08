@@ -22,9 +22,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="flex-1 text-center md:text-left"
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-academic-200 text-academic-800 text-sm font-medium mb-6 tracking-wide uppercase">
-            {PERSONAL_INFO.title}
-          </span>
+          {/* Removed top banner as requested */}
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-slate-900 leading-tight mb-6">
             <span className="text-academic-600">Nadja R Ging-Jehli</span>
             <div className="text-academic-600 text-2xl font-serif font-normal mt-2">Ph.D., Psychology and Neuroscience</div>

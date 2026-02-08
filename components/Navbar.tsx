@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Research', href: '/research' },
+    { name: 'Research Areas', href: '/research' },
     { name: 'Publications', href: '/publications' },
     { name: 'Modeling Hub', href: '/blog' },
     { name: 'Gearshift Fellowship', href: '/gearshift' },

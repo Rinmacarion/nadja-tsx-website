@@ -8,10 +8,7 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-serif font-bold text-white mb-6">{PERSONAL_INFO.name}</h3>
-            <p className="mb-6 max-w-md text-slate-400">
-              {PERSONAL_INFO.department}<br />
-              {PERSONAL_INFO.university}
-            </p>
+            {/* Department and university removed as requested */}
             <a 
               href={`mailto:${PERSONAL_INFO.email}`} 
               className="inline-block py-2 px-6 border border-slate-700 text-white rounded hover:bg-white hover:text-slate-900 transition-all"

@@ -272,35 +272,6 @@ const GearshiftPlatform: React.FC = () => {
             </ol>
           </motion.div>
 
-          {/* Collapsible Info Sections at Top */}
-          <div className="max-w-3xl mx-auto mb-12">
-            {/* What is GF Collapsible */}
-            <CollapsibleSection
-              question="What is Gearshift Fellowship (GF)?"
-              className="mb-4"
-            >
-              <p>
-                <strong>Gearshift Fellowship (GF)</strong> is an independently developed research ecosystem that integrates computational modeling, serious-game environments, and adaptive AI agents to study how humans learn to adapt across cognitive, affective, and social challenges.
-              </p>
-              <p className="mt-4">
-                The platform combines mechanistic neurocomputational models with interactive digital tasks that can be reconfigured in real time, enabling precise measurement of adaptability, controllability inference, and meta-learning across both healthy and clinical populations. Designed as a bridge between basic science and real-world application, Gearshift supports scalable online experiments, clinical studies, and translational partnerships, providing a shared infrastructure for researchers, clinicians, and engineers to collaboratively develop mechanism-based assessments and interventions.  GF is used in academic and clinical collaborations across institutions and serves as the core foundation of Nadja Ging-Jehli’s independent research program on adaptive intelligence and computational psychiatry.
-              </p>
-            </CollapsibleSection>
-
-            {/* Leadership Collapsible */}
-            <CollapsibleSection
-              question="Who leads Gearshift Fellowship?"
-            >
-              <h3 className="text-xl font-semibold mb-2">Nadja Ging-Jehli, PhD</h3>
-              <p className="italic mb-2">Founder & Scientific Director, Gearshift Fellowship (GF)</p>
-              <p>
-                Nadja is the creator and principal investigator of the Gearshift Fellowship platform. She leads its scientific vision, experimental architecture, and interdisciplinary integration, guiding the development of an independently built research ecosystem for studying and shaping cognitive–affective co-adaptation between humans and adaptive agents.
-              </p>
-              <p className="mt-4">
-                To enable sustainable technical development and future translational applications, she established supporting entities that provide engineering infrastructure and steward the platform’s intellectual property.
-              </p>
-            </CollapsibleSection>
-          </div>
         </div>
       </main>
 
