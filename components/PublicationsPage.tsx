@@ -127,38 +127,57 @@ const PublicationsPage: React.FC = () => {
                 </div>
 
                 <div className="space-y-4">
+                    {/* ARTICLES UNDER REVIEW */}
+                    {[
+                        {
+                            title: "A Novel Approach-Avoidance Task to Study Decision Making Under Outcome Uncertainty",
+                            authors: ["Ziwei, C.", "Ging-Jehli, N.R.", "Tarlow, M.", "Kim, J.", "Chase, H.W.", "Bonar, L.", "Stiffler, R.", "Grattery, A.", "Graur, S.", "Frank, M.J.", "Phillips, M.L.", "Shenhav, A."],
+                            status: "submitted"
+                        },
+                        {
+                            title: "Broader visual processing and distinct pupil dynamics facilitate resolving perceptual conflict and compensate for ADHD distractibility.",
+                            authors: ["Ging-Jehli, N.R.", "Arnold, L.E.", "Sellers J.", "Van Zandt, T."],
+                            status: "submitted"
+                        }
+                    ].map((pub, idx) => (
+                        <div key={idx} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div className="flex flex-col md:flex-row gap-4">
+                                <div className="flex-grow">
+                                    <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight">
+                                        {pub.title}
+                                    </h3>
+                                    <p className="text-slate-600 mb-2">
+                                        {pub.authors.map((author, i) => (
+                                            <span key={i} className={author.includes('Jehli') ? "font-bold text-slate-800" : ""}>
+                                                {author}{i < pub.authors.length - 1 ? ", " : ""}
+                                            </span>
+                                        ))}
+                                        <span className="text-academic-600 font-medium ml-2">({pub.status})</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="h-12"></div>
+                <div className="flex items-center gap-4 mb-6">
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight">CURRENT PROJECTS</h3>
+                    <div className="h-px bg-slate-200 flex-grow"></div>
+                </div>
+
+                <div className="space-y-4">
                     <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                        <p className="text-slate-800 text-sm leading-relaxed">
-                            Ziwei, C., Ging-Jehli, N.R., Tarlow, M., Kim, J., Chase, H.W., Bonar, L., Stiffler, R., Grattery, A., Graur, S., Frank, M.J., Phillips, M.L., Shenhav, A. (submitted). A Novel Approach-Avoidance Task to Study Decision Making Under Outcome Uncertainty.
-                        </p>
+                        <p className="text-slate-800 text-sm leading-relaxed">Generative Archetypes of Adaptive Intelligence. Integrating cognitive mechanisms with adaptive AI</p>
                     </div>
-
                     <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                        <p className="text-slate-800 text-sm leading-relaxed">
-                            Ging-Jehli, N.R., Arnold, L.E., Sellers J., Van Zandt, T. (submitted). Broader visual processing and distinct pupil dynamics facilitate resolving perceptual conflict and compensate for ADHD distractibility.
-                        </p>
+                        <p className="text-slate-800 text-sm leading-relaxed">A unified modeling approach to characterize disorder-specific and transdiagnostic features across cognitive domains and over time</p>
                     </div>
-
-                    <div className="h-6"></div>
-
-                    <div className="flex items-center gap-4 mb-6">
-                        <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight">CURRENT PROJECTS</h3>
-                        <div className="h-px bg-slate-200 flex-grow"></div>
+                    <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                        <p className="text-slate-800 text-sm leading-relaxed">Neuronal and attentional signatures of attention-deficit/hyperactivity disorder (ADHD) within a novel cognitive flexibility task</p>
                     </div>
-
-                    <div className="space-y-4">
-                        <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                            <p className="text-slate-800 text-sm leading-relaxed">Generative Archetypes of Adaptive Intelligence. Integrating cognitive mechanisms with adaptive AI</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                            <p className="text-slate-800 text-sm leading-relaxed">A unified modeling approach to characterize disorder-specific and transdiagnostic features across cognitive domains and over time</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                            <p className="text-slate-800 text-sm leading-relaxed">Neuronal and attentional signatures of attention-deficit/hyperactivity disorder (ADHD) within a novel cognitive flexibility task</p>
-                        </div>
-                        <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
-                            <p className="text-slate-800 text-sm leading-relaxed">Neurocognitive study using own developed cognitive flexibility paradigm and a new joint-modeling approach to integrate behavioral responses, eye tracking, and EEG</p>
-                        </div>
+                    <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                        <p className="text-slate-800 text-sm leading-relaxed">Neurocognitive study using own developed cognitive flexibility paradigm and a new joint-modeling approach to integrate behavioral responses, eye tracking, and EEG</p>
                     </div>
                 </div>
             </motion.div>

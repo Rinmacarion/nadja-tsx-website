@@ -28,19 +28,19 @@ export const RESEARCH_AREAS: ResearchArea[] = [
   {
     id: '1',
     title: 'Behavioral Adaptability',
-    description: 'I <b>investigate</b> how humans and artificial agents navigate uncertainty by adapting their decision-making and coping strategies. My work focuses on when agents hold on to control versus when they let go, and how these patterns emerge in the context of mood, anxiety, ADHD, and autism.',
+    description: 'I <b>study</b> how humans and artificial agents maintain agency under uncertainty. Specifically, how they learn when to persist, when to disengage, and how to flexibly recalibrate control as conditions change. Using computational and behavioral approaches, I identify the neurocomputational mechanisms that support adaptability and how they break down across mood, anxiety, and neurodevelopmental conditions.',
     iconName: 'Brain'
   },
   {
     id: '2',
     title: 'Meta-Learning & AI',
-    description: 'I <b>develop</b> computational and neural network models to explain how we balance the trade-off between adaptability and the motivation to control outcomes. These models reveal the mechanisms shaping cognitive flexibility and "learning-to-learn" processes in dynamic, unpredictable settings.',
+    description: 'I <b>develop</b> mechanistic computational models and adaptive AI agents to explain how systems learn to learn. Namely, how they infer structure, update strategies, and regulate control across changing environments. These models formalize the trade-off between flexibility and stability, revealing how meta-learning shapes reasoning, decision-making, and long-term adaptation.',
     iconName: 'BarChart'
   },
   {
     id: '3',
-    title: 'Interdisciplinary Bridging',
-    description: 'I <b>bridge</b> the gap between psychology, psychiatry, and neuroscience to build a new generation of adaptive AI. By integrating biomarkers like EEG and eye-tracking into social-cognitive paradigms, I translate mechanistic research into clinical tools that improve neurocognitive testing and foster real-world resilience.',
+    title: 'Interdisciplinary Translation',
+    description: 'I <b>integrate</b> neuroscience, psychology, and psychiatry to build scalable, real-world tools for assessment and intervention. By embedding biomarkers such as EEG and eye-tracking into ecologically valid behavioral paradigms, I translate mechanistic insights into digital phenotyping, interventions and clinical decision-support systems.',
     iconName: 'Globe'
   }
 ];
@@ -134,16 +134,6 @@ export const PUBLICATIONS: Publication[] = [
   },
   {
     id: 'p13',
-    title: "Characterizing underlying cognitive components of ADHD presentations and co-morbid diagnoses – A diffusion decision model analysis",
-    journal: "Journal of Attention Disorders",
-    year: 2021,
-    authors: ["Ging-Jehli, N.R.", "Arnold, L.E.", "Roley-Roberts, M.E.", "deBeus, R."],
-    abstract: "Using diffusion decision model analysis to characterize underlying cognitive components of ADHD presentations and co-morbid diagnoses.",
-    tags: ["ADHD", "Diffusion Decision Model", "Comorbidities"],
-    link: "https://doi.org/10.1177/10870547211020087",
-    pdf: "https://www.researchgate.net/publication/351427873_Characterizing_underlying_cognitive_components_of_ADHD_presentations_and_co-morbid_diagnoses_-A_diffusion_decision_model_analysis"
-  },
-  {
     title: "Characterizing underlying cognitive components of ADHD presentations and co-morbid diagnoses – A diffusion decision model analysis",
     journal: "Journal of Attention Disorders",
     year: 2021,

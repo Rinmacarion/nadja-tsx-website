@@ -79,7 +79,7 @@ const About: React.FC = () => {
             </ul>
             {/* Removed biographical paragraphs as requested */}
           </div>
-          
+
           <div className="mt-12">
             <h3 className="text-center text-xl md:text-2xl font-semibold text-academic-700 mb-8 tracking-tight">
               A Bridge Between Academia and Industry
@@ -99,7 +99,7 @@ const About: React.FC = () => {
                 <span className="block text-base text-slate-500 font-medium mt-1">Awards & Fellowships</span>
               </div>
               <div className="flex-1 min-w-[180px] text-center">
-                <span className="block text-3xl font-bold text-academic-600">8 <span className='text-lg font-normal'>Years</span></span>
+                <span className="block text-3xl font-bold text-academic-600">8 <span className="text-lg font-normal">Years</span></span>
                 <span className="block text-base text-slate-500 font-medium mt-1">Industry Leadership & Consulting</span>
               </div>
             </div>
