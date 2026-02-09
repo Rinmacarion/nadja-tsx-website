@@ -133,6 +133,50 @@ export const PUBLICATIONS: Publication[] = [
     pdf: "https://www.gingjehli.com/_files/ugd/2d0ae9_0e3a5ac0fddb488b93eeb975749397ee.pdf"
   },
   {
+    id: 'p18',
+    title: "A Diffusion Decision Model Analysis of The Cognitive Effects of Neurofeedback for ADHD",
+    journal: "Neuropsychology",
+    year: 2023,
+    authors: ["Ging-Jehli, N.R.", "Painter, Q.A.", "Kraemer, H.", "Roley-Roberts, M.E.", "Panchyshyn, C.", "deBeus, R.", "Arnold, L.E."],
+    abstract: "A diffusion decision model analysis of cognitive effects associated with neurofeedback in ADHD.",
+    tags: ["ADHD", "Neurofeedback", "Diffusion Decision Model", "Computational Modeling"],
+    link: "https://www.researchgate.net/publication/375710404_A_diffusion_decision_model_analysis_of_the_cognitive_effects_of_neurofeedback_for_ADHD",
+    pdf: ""
+  },
+  {
+    id: 'p19',
+    title: "Cognitive Markers for Efficacy of Neurofeedback for Attention-Deficit Hyperactivity Disorder - Personalized Medicine Using Computational Psychiatry in a Randomized Clinical Trial",
+    journal: "Journal of Clinical and Experimental Neuropsychology",
+    year: 2023,
+    authors: ["Ging-Jehli, N.R.", "Kraemer, H.", "Arnold, L.E.", "Roley-Roberts, M.E.", "deBeus, R."],
+    abstract: "Computational modeling analysis showing latent cognitive components moderate neurofeedback response in ADHD.",
+    tags: ["ADHD", "Neurofeedback", "Computational Modeling", "Clinical Trial"],
+    link: "https://www.researchgate.net/publication/370628686_Cognitive_Markers_for_Efficacy_of_Neurofeedback_for_Attention-Deficit_Hyperactivity_Disorder_-Personalized_Medicine_Using_Computational_Psychiatry_in_a_Randomized_Clinical_Trial",
+    pdf: ""
+  },
+  {
+    id: 'p20',
+    title: "For Which Children with ADHD is TBR Neurofeedback Effective? Comorbidity as a Moderator",
+    journal: "Applied Psychophysiology and Biofeedback",
+    year: 2022,
+    authors: ["Roley-Robert, M.E.", "Bergman, R.", "Pan, X.", "Tan, Y.", "Hendrix, K.", "deBeus, R.", "Kerson, C.", "Arns, M.", "Ging-Jehli, N.R.", "Connor, S.", "Shrader, C.", "Arnold, L.E."],
+    abstract: "Comorbidity effects on the efficacy of TBR neurofeedback in children with ADHD.",
+    tags: ["ADHD", "Neurofeedback", "Comorbidity", "Biofeedback"],
+    link: "https://link.springer.com/article/10.1007/s10484-022-09577-9",
+    pdf: ""
+  },
+  {
+    id: 'p21',
+    title: "Improving Neurocognitive Testing using Computational Psychiatry - A Systematic Review for ADHD",
+    journal: "Psychological Bulletin",
+    year: 2021,
+    authors: ["Ging-Jehli, N.R.", "Ratcliff, R.", "Arnold, L.E."],
+    abstract: "Systematic review of computational psychiatry approaches to improve neurocognitive testing for ADHD.",
+    tags: ["ADHD", "Computational Psychiatry", "Systematic Review", "Neurocognitive Testing"],
+    link: "https://psycnet.apa.org/buy/2020-99592-001",
+    pdf: ""
+  },
+  {
     id: 'p13',
     title: "Characterizing underlying cognitive components of ADHD presentations and co-morbid diagnoses – A diffusion decision model analysis",
     journal: "Journal of Attention Disorders",
