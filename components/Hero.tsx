@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Mail } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 import { Link } from 'react-router-dom';
-import EinsteinQuote from './EinsteinQuote';
 
 const Hero: React.FC = () => {
 
