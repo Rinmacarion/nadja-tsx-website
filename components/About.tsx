@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-20 md:py-24 bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,15 +16,15 @@ const About: React.FC = () => {
           className="max-w-4xl mx-auto"
         >
           <div className="my-4 flex flex-col items-center justify-center text-center">
-            <div className="bg-slate-50 border border-slate-200 rounded-xl shadow-sm px-6 py-6 w-full max-w-3xl">
+            <div className="bg-slate-50 border border-slate-200 rounded-xl shadow-sm px-4 sm:px-6 py-5 sm:py-6 w-full max-w-3xl">
               <Quote className="text-academic-200 mb-4 h-8 w-8 rotate-180 mx-auto" />
-              <blockquote className="font-serif text-2xl md:text-3xl italic text-academic-700 mb-4 leading-relaxed">
+              <blockquote className="font-serif text-xl md:text-3xl italic text-academic-700 mb-4 leading-relaxed">
                 "Out of clutter, find simplicity. From discord, find harmony. In the middle of difficulty lies opportunity."
               </blockquote>
               <cite className="text-slate-500 font-medium not-italic">— Albert Einstein</cite>
             </div>
           </div>
-          <div className="bg-academic-50 border border-academic-200 rounded-xl shadow-md p-8 mb-12">
+          <div className="bg-academic-50 border border-academic-200 rounded-xl shadow-md p-5 sm:p-8 mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-academic-700 mb-6 text-center">My Mission</h2>
             <p className="mb-6 text-base text-slate-700">
               I build theories and models that help humans and intelligent systems adapt when the world is uncertain. My work sits at the intersection of neuroscience, psychology, psychiatry, and artificial intelligence, guided by one central question:
@@ -43,39 +43,39 @@ const About: React.FC = () => {
             </p>
           </div>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">About Me</h2>
-          <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed text-justify">
-            <ul className="mb-8 pl-0">
-              <li className="flex items-center gap-3 mb-4">
-                <Brain className="text-academic-600 w-6 h-6" />
-                <span>Computational neuroscientist, psychologist, and economist studying the neurocomputational mechanisms of learning, decision-making, and adaptability</span>
+          <div className="mx-auto text-slate-600 leading-relaxed text-left">
+            <ul className="mb-8 pl-0 m-0 list-none space-y-4 text-left">
+              <li className="grid grid-cols-[18px_1fr] md:grid-cols-[24px_1fr] gap-3 items-start">
+                <Brain className="text-academic-600 w-4 h-4 md:w-6 md:h-6 mt-1" />
+                <span className="block">Computational neuroscientist, psychologist, and economist studying the neurocomputational mechanisms of learning, decision-making, and adaptability</span>
               </li>
-              <li className="flex items-center gap-3 mb-4">
-                <Microscope className="text-academic-600 w-6 h-6" />
-                <span>Founder and Principal Investigator of Gearshift Fellowship, a scalable experimental and computational platform integrating neuroscience, psychiatry, and AI</span>
+              <li className="grid grid-cols-[18px_1fr] md:grid-cols-[24px_1fr] gap-3 items-start">
+                <Microscope className="text-academic-600 w-4 h-4 md:w-6 md:h-6 mt-1" />
+                <span className="block">Founder and Principal Investigator of Gearshift Fellowship, a scalable experimental and computational platform integrating neuroscience, psychiatry, and AI</span>
               </li>
-              <li className="flex items-center gap-3 mb-4">
-                <Users className="text-academic-600 w-6 h-6" />
-                <span>Skilled in integrative testing across cognitive and social-cognitive domains</span>
+              <li className="grid grid-cols-[18px_1fr] md:grid-cols-[24px_1fr] gap-3 items-start">
+                <Users className="text-academic-600 w-4 h-4 md:w-6 md:h-6 mt-1" />
+                <span className="block">Skilled in integrative testing across cognitive and social-cognitive domains</span>
               </li>
-              <li className="flex items-center gap-3 mb-4">
-                <Eye className="text-academic-600 w-6 h-6" />
-                <span>Proficient in combining EEG and eye-tracking with advanced modeling techniques and experiments</span>
+              <li className="grid grid-cols-[18px_1fr] md:grid-cols-[24px_1fr] gap-3 items-start">
+                <Eye className="text-academic-600 w-4 h-4 md:w-6 md:h-6 mt-1" />
+                <span className="block">Proficient in combining EEG and eye-tracking with advanced modeling techniques and experiments</span>
               </li>
-              <li className="flex items-center gap-3 mb-4">
-                <BarChart2 className="text-academic-600 w-6 h-6" />
-                <span>Versatile in analyzing experimental data across clinical and non-clinical settings and across species</span>
+              <li className="grid grid-cols-[18px_1fr] md:grid-cols-[24px_1fr] gap-3 items-start">
+                <BarChart2 className="text-academic-600 w-4 h-4 md:w-6 md:h-6 mt-1" />
+                <span className="block">Versatile in analyzing experimental data across clinical and non-clinical settings and across species</span>
               </li>
-              <li className="flex items-center gap-3 mb-4">
-                <Sigma className="text-academic-600 w-6 h-6" />
-                <span>Deep expertise in statistics (Bayesian & Frequentist), machine learning, and modeling across analytical levels</span>
+              <li className="grid grid-cols-[18px_1fr] md:grid-cols-[24px_1fr] gap-3 items-start">
+                <Sigma className="text-academic-600 w-4 h-4 md:w-6 md:h-6 mt-1" />
+                <span className="block">Deep expertise in statistics (Bayesian & Frequentist), machine learning, and modeling across analytical levels</span>
               </li>
-              <li className="flex items-center gap-3 mb-4">
-                <Briefcase className="text-academic-600 w-6 h-6" />
-                <span>Entrepreneurially inclined with a decade of industry experience in banking and consulting informs a strong focus on implementation, scalability, and real-world impact</span>
+              <li className="grid grid-cols-[18px_1fr] md:grid-cols-[24px_1fr] gap-3 items-start">
+                <Briefcase className="text-academic-600 w-4 h-4 md:w-6 md:h-6 mt-1" />
+                <span className="block">Entrepreneurially inclined with a decade of industry experience in banking and consulting informs a strong focus on implementation, scalability, and real-world impact</span>
               </li>
-              <li className="flex items-center gap-3 mb-4">
-                <GraduationCap className="text-academic-600 w-6 h-6" />
-                <span>Self-driven first-generation academic and college student</span>
+              <li className="grid grid-cols-[18px_1fr] md:grid-cols-[24px_1fr] gap-3 items-start">
+                <GraduationCap className="text-academic-600 w-4 h-4 md:w-6 md:h-6 mt-1" />
+                <span className="block">Self-driven first-generation academic and college student</span>
               </li>
             </ul>
             {/* Removed biographical paragraphs as requested */}

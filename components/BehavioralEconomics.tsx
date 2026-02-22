@@ -17,12 +17,12 @@ const BehavioralEconomics: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="mb-12 text-center"
           >
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-slate-900 mb-6">
               Behavioral Economics
             </h1>
 
             <div className="space-y-4 mb-8">
-              <h2 className="text-2xl font-semibold text-academic-700">
+              <h2 className="text-xl md:text-2xl font-semibold text-academic-700">
                 PROPOSED BEHAVIORAL ECONOMICS (BE) FRAMEWORK
               </h2>
               <h3 className="text-xl font-semibold text-slate-800">
@@ -41,7 +41,7 @@ const BehavioralEconomics: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-12"
           >
-            <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm">
+            <div className="bg-white p-5 sm:p-8 rounded-xl border border-slate-100 shadow-sm">
               <p className="text-lg text-slate-700 leading-relaxed mb-6">
                 Extensive research suggests that social behavior is influenced by various factors that existing models in economics and other social sciences have neglected thus far. Prominent examples involve robust and consistent evidence illustrating that individuals' social behaviors are affected by emotions, induced reference points or contextual frames (see for an overview Jehli, 2017, master's thesis). However, most prevalent theories take social preferences as primitives and thus implicitly assume that they are stable, a priori determined, and consistent both, over time and across contexts.
               </p>

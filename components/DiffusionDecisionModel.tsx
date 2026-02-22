@@ -60,7 +60,7 @@ const DiffusionDecisionModel: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen p-6" style={{
+        <div className="min-h-screen p-3 sm:p-6" style={{
             backgroundImage: "url('/assets/background neural network.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -70,7 +70,7 @@ const DiffusionDecisionModel: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="max-w-4xl mx-auto my-8 p-8 md:p-12 bg-stone-100 shadow-xl rounded-lg border border-stone-300"
+                className="max-w-4xl mx-auto my-6 md:my-8 p-4 sm:p-8 md:p-12 bg-stone-100 shadow-xl rounded-lg border border-stone-300"
             >
                 {!post ? (
                     <div className="space-y-6 text-stone-700 leading-relaxed">

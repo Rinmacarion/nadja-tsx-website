@@ -26,9 +26,9 @@ const ResearchAreasPage: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="mb-16"
             >
-                <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-8 text-center">Research Areas</h1>
+                <h1 className="font-serif text-3xl md:text-5xl font-bold text-slate-900 mb-8 text-center">Research Areas</h1>
                 
-                <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed text-justify">
+                <div className="prose prose-lg prose-slate mx-auto text-slate-600 leading-relaxed text-left md:text-justify">
                     <p className="mb-6 font-medium text-academic-700 italic text-center">
                         Adaptability begins where certainty ends: in the moment the mind decides whether to persist, let go, or shift gears.
                     </p>
@@ -55,9 +55,13 @@ const ResearchAreasPage: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100"
+                    className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden"
                 >
-                    <div className="flex items-center gap-4 mb-6">
+                    <div className="md:hidden px-5 py-3 bg-gradient-to-r from-academic-800 to-academic-600 mb-6">
+                        <h2 className="text-2xl font-serif font-bold text-white leading-tight">From Integrative Theory to Real-World Utility</h2>
+                        <span className="text-sm font-bold text-academic-100 uppercase tracking-wider">Behavioral Adaptability & Agency</span>
+                    </div>
+                    <div className="hidden md:flex items-center gap-4 mb-6 px-10 pt-10">
                         <div className="p-3 bg-academic-100 text-academic-700 rounded-lg">
                             <Brain size={32} />
                         </div>
@@ -66,7 +70,7 @@ const ResearchAreasPage: React.FC = () => {
                             <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Behavioral Adaptability & Agency</span>
                         </div>
                     </div>
-                    <div className="prose prose-slate text-slate-600 leading-relaxed text-justify max-w-none">
+                    <div className="prose prose-slate text-slate-600 leading-relaxed text-left md:text-justify max-w-none px-5 pb-5 sm:px-8 sm:pb-8 md:px-10 md:pb-10">
                         <p>
                             At the core of my work is a fundamental question: How do minds decide when to persist, let go, or shift strategies as the world changes? How do cognitive, affective, and meta-cognitive processes together construct a sense of agency under uncertainty?
                         </p>
@@ -83,9 +87,13 @@ const ResearchAreasPage: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100"
+                    className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden"
                 >
-                    <div className="flex items-center gap-4 mb-6">
+                    <div className="md:hidden px-5 py-3 bg-gradient-to-r from-academic-800 to-academic-600 mb-6">
+                        <h2 className="text-2xl font-serif font-bold text-white leading-tight">Joint Modeling of Brain, Behavior & Physiology</h2>
+                        <span className="text-sm font-bold text-academic-100 uppercase tracking-wider">Meta-Learning & Agentic AI</span>
+                    </div>
+                    <div className="hidden md:flex items-center gap-4 mb-6 px-10 pt-10">
                         <div className="p-3 bg-academic-100 text-academic-700 rounded-lg">
                             <BarChart size={32} />
                         </div>
@@ -94,7 +102,7 @@ const ResearchAreasPage: React.FC = () => {
                             <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Meta-Learning & Agentic AI</span>
                         </div>
                     </div>
-                    <div className="prose prose-slate text-slate-600 leading-relaxed text-justify max-w-none">
+                    <div className="prose prose-slate text-slate-600 leading-relaxed text-left md:text-justify max-w-none px-5 pb-5 sm:px-8 sm:pb-8 md:px-10 md:pb-10">
                         <p>
                             Understanding adaptive behavior requires models that explain not only what choices people make, but how they learn to learn. Namely, how they infer structure, update strategies, and regulate control across changing environments. I develop mechanistic computational models and generative AI agents that formalize these meta-learning processes, treating artificial agents as experimental model systems for cognitive, affective, and motivational mechanisms.
                         </p>
@@ -114,9 +122,13 @@ const ResearchAreasPage: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100"
+                    className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden"
                 >
-                    <div className="flex items-center gap-4 mb-6">
+                    <div className="md:hidden px-5 py-3 bg-gradient-to-r from-academic-800 to-academic-600 mb-6">
+                        <h2 className="text-2xl font-serif font-bold text-white leading-tight">Ecological Assessment Platforms</h2>
+                        <span className="text-sm font-bold text-academic-100 uppercase tracking-wider">Translational Systems & Clinical Integration</span>
+                    </div>
+                    <div className="hidden md:flex items-center gap-4 mb-6 px-10 pt-10">
                         <div className="p-3 bg-academic-100 text-academic-700 rounded-lg">
                             <Globe size={32} />
                         </div>
@@ -125,7 +137,7 @@ const ResearchAreasPage: React.FC = () => {
                             <span className="text-sm font-bold text-academic-600 uppercase tracking-wider">Translational Systems & Clinical Integration</span>
                         </div>
                     </div>
-                    <div className="prose prose-slate text-slate-600 leading-relaxed text-justify max-w-none">
+                    <div className="prose prose-slate text-slate-600 leading-relaxed text-left md:text-justify max-w-none px-5 pb-5 sm:px-8 sm:pb-8 md:px-10 md:pb-10">
                         <p>
                             Traditional neurocognitive tests focus on single constructs and are not suited to study dynamics between them. Consequently, they miss to capture how people function in real-world, dynamic environments. I design ecologically valid behavioral and social-cognitive environments that integrate computational models with biomarkers, enabling adaptability to be measured as it unfolds in realistic contexts.
                         </p>

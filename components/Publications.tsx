@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PUBLICATIONS } from '../constants';
 
@@ -9,9 +9,9 @@ const Publications: React.FC = () => {
   const previewPublications = PUBLICATIONS.slice(0, 3);
 
   return (
-    <section id="publications" className="py-24 bg-white">
+    <section id="publications" className="py-20 md:py-24 bg-white">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-slate-100 pb-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-slate-100 pb-4">
           <div>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-2">Selected Publications</h2>
           </div>
@@ -34,15 +34,10 @@ const Publications: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group flex flex-col md:flex-row gap-6 p-6 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100"
+              className="group bg-white p-4 sm:p-6 rounded-xl transition-colors border border-slate-100 hover:border-slate-200"
             >
-              <div className="flex-shrink-0 mt-1">
-                <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-400 group-hover:bg-academic-100 group-hover:text-academic-600 transition-colors">
-                  <BookOpen size={20} />
-                </div>
-              </div>
               <div className="flex-grow">
-                <h3 className="text-xl font-semibold text-slate-900 mb-1 group-hover:text-academic-700 transition-colors">
+                <h3 className="text-lg md:text-xl font-semibold text-slate-900 mb-1 group-hover:text-academic-700 transition-colors">
                   {pub.title}
                 </h3>
                 <p className="text-sm text-slate-500 mb-3 italic">

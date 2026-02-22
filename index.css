@@ -1,0 +1,30 @@
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+a[role="button"],
+input[type="button"],
+input[type="submit"] {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}

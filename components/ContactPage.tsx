@@ -47,8 +47,8 @@ const ContactPage: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="mb-12 text-center"
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-4">Contact Me</h1>
-            <p className="text-xl text-slate-600 font-light max-w-2xl mx-auto">
+            <h1 className="font-serif text-3xl md:text-5xl font-bold text-slate-900 mb-4">Contact Me</h1>
+            <p className="text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto">
               Interested in collaborating, or have questions about my research? I'd love to hear from you.
             </p>
           </motion.div>
@@ -59,7 +59,7 @@ const ContactPage: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="md:w-5/12 bg-academic-900 text-white relative p-8 md:p-12 flex flex-col"
+              className="md:w-5/12 bg-academic-900 text-white relative p-5 sm:p-8 md:p-12 flex flex-col"
             >
               <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
               
@@ -111,11 +111,11 @@ const ContactPage: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="md:w-7/12 p-8 md:p-12 bg-white"
+              className="md:w-7/12 p-5 sm:p-8 md:p-12 bg-white"
             >
               <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6">Send a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-slate-700">Full Name *</label>

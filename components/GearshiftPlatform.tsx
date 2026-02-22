@@ -108,7 +108,7 @@ const GearshiftFellowship: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-12 bg-white p-8 rounded-xl border border-slate-100 shadow-sm"
+            className="mb-12 bg-white p-5 sm:p-8 rounded-xl border border-slate-100 shadow-sm"
           >
             <p className="text-lg text-slate-700 leading-relaxed mb-4">
               <span className="font-semibold text-slate-900">Answering these questions requires a new kind of integrative platform.</span>
@@ -171,28 +171,28 @@ const GearshiftFellowship: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
           >
-            <h2 className="text-2xl font-semibold text-slate-900 mb-6">Learn more:</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-slate-900 mb-6">Learn more:</h2>
 
             <div className="space-y-4">
-              <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
+              <div className="bg-blue-50 p-4 sm:p-6 rounded-lg border border-blue-100">
                 <p className="text-slate-700 leading-relaxed">
                   While the front-end is gamified, this platform is designed as an experimental tool for probing and modeling neurocognitive mechanisms across cognitive and social contexts. It is not intended as a standalone intervention, but rather as a modular testbed that can be integrated with other digital approaches.
                 </p>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
+              <div className="bg-blue-50 p-4 sm:p-6 rounded-lg border border-blue-100">
                 <p className="text-slate-700 leading-relaxed">
                   This platform is "computationally engineered"- meaning it is specifically tailored to dissect neurocomputational mechanisms in a rich, yet controlled environment. It is suitable for studying cognitive-affective processes across multiple frameworks (e.g., cognitive control, reinforcement learning, avoidance behavior, effort-based or risky decision-making).
                 </p>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
+              <div className="bg-blue-50 p-4 sm:p-6 rounded-lg border border-blue-100">
                 <p className="text-slate-700 leading-relaxed">
                   I'm using this platform to pursue my research program centered on the neurocomputational mechanisms of adaptive behavior in natural and artificial intelligence, with a particular focus on how uncertainty, stress, and controllability influence mental and behavioral flexibility across cognitive and social contexts.
                 </p>
               </div>
 
-              <div className="bg-amber-50 p-6 rounded-lg border border-amber-100">
+              <div className="bg-amber-50 p-4 sm:p-6 rounded-lg border border-amber-100">
                 <p className="text-slate-700 leading-relaxed">
                   <span className="font-semibold text-slate-900">Disclaimer:</span> This is an early-stage scientific and translational concept under active development. All concepts and designs are original and protected by applicable intellectual property rights. Please contact before reuse or citation.
                 </p>
@@ -209,7 +209,7 @@ const GearshiftFellowship: React.FC = () => {
           >
             <div className="grid md:grid-cols-3 gap-6">
               {/* For Scientists */}
-              <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white p-5 sm:p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-4">
                   <Lightbulb className="w-8 h-8 text-academic-600" />
                   <h3 className="text-xl font-semibold text-slate-900">For Scientists</h3>
@@ -229,7 +229,7 @@ const GearshiftFellowship: React.FC = () => {
               </div>
 
               {/* For Clinicians */}
-              <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white p-5 sm:p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-4">
                   <Heart className="w-8 h-8 text-red-600" />
                   <h3 className="text-xl font-semibold text-slate-900">For Clinicians</h3>
@@ -249,7 +249,7 @@ const GearshiftFellowship: React.FC = () => {
               </div>
 
               {/* For Institutions & Funders */}
-              <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-white p-5 sm:p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-4">
                   <Zap className="w-8 h-8 text-yellow-600" />
                   <h3 className="text-xl font-semibold text-slate-900">For Institutions & Funders</h3>

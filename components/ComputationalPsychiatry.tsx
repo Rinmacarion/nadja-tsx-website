@@ -21,12 +21,12 @@ const ComputationalPsychiatry: React.FC = () => {
             <p className="text-red-600 font-semibold mb-4">
               This section is currently being expanded to include new work on mechanistic cognitive models and generative AI agents.
             </p>
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-slate-900 mb-6">
               Computational Psychiatry
             </h1>
             
             <div className="space-y-4 mb-8">
-              <h2 className="text-2xl font-semibold text-academic-700">
+              <h2 className="text-xl md:text-2xl font-semibold text-academic-700">
                 Using computational psychiatry to characterize the neuropsychological pathways of ADHD
               </h2>
               <h3 className="text-xl font-semibold text-slate-800">
@@ -42,7 +42,7 @@ const ComputationalPsychiatry: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-slate-900 mb-6">Objectives and Approach</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-6">Objectives and Approach</h2>
 
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
               The purpose of my research program is to better understand the neuropsychological pathways of child and adult attention-deficit hyperactivity disorder (ADHD) as well as other mental health conditions such as mood disorders. Specifically, I pursue the following three aims:
@@ -60,7 +60,7 @@ const ComputationalPsychiatry: React.FC = () => {
               </li>
             </ol>
 
-            <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm mb-8">
+            <div className="bg-white p-5 sm:p-8 rounded-xl border border-slate-100 shadow-sm mb-8">
               <p className="text-lg text-slate-700 leading-relaxed mb-6">
                 To pursue these aims, I am using a multidisciplinary approach that consists of clinical questionnaires, behavioral tests, and physiological measures such as electroencephalography (EEG) and eye tracking. To integrate these different measures into one framework, I am using computational modeling and machine learning. In so doing, I am implementing the Research Domain Criteria (RDoC) approach of the National Institute of Mental Health into practice. Figure 1 summarizes the objectives and the methodological approach of my research program.
               </p>
@@ -91,9 +91,9 @@ const ComputationalPsychiatry: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-slate-900 mb-6">Significance of My Research Program</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-6">Significance of My Research Program</h2>
 
-            <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm">
+            <div className="bg-white p-5 sm:p-8 rounded-xl border border-slate-100 shadow-sm">
               <p className="text-slate-700 leading-relaxed mb-4">
                 Characterizing ADHD from a multidisciplinary perspective can help in the search for effective, tailored assessments and treatments, especially identification of subgroups responsive to specific treatments. Developing an integrative modeling tool allows psychologically meaningful interpretations of neurocognitive and EEG measures, as well as eye-tracking patterns.
               </p>
@@ -111,13 +111,13 @@ const ComputationalPsychiatry: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-slate-900 mb-6">Components of My Research Program</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-6">Components of My Research Program</h2>
 
             <p className="text-lg text-slate-700 leading-relaxed mb-8">
               My research program involves multiple (ongoing/completed) projects. Each completed project helped me to develop the integrative approach outlined in Figure 1. Currently, I am implementing this integrative approach as part of my dissertation.
             </p>
 
-            <div className="bg-blue-50 p-8 rounded-xl border border-blue-100 mb-8">
+            <div className="bg-blue-50 p-5 sm:p-8 rounded-xl border border-blue-100 mb-8">
               <p className="text-slate-700 leading-relaxed mb-6">
                 In my review article, I found that young adults with ADHD (particularly females) represent an understudied population. Studying the neurocognitive characteristics of this population is important given that the number of young adults diagnosed with ADHD is increasing. For my dissertation, I use a novel test environment (composed of self-developed cognitive and social-cognitive tasks, physiological and clinical measures) to pursue the following aims:
               </p>
@@ -141,13 +141,13 @@ const ComputationalPsychiatry: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-slate-900 mb-8">Explanation of Methodological Approach</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-8">Explanation of Methodological Approach</h2>
 
             {/* Computational Modeling */}
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Computational Modeling</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-slate-900 mb-4">Computational Modeling</h3>
 
-              <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm">
+              <div className="bg-white p-5 sm:p-8 rounded-xl border border-slate-100 shadow-sm">
                 <div className="flex flex-col md:flex-row gap-8 items-start">
                   <div className="flex-1">
                     <p className="text-slate-700 leading-relaxed mb-6">
@@ -177,9 +177,9 @@ const ComputationalPsychiatry: React.FC = () => {
 
             {/* Joint-Modeling Approach */}
             <div>
-              <h3 className="text-2xl font-semibold text-slate-900 mb-4">Joint-Modeling Approach</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-slate-900 mb-4">Joint-Modeling Approach</h3>
 
-              <div className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm">
+              <div className="bg-white p-5 sm:p-8 rounded-xl border border-slate-100 shadow-sm">
                 <div className="flex flex-col md:flex-row gap-8 items-start">
                   <div className="flex-1">
                     <p className="text-slate-700 leading-relaxed mb-6">
@@ -215,7 +215,7 @@ const ComputationalPsychiatry: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-slate-900 mb-6">References</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-6">References</h2>
 
             <ol className="list-none ml-0 space-y-2 text-sm">
               <li className="flex"><span className="mr-3 font-mono text-sm text-slate-700">[1]</span><div><span className="italic">The National Institute of Mental Health (NIMH) Research Domain Criteria (RDoC) initiative</span>. National Institute of Mental Health. https://www.nimh.nih.gov/research/research-funded-by-nimh/rdoc/index.shtml</div></li>

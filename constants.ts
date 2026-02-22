@@ -20,7 +20,8 @@ My long-term vision is to lead an interdisciplinary research program that unifie
     twitterHandle: "@NadjaGingJehli",
     linkedin: "https://www.linkedin.com/in/nadja-ging-jehli-phd-7b1539a9",
     scholar: "https://scholar.google.com/citations?user=V8zeDrIAAAAJ",
-    researchgate: "https://www.researchgate.net/profile/Nadja-Ging-Jehli"
+    researchgate: "https://www.researchgate.net/profile/Nadja-Ging-Jehli",
+    orcid: "https://orcid.org/0000-0002-1071-0693"
   }
 };
 

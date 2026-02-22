@@ -50,7 +50,7 @@ const BlogPage: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-4">Welcome to my modeling cockpit!</h1>
+            <h1 className="font-serif text-3xl md:text-5xl font-bold text-slate-900 mb-4">Welcome to my modeling cockpit!</h1>
             <p className="text-lg text-slate-600 leading-relaxed">
               Here, I provide brief and digestible blogs covering various aspects of modeling. From the foundational principles of hierarchical/multilevel modeling (spanning both Bayesian and Frequentist approaches) to the nitty-gritty of advanced modeling techniques, including applications with sequential sampling modeling, neural network modeling, and other machine learning techniques. In addition to insightful explanations, you'll find practical guides about various modeling toolboxes.
             </p>
@@ -66,7 +66,7 @@ const BlogPage: React.FC = () => {
             className="mb-8"
           >
             <h2 className="text-2xl font-semibold text-slate-900 mb-3">Practical Tutorials</h2>
-            <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+            <div className="bg-white p-4 sm:p-6 rounded-xl border border-slate-100 shadow-sm">
               <p className="text-slate-700">I currently provide tutorials and code snippets on my <a href="https://github.com/gingjehli" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub account</a>. I will soon add more tutorials and code snippets for different modeling toolboxes.</p>
             </div>
           </motion.div>
@@ -116,7 +116,7 @@ const BlogPage: React.FC = () => {
             )}
 
             {posts.map((post: any) => (
-              <div key={post.id} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+              <div key={post.id} className="bg-white p-4 sm:p-6 rounded-xl border border-slate-100 shadow-sm">
                 <div className="flex items-start justify-between">
                   <div className="flex-grow">
                     <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight">{post.title}</h3>

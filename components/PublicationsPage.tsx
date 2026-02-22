@@ -30,8 +30,8 @@ const PublicationsPage: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="mb-12 text-center md:text-left"
             >
-                <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-4">Publications</h1>
-                <p className="text-xl text-slate-600 font-light">
+                <h1 className="font-serif text-3xl md:text-5xl font-bold text-slate-900 mb-4">Publications</h1>
+                <p className="text-lg md:text-xl text-slate-600 font-light">
                     Full list of peer-reviewed journal articles, conference proceedings, and book chapters.
                 </p>
             </motion.div>
@@ -51,7 +51,7 @@ const PublicationsPage: React.FC = () => {
 
                         <div className="space-y-6">
                             {pubsByYear[year].map((pub) => (
-                                <div key={pub.id} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                                <div key={pub.id} className="bg-white p-4 sm:p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                                     <div className="flex flex-col md:flex-row gap-4">
                                         <div className="flex-grow">
                                             <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight">
@@ -59,13 +59,13 @@ const PublicationsPage: React.FC = () => {
                                             </h3>
                                             <p className="text-slate-600 mb-2">
                                                 {pub.authors.map((author, i) => (
-                                                    <span key={i} className={author.includes('Jehli') ? "font-bold text-slate-800" : ""}>
+                                                    <span key={i}>
                                                         {author}{i < pub.authors.length - 1 ? ", " : ""}
                                                     </span>
                                                 ))}
                                             </p>
                                             <div className="flex items-center gap-2 text-sm text-academic-600 font-medium italic mb-3">
-                                                <BookOpen size={14} />
+                                                <BookOpen size={14} className="hidden md:block" />
                                                 {pub.journal}
                                             </div>
                                             <p className="text-slate-500 text-sm leading-relaxed mb-4">
@@ -78,8 +78,30 @@ const PublicationsPage: React.FC = () => {
                                                     </span>
                                                 ))}
                                             </div>
+                                            <div className="md:hidden flex flex-wrap gap-3 mt-4 text-sm">
+                                                {pub.link && (
+                                                    <a
+                                                        href={pub.link}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-academic-700 font-medium hover:text-academic-900 underline underline-offset-2"
+                                                    >
+                                                        View article
+                                                    </a>
+                                                )}
+                                                {pub.pdf && (
+                                                    <a
+                                                        href={pub.pdf}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-academic-700 font-medium hover:text-academic-900 underline underline-offset-2"
+                                                    >
+                                                        View preprint
+                                                    </a>
+                                                )}
+                                            </div>
                                         </div>
-                                        <div className="flex-shrink-0 flex md:flex-col gap-2 pt-1">
+                                        <div className="hidden md:flex flex-shrink-0 md:flex-col gap-2 pt-1">
                                             {pub.link && (
                                                 <a 
                                                     href={pub.link}
@@ -140,7 +162,7 @@ const PublicationsPage: React.FC = () => {
                             status: "submitted"
                         }
                     ].map((pub, idx) => (
-                        <div key={idx} className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div key={idx} className="bg-white p-4 sm:p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                             <div className="flex flex-col md:flex-row gap-4">
                                 <div className="flex-grow">
                                     <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight">
@@ -148,7 +170,7 @@ const PublicationsPage: React.FC = () => {
                                     </h3>
                                     <p className="text-slate-600 mb-2">
                                         {pub.authors.map((author, i) => (
-                                            <span key={i} className={author.includes('Jehli') ? "font-bold text-slate-800" : ""}>
+                                            <span key={i}>
                                                 {author}{i < pub.authors.length - 1 ? ", " : ""}
                                             </span>
                                         ))}
@@ -167,16 +189,16 @@ const PublicationsPage: React.FC = () => {
                 </div>
 
                 <div className="space-y-4">
-                    <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                    <div className="bg-white p-4 sm:p-6 rounded-xl border border-slate-100 shadow-sm">
                         <p className="text-slate-800 text-sm leading-relaxed">Generative Archetypes of Adaptive Intelligence. Integrating cognitive mechanisms with adaptive AI</p>
                     </div>
-                    <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                    <div className="bg-white p-4 sm:p-6 rounded-xl border border-slate-100 shadow-sm">
                         <p className="text-slate-800 text-sm leading-relaxed">A unified modeling approach to characterize disorder-specific and transdiagnostic features across cognitive domains and over time</p>
                     </div>
-                    <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                    <div className="bg-white p-4 sm:p-6 rounded-xl border border-slate-100 shadow-sm">
                         <p className="text-slate-800 text-sm leading-relaxed">Neuronal and attentional signatures of attention-deficit/hyperactivity disorder (ADHD) within a novel cognitive flexibility task</p>
                     </div>
-                    <div className="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                    <div className="bg-white p-4 sm:p-6 rounded-xl border border-slate-100 shadow-sm">
                         <p className="text-slate-800 text-sm leading-relaxed">Neurocognitive study using own developed cognitive flexibility paradigm and a new joint-modeling approach to integrate behavioral responses, eye tracking, and EEG</p>
                     </div>
                 </div>
