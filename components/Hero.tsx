@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-12">
             <a
-              href="/assets/CV_GingJehli_011826.pdf"
+              href="/assets/CV_GingJehli_022126.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-12 w-72 py-3 bg-academic-200 text-academic-800 rounded-lg font-medium hover:bg-academic-300 transition-colors shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
