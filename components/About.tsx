@@ -39,7 +39,7 @@ const About: React.FC = () => {
               <br /><br />
               <span className="font-bold">3. Translate impact.</span> Transform these insights into scalable systems that improve mental health care, support clinical decision-making, and enable human-aligned AI.
               <br /><br />
-              Through <Link to="/gearshift" className="text-academic-600 font-semibold underline hover:text-academic-800 transition-colors">Gearshift Fellowship</Link>, I am building not just a research tool, but an ecosystem where scientists, clinicians, engineers, and participants co-evolve adaptive intelligence together.
+              Through <Link to="/gearshiftfellowship" className="text-academic-600 font-semibold underline hover:text-academic-800 transition-colors">Gearshift Fellowship</Link>, I am building not just a research tool, but an ecosystem where scientists, clinicians, engineers, and participants co-evolve adaptive intelligence together.
             </p>
           </div>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">About Me</h2>

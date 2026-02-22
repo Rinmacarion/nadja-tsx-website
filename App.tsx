@@ -56,8 +56,8 @@ function App() {
           <Route path="/blog/:id" element={<DiffusionDecisionModel />} />
           <Route path="/research" element={<ResearchAreasPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/gearshift" element={<GearshiftFellowship />} />
-          <Route path="/gearshiftfellowship" element={<Navigate to="/gearshift" replace />} />
+          <Route path="/gearshiftfellowship" element={<GearshiftFellowship />} />
+          <Route path="/gearshift" element={<Navigate to="/gearshiftfellowship" replace />} />
           <Route path="/computational-psychiatry" element={<ComputationalPsychiatry />} />
           <Route path="/behavioral-economics" element={<BehavioralEconomics />} />
           <Route path="/what-is-gf" element={<WhatIsGF />} />
