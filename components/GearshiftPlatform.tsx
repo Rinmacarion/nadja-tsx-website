@@ -1,5 +1,5 @@
 // CollapsibleSection component (must be top-level, before all imports)
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 const CollapsibleSection: React.FC<{ question: string; className?: string; children: React.ReactNode }> = ({ question, className = '', children }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -23,6 +23,32 @@ import Footer from './Footer';
 import { PERSONAL_INFO } from '../constants';
 
 const GearshiftFellowship: React.FC = () => {
+  useEffect(() => {
+    const previousTitle = document.title;
+    document.title = 'Gearshift Fellowship | Nadja Ging-Jehli';
+
+    const descriptionContent = 'Gearshift Fellowship is an independently developed research ecosystem integrating computational modeling, serious-game environments, and adaptive AI for adaptive intelligence and mental health research.';
+    let metaDescription = document.querySelector('meta[name="description"]');
+
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+
+    const previousDescription = metaDescription.getAttribute('content') || '';
+    metaDescription.setAttribute('content', descriptionContent);
+
+    return () => {
+      document.title = previousTitle;
+      if (previousDescription) {
+        metaDescription?.setAttribute('content', previousDescription);
+      } else {
+        metaDescription?.removeAttribute('content');
+      }
+    };
+  }, []);
+
   const handleEmailClick = (subject: string) => {
     const emailAddress = "gearshiftfellowship@gmail.com";
     const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}`;

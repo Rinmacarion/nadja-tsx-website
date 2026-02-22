@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -57,6 +57,7 @@ function App() {
           <Route path="/research" element={<ResearchAreasPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/gearshift" element={<GearshiftFellowship />} />
+          <Route path="/gearshiftfellowship" element={<Navigate to="/gearshift" replace />} />
           <Route path="/computational-psychiatry" element={<ComputationalPsychiatry />} />
           <Route path="/behavioral-economics" element={<BehavioralEconomics />} />
           <Route path="/what-is-gf" element={<WhatIsGF />} />
