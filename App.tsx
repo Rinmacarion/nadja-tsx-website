@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,7 +12,7 @@ import ResearchAreasPage from './components/ResearchAreasPage';
 import ContactPage from './components/ContactPage';
 import BlogPage from './components/BlogPage';
 import DiffusionDecisionModel from './components/DiffusionDecisionModel';
-import GearshiftPlatform from './components/GearshiftPlatform';
+import GearshiftFellowship from './components/GearshiftPlatform';
 import ComputationalPsychiatry from './components/ComputationalPsychiatry';
 import BehavioralEconomics from './components/BehavioralEconomics';
 import EinsteinQuote from './components/EinsteinQuote';
@@ -46,7 +46,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen bg-slate-50 font-sans">
         <Routes>
@@ -56,14 +56,14 @@ function App() {
           <Route path="/blog/:id" element={<DiffusionDecisionModel />} />
           <Route path="/research" element={<ResearchAreasPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/gearshift" element={<GearshiftPlatform />} />
+          <Route path="/gearshift" element={<GearshiftFellowship />} />
           <Route path="/computational-psychiatry" element={<ComputationalPsychiatry />} />
           <Route path="/behavioral-economics" element={<BehavioralEconomics />} />
           <Route path="/what-is-gf" element={<WhatIsGF />} />
           <Route path="/leadership" element={<Leadership />} />
         </Routes>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

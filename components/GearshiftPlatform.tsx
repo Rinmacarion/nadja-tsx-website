@@ -22,7 +22,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { PERSONAL_INFO } from '../constants';
 
-const GearshiftPlatform: React.FC = () => {
+const GearshiftFellowship: React.FC = () => {
   const handleEmailClick = (subject: string) => {
     const emailAddress = "gearshiftfellowship@gmail.com";
     const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}`;
@@ -280,4 +280,4 @@ const GearshiftPlatform: React.FC = () => {
   );
 };
 
-export default GearshiftPlatform;
+export default GearshiftFellowship;
