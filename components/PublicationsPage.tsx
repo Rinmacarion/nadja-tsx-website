@@ -32,7 +32,7 @@ const PublicationsPage: React.FC = () => {
             >
                 <h1 className="font-serif text-3xl md:text-5xl font-bold text-slate-900 mb-4">Publications</h1>
                 <p className="text-lg md:text-xl text-slate-600 font-light">
-                    Full list of peer-reviewed journal articles, conference proceedings, and book chapters.
+                    Full list of peer-reviewed journal articles. For preprints, conference proceedings, and book chapters, please see <a href="/assets/CV_GingJehli_032726.pdf" target="_blank" rel="noopener noreferrer" className="text-academic-700 hover:text-academic-800 underline">CV</a>.
                 </p>
             </motion.div>
 

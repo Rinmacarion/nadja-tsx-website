@@ -49,6 +49,16 @@ export const RESEARCH_AREAS: ResearchArea[] = [
 export const PUBLICATIONS: Publication[] = [
   // Published Articles
   {
+    id: 'p0',
+    title: "A novel approach-avoidance task to study decision making under outcome uncertainty",
+    journal: "Psychonomic Bulletin & Review, 33(4), 114",
+    year: 2026,
+    authors: ["Cheng, Z.", "Ging-Jehli, N.R.", "Tarlow, M.", "Kim, J.", "Chase, H.W.", "Arora, M.", "Shenhav, A."],
+    abstract: "Sequential sampling models reveal dissociable mechanisms in approach-avoidance decisions under motivational conflict and outcome uncertainty.",
+    tags: ["Decision Making", "Uncertainty", "Behavioral Task"],
+    link: "https://link.springer.com/article/10.3758/s13423-026-02885-9"
+  },
+  {
     id: 'p1',
     title: "Gearshift Fellowship: A Next-Generation Neurocomputational Game Platform to Model and Train Human-AI Adaptability",
     journal: "Lecture Notes in Computer Science, vol 16243. Springer, Cham (JCSG 2025)",
