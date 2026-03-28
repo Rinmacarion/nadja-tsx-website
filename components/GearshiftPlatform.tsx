@@ -60,45 +60,54 @@ const GearshiftFellowship: React.FC = () => {
 
       <main className="flex-grow pt-28 pb-16">
         <div className="container mx-auto px-6 max-w-3xl">
-          {/* Hero Section */}
+          {/* Header Bar with Logo and Tagline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-16"
+            className="mb-12 bg-gradient-to-r from-slate-50 to-slate-100 rounded-xl border border-slate-200 p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6"
           >
-            {/* Hero Image at Top */}
-            <div className="w-full flex justify-center mb-8">
+            {/* Small Logo */}
+            <div className="flex-shrink-0">
               <img
                 src="/assets/gearshift%20fellowship.jpg"
                 alt="Gearshift Fellowship"
-                className="w-full max-w-xs md:max-w-md rounded-2xl shadow-xl border-4 border-white"
+                className="w-24 sm:w-32 rounded-xl shadow-md border-2 border-white"
                 loading="eager"
               />
             </div>
-            {/* Hero Content below image */}
-            <div className="w-full flex flex-col items-center text-center">
-              <h2 className="text-xl md:text-2xl font-semibold text-slate-800 mb-2">One Platform. Three Missions.</h2>
-              <p className="text-lg md:text-xl text-academic-700 font-medium mb-6">
+            {/* Tagline Content */}
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">One Platform. Three Missions.</h2>
+              <p className="text-lg md:text-xl text-academic-700 font-medium">
                 Advancing science. Empowering clinicians. Driving real-world impact.
               </p>
-              {/* Three Missions as Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full mb-6">
-                <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center border border-slate-100">
-                  <Lightbulb className="w-8 h-8 text-academic-600 mb-2" />
-                  <span className="font-semibold text-slate-900 mb-1">Adaptation</span>
-                  <span className="text-slate-700 text-sm">How do humans and AI agents adapt in a fast, ever-changing world?</span>
-                </div>
-                <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center border border-slate-100">
-                  <Users className="w-8 h-8 text-blue-600 mb-2" />
-                  <span className="font-semibold text-slate-900 mb-1">Decision-Making</span>
-                  <span className="text-slate-700 text-sm">How do we decide when to persist, let go, or shift gears?</span>
-                </div>
-                <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center border border-slate-100">
-                  <Heart className="w-8 h-8 text-red-500 mb-2" />
-                  <span className="font-semibold text-slate-900 mb-1">Resilience</span>
-                  <span className="text-slate-700 text-sm">Why do we get stuck, and how do we best cope with it?</span>
-                </div>
+            </div>
+          </motion.div>
+
+          {/* Hero Section with Mission Cards */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-16"
+          >
+            {/* Three Missions as Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
+              <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center border border-slate-100">
+                <Lightbulb className="w-8 h-8 text-academic-600 mb-2" />
+                <span className="font-semibold text-slate-900 mb-1">Adaptation</span>
+                <span className="text-slate-700 text-sm">How do humans and AI agents adapt in a fast, ever-changing world?</span>
+              </div>
+              <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center border border-slate-100">
+                <Users className="w-8 h-8 text-blue-600 mb-2" />
+                <span className="font-semibold text-slate-900 mb-1">Decision-Making</span>
+                <span className="text-slate-700 text-sm">How do we decide when to persist, let go, or shift gears?</span>
+              </div>
+              <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center border border-slate-100">
+                <Heart className="w-8 h-8 text-red-500 mb-2" />
+                <span className="font-semibold text-slate-900 mb-1">Resilience</span>
+                <span className="text-slate-700 text-sm">Why do we get stuck, and how do we best cope with it?</span>
               </div>
             </div>
           </motion.div>
