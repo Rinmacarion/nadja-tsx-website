@@ -139,7 +139,7 @@ const GearshiftFellowship: React.FC = () => {
                 id="platform-video"
                 src="/assets/GF01_VersionClinical_GingJehli.mp4"
                 controls
-                className="rounded-xl shadow-lg w-full max-w-2xl"
+                className="rounded-xl shadow-lg w-full max-w-2xl scroll-m-20"
                 poster="/assets/gearshift%20fellowship.jpg"
               >
                 Your browser does not support the video tag.
