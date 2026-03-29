@@ -58,10 +58,15 @@ const Hero: React.FC = () => {
               </a>
             </div>
           </div>
-          <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto md:mx-0 font-light leading-relaxed">
-            I lead an independent research program on how humans and machines adapt in uncertain, dynamic environments.<br />
-            Bridging neuroscience, psychiatry, AI, and economics, my work focuses on meta-learning, behavioral adaptability, and perceived controllability - to generate interdisciplinary insights & build scalable ecosystems for scientific discovery and real-world impact.
+          <p className="text-lg md:text-xl text-slate-600 mb-4 max-w-2xl mx-auto md:mx-0 font-light leading-relaxed">
+            I lead an independent research program on how humans and intelligent systems adapt in uncertain, dynamic environments. Bridging neuroscience, psychiatry, AI, and economics, my work focuses on controllability, agency, and adaptive intelligence, grounded in meta-learning, to understand how minds regulate persistence versus disengagement and to build scalable systems for scientific discovery and real-world impact.
           </p>
+          <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-8">
+            <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Agency</span>
+            <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Controllability</span>
+            <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Persistence vs. Escape</span>
+            <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Adaptive Intelligence</span>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-12">
             <a
               href="/assets/CV_GingJehli_032726.pdf"

@@ -17,7 +17,7 @@ const CollapsibleSection: React.FC<{ question: string; className?: string; child
   );
 };
 import { motion } from 'framer-motion';
-import { Zap, Users, Heart, Lightbulb } from 'lucide-react';
+import { Zap, Users, Heart, Lightbulb, PlayCircle } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { PERSONAL_INFO } from '../constants';
@@ -79,8 +79,12 @@ const GearshiftFellowship: React.FC = () => {
             {/* Tagline Content */}
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">One Platform. Three Missions.</h2>
-              <p className="text-lg md:text-xl text-academic-700 font-medium">
+              <p className="text-lg md:text-xl text-academic-700 font-medium flex items-center">
                 Advancing science. Empowering clinicians. Driving real-world impact.
+                <a href="#platform-video" className="ml-4 text-sm font-semibold text-academic-600 hover:text-academic-800 transition-colors flex items-center gap-1.5 group">
+                  <PlayCircle size={18} className="transition-transform group-hover:scale-110" />
+                  <span>Watch the Video</span>
+                </a>
               </p>
             </div>
           </motion.div>
@@ -132,6 +136,7 @@ const GearshiftFellowship: React.FC = () => {
             </p>
             <div className="flex justify-center my-6">
               <video
+                id="platform-video"
                 src="/assets/GF01_VersionClinical_GingJehli.mp4"
                 controls
                 className="rounded-xl shadow-lg w-full max-w-2xl"
