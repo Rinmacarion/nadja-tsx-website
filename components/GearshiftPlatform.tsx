@@ -214,6 +214,34 @@ const GearshiftFellowship: React.FC = () => {
             </div>
           </motion.div>
 
+          {/* Vision Statement */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-semibold text-slate-900 mb-8">My Vision</h2>
+
+            <p className="text-lg text-slate-700 leading-relaxed mb-8">
+              A digital platform designed to holistically assess and enhance mental flexibility, advancing neuropsychological science and fostering mental resilience. By integrating state-of-the-art AI and computational modeling, we bring together scientists, the public, and healthcare professionals to improve productivity and coping skills in everyone, particularly those with ADHD and co-occurring anxiety and mood conditions.
+            </p>
+
+            <h3 className="text-xl font-semibold text-slate-900 mb-6">Our platform aims to:</h3>
+
+            <ol className="space-y-4 list-decimal list-inside">
+              <li className="text-slate-700 leading-relaxed">
+                <span className="font-semibold">Advance the study of mental flexibility</span> by exploring the biopsychological characteristics of behavioral adaptability across various contexts and varying timescales.
+              </li>
+              <li className="text-slate-700 leading-relaxed">
+                <span className="font-semibold">Enhance research</span> in neuroscience, psychology and computational psychiatry by addressing current barriers of traditional neurocognitive tests and modeling tool applications.
+              </li>
+              <li className="text-slate-700 leading-relaxed">
+                <span className="font-semibold">Integrate users and empower participants</span> by giving affected individuals a voice, with the long-term goal of creating personalized and autonomous digital coaching.
+              </li>
+            </ol>
+          </motion.div>
+
           {/* Three Missions */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -282,34 +310,6 @@ const GearshiftFellowship: React.FC = () => {
                 </button>
               </div>
             </div>
-          </motion.div>
-
-          {/* Vision Statement */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-12"
-          >
-            <h2 className="text-3xl font-semibold text-slate-900 mb-8">My Vision</h2>
-
-            <p className="text-lg text-slate-700 leading-relaxed mb-8">
-              A digital platform designed to holistically assess and enhance mental flexibility, advancing neuropsychological science and fostering mental resilience. By integrating state-of-the-art AI and computational modeling, we bring together scientists, the public, and healthcare professionals to improve productivity and coping skills in everyone, particularly those with ADHD and co-occurring anxiety and mood conditions.
-            </p>
-
-            <h3 className="text-xl font-semibold text-slate-900 mb-6">Our platform aims to:</h3>
-
-            <ol className="space-y-4 list-decimal list-inside">
-              <li className="text-slate-700 leading-relaxed">
-                <span className="font-semibold">Advance the study of mental flexibility</span> by exploring the biopsychological characteristics of behavioral adaptability across various contexts and varying timescales.
-              </li>
-              <li className="text-slate-700 leading-relaxed">
-                <span className="font-semibold">Enhance research</span> in neuroscience, psychology and computational psychiatry by addressing current barriers of traditional neurocognitive tests and modeling tool applications.
-              </li>
-              <li className="text-slate-700 leading-relaxed">
-                <span className="font-semibold">Integrate users and empower participants</span> by giving affected individuals a voice, with the long-term goal of creating personalized and autonomous digital coaching.
-              </li>
-            </ol>
           </motion.div>
 
         </div>

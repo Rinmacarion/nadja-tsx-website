@@ -59,16 +59,16 @@ const Hero: React.FC = () => {
                   </a>
                 </div>
             </div>
-            <div className="flex flex-wrap gap-2 justify-center mt-4">
-                <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Agency</span>
-                <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Controllability</span>
-                <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Persistence vs. Escape</span>
-                <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Adaptive Intelligence</span>
-            </div>
           </div>
           <p className="text-lg md:text-xl text-slate-600 mb-4 max-w-2xl mx-auto md:mx-0 font-light leading-relaxed">
             I lead an independent research program on how humans and intelligent systems adapt in uncertain, dynamic environments. Bridging neuroscience, psychiatry, AI, and economics, my work focuses on controllability, agency, and adaptive intelligence, grounded in meta-learning, to understand how minds regulate persistence versus disengagement and to build scalable systems for scientific discovery and real-world impact.
           </p>
+          <div className="flex flex-wrap gap-2 justify-center mt-4 md:hidden">
+                <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Agency</span>
+                <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Controllability</span>
+                <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Persistence vs. Escape</span>
+                <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Adaptive Intelligence</span>
+          </div>
           <div className="hidden md:flex flex-wrap gap-2 justify-center md:justify-start mb-8">
             <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Agency</span>
             <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Controllability</span>
