@@ -152,9 +152,10 @@ const PublicationsPage: React.FC = () => {
                     {/* ARTICLES UNDER REVIEW */}
                     {[
                         {
-                            title: "A Novel Approach-Avoidance Task to Study Decision Making Under Outcome Uncertainty",
-                            authors: ["Ziwei, C.", "Ging-Jehli, N.R.", "Tarlow, M.", "Kim, J.", "Chase, H.W.", "Bonar, L.", "Stiffler, R.", "Grattery, A.", "Graur, S.", "Frank, M.J.", "Phillips, M.L.", "Shenhav, A."],
-                            status: "submitted"
+                            title: "Sustaining Control and Agency Under Threat: Computational Pathways to Persistence and Escape",
+                            authors: ["Ging-Jehli, N.R.", "Childers, R.K."],
+                            status: "submitted",
+                            link: "https://www.biorxiv.org/content/10.64898/2026.04.08.717273v1"
                         },
                         {
                             title: "Broader visual processing and distinct pupil dynamics facilitate resolving perceptual conflict and compensate for ADHD distractibility.",
@@ -176,6 +177,18 @@ const PublicationsPage: React.FC = () => {
                                         ))}
                                         <span className="text-academic-600 font-medium ml-2">({pub.status})</span>
                                     </p>
+                                    {pub.link && (
+                                        <div className="mt-2">
+                                            <a
+                                                href={pub.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-academic-700 font-medium hover:text-academic-900 underline underline-offset-2 text-sm"
+                                            >
+                                                View preprint
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
