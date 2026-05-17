@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
                 <div className="relative w-44 h-44 flex-shrink-0">
                   <div className="absolute inset-0 bg-academic-200 rounded-full blur-2xl opacity-50 transform translate-x-3 translate-y-3"></div>
                   <img
-                    src="/assets/nadja.png"
+                    src="/assets/nadjanew.JPG"
                     alt={PERSONAL_INFO.name}
                     className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white"
                     style={{ objectPosition: 'center top' }}
@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
           <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
             <div className="absolute inset-0 bg-academic-200 rounded-full blur-2xl opacity-50 transform translate-x-4 translate-y-4"></div>
             <img 
-              src="/assets/nadja.png"
+              src="/assets/nadjanew.JPG"
               alt={PERSONAL_INFO.name}
               className="relative w-full h-full object-cover rounded-full shadow-2xl border-4 border-white"
               style={{ objectPosition: 'center top' }}
