@@ -71,6 +71,7 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
+    { name: 'NAIADEL Lab', href: '/naiadel-lab' },
     { name: 'Research Areas', href: '/research' },
     { name: 'Publications', href: '/publications' },
     { name: 'Modeling Hub', href: '/blog' },

@@ -16,6 +16,7 @@ import GearshiftFellowship from './components/GearshiftPlatform';
 import ComputationalPsychiatry from './components/ComputationalPsychiatry';
 import BehavioralEconomics from './components/BehavioralEconomics';
 import EinsteinQuote from './components/EinsteinQuote';
+import NAIADELLab from './components/NAIADELLab';
 import WhatIsGF from './pages/WhatIsGF';
 import Leadership from './pages/Leadership';
 
@@ -54,6 +55,7 @@ function App() {
           <Route path="/publications" element={<PublicationsPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<DiffusionDecisionModel />} />
+          <Route path="/naiadel-lab" element={<NAIADELLab />} />
           <Route path="/research" element={<ResearchAreasPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/gearshiftfellowship" element={<GearshiftFellowship />} />
