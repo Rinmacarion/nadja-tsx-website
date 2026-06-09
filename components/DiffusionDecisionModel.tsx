@@ -10,7 +10,7 @@ const DiffusionDecisionModel: React.FC = () => {
     const params = useParams();
     const POST_ID = params.id || 'diffusion-ddm';
     const post = BLOG_POSTS.find((p: any) => p.id === POST_ID);
-    // Ratings and comments persisted in localStorage per post
+    // Ratings are session-only and comments remain persisted per post
     const [hover, setHover] = React.useState<number | null>(null);
     const [ratingList, setRatingList] = React.useState<number[]>([]);
     const avgRating = ratingList.length ? (ratingList.reduce((a, b) => a + b, 0) / ratingList.length) : 0;
@@ -24,7 +24,7 @@ const DiffusionDecisionModel: React.FC = () => {
     React.useEffect(() => {
         if (post) {
             try {
-                const storedRatings = localStorage.getItem(`ratings_${POST_ID}`);
+                const storedRatings = sessionStorage.getItem(`ratings_${POST_ID}`);
                 if (storedRatings) {
                     setRatingList(JSON.parse(storedRatings));
                 } else if (post.ratings) {
@@ -46,7 +46,7 @@ const DiffusionDecisionModel: React.FC = () => {
     const addRating = (value: number) => {
         const next = [...ratingList, value];
         setRatingList(next);
-        try { localStorage.setItem(`ratings_${POST_ID}`, JSON.stringify(next)); } catch {}
+        try { sessionStorage.setItem(`ratings_${POST_ID}`, JSON.stringify(next)); } catch {}
     };
 
     const submitComment = () => {
