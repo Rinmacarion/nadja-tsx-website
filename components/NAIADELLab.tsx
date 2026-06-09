@@ -41,12 +41,17 @@ const NAIADELLab: React.FC = () => {
                 <p className="text-sm text-slate-600 mt-1">The flyer is displayed directly here so visitors can quickly review our vision without needing to download it first.</p>
               </div>
               <div className="w-full">
-                <iframe
-                  title="NAIADEL Flyer"
-                  src="/assets/NAIADEL_Flyer_vertical.pdf"
+                <object
+                  type="application/pdf"
+                  data="/assets/NAIADEL_Flyer_vertical.pdf"
                   className="w-full min-h-[80vh]"
-                  style={{ border: 'none' }}
-                />
+                  aria-label="NAIADEL Flyer"
+                >
+                  <div className="p-8 text-center text-slate-600">
+                    <p>The flyer should appear here as an inline preview.</p>
+                    <p>If it does not display, you can <a href="/assets/NAIADEL_Flyer_vertical.pdf" target="_blank" rel="noopener noreferrer" className="text-academic-700 underline">open the flyer directly</a>.</p>
+                  </div>
+                </object>
               </div>
             </div>
           </motion.div>
