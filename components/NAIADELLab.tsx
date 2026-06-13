@@ -24,7 +24,7 @@ const NAIADELLab: React.FC = () => {
                     NAIADEL is a research lab studying how adaptive intelligence and agency emerge, are sustained, and break down across neural, psychological, computational, and social systems.
                   </p>
                   <p>
-                    Starting Fall 2026, I join the Department of Psychology at the University of Arizona, where NAIADEL will be housed within the Cognition & Neural Systems program. Our work sits at the intersection of computational cognitive neuroscience, reinforcement learning, dynamical systems, and human–AI interaction – with translational reach into mental health and the design of adaptive artificial systems.
+                    Starting Fall 2026, I will join the Department of Psychology at the University of Arizona as an Assistant Professor, where NAIADEL will be housed within the Cognition & Neural Systems program. Our work sits at the intersection of computational cognitive neuroscience, reinforcement learning, dynamical systems, and human–AI interaction – with translational reach into mental health and the design of adaptive artificial systems.
                   </p>
                   <p>
                     The full lab website is in development. Until then, the extended flyer below gives an overview of our scientific vision, research directions, and opportunities to join.
