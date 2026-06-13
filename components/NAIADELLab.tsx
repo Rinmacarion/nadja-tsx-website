@@ -18,7 +18,7 @@ const NAIADELLab: React.FC = () => {
             <div className="space-y-6">
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900">NAIADEL Lab</h1>
               <div className="flex flex-col md:flex-row items-start gap-8">
-                <div className="flex-1 space-y-5 text-slate-700 leading-relaxed text-lg">
+                <div className="flex-1 space-y-5 text-slate-700 leading-relaxed text-lg order-2 md:order-1">
                   <p>
                     NAIADEL is a research lab studying how adaptive intelligence and agency emerge, are sustained, and break down across neural, psychological, computational, and social systems.
                   </p>
@@ -34,7 +34,7 @@ const NAIADELLab: React.FC = () => {
                   </p>
                   <p className="font-semibold">More to come soon.</p>
                 </div>
-                <div className="w-full md:w-72 lg:w-96 flex-shrink-0">
+                <div className="w-full md:w-72 lg:w-96 flex-shrink-0 order-1 md:order-2">
                   <img src="/assets/naiadel_logo_transparent.png" alt="NAIADEL logo" className="w-full h-auto" />
                 </div>
               </div>
