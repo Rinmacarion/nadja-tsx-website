@@ -35,7 +35,7 @@ const NAIADELLab: React.FC = () => {
                   <p className="font-semibold">More to come soon.</p>
                 </div>
                 <div className="w-full md:w-72 lg:w-96 flex-shrink-0">
-                  <img src="/assets/naiadel_logo transperent.png" alt="NAIADEL logo" className="w-full h-auto" />
+                  <img src="/assets/naiadel_logo_transparent.png" alt="NAIADEL logo" className="w-full h-auto" />
                 </div>
               </div>
             </div>
