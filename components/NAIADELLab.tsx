@@ -17,21 +17,26 @@ const NAIADELLab: React.FC = () => {
           >
             <div className="space-y-6">
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900">NAIADEL Lab</h1>
-              <div className="space-y-5 text-slate-700 leading-relaxed text-lg">
-                <p>
-                  NAIADEL is a research lab studying how adaptive intelligence and agency emerge, are sustained, and break down across neural, psychological, computational, and social systems.
-                </p>
-                <p>
-                  Starting Fall 2026, I join the Department of Psychology at the University of Arizona, where NAIADEL will be housed within the Cognition & Neural Systems program. Our work sits at the intersection of computational cognitive neuroscience, reinforcement learning, dynamical systems, and human–AI interaction – with translational reach into mental health and the design of adaptive artificial systems.
-                </p>
-                <p>
-                  The full lab website is in development. Until then, the extended flyer below gives an overview of our scientific vision, research directions, and opportunities to join.
-                </p>
-                <p className="font-semibold">Interested in joining or collaborating?</p>
-                <p>
-                  Reach out at <a href="mailto:nadjaging@arizona.edu" className="text-academic-700 underline">nadjaging@arizona.edu</a> [see flyer below]
-                </p>
-                <p className="font-semibold">More to come soon.</p>
+              <div className="flex flex-col md:flex-row items-start gap-8">
+                <div className="flex-1 space-y-5 text-slate-700 leading-relaxed text-lg">
+                  <p>
+                    NAIADEL is a research lab studying how adaptive intelligence and agency emerge, are sustained, and break down across neural, psychological, computational, and social systems.
+                  </p>
+                  <p>
+                    Starting Fall 2026, I join the Department of Psychology at the University of Arizona, where NAIADEL will be housed within the Cognition & Neural Systems program. Our work sits at the intersection of computational cognitive neuroscience, reinforcement learning, dynamical systems, and human–AI interaction – with translational reach into mental health and the design of adaptive artificial systems.
+                  </p>
+                  <p>
+                    The full lab website is in development. Until then, the extended flyer below gives an overview of our scientific vision, research directions, and opportunities to join.
+                  </p>
+                  <p className="font-semibold">Interested in joining or collaborating?</p>
+                  <p>
+                    Reach out at <a href="mailto:nadjaging@arizona.edu" className="text-academic-700 underline">nadjaging@arizona.edu</a> [see flyer below]
+                  </p>
+                  <p className="font-semibold">More to come soon.</p>
+                </div>
+                <div className="w-full md:w-72 lg:w-96 flex-shrink-0">
+                  <img src="/assets/naiadel_logo transperent.png" alt="NAIADEL logo" className="w-full h-auto" />
+                </div>
               </div>
             </div>
 
