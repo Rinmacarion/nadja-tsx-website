@@ -16,8 +16,11 @@ const NAIADELLab: React.FC = () => {
             className="space-y-10"
           >
             <div className="space-y-6">
-              <h1 className="sr-only">NAIADEL Lab</h1>
-              <h1 aria-hidden="true" className="hidden sm:block font-serif text-4xl md:text-5xl font-bold text-slate-900">NAIADEL Lab</h1>
+              <div>
+                <h1 className="sr-only">NAIADEL Lab</h1>
+                <h1 aria-hidden="true" className="hidden sm:block font-serif text-4xl md:text-5xl font-bold text-slate-900">NAIADEL Lab</h1>
+                <a href="https://www.naiadel.com" target="_blank" rel="noopener noreferrer" className="text-academic-700 underline hover:text-academic-800 text-lg font-medium inline-block mt-2">www.naiadel.com</a>
+              </div>
               <div className="flex flex-col md:flex-row items-start gap-8">
                 <div className="flex-1 space-y-5 text-slate-700 leading-relaxed text-lg order-2 md:order-1">
                   <p>

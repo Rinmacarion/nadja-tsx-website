@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
             Grounded in mechanistic computational modeling and meta-learning, I develop NeuroAI frameworks that uncover the computational principles underlying controllability, learning, and adaptive behavior – and build scalable systems that translate these discoveries into tools for scientific inquiry and real-world mental health impact.
           </p>
           <p className="text-lg md:text-xl text-slate-600 mb-4 max-w-2xl mx-auto md:mx-0 font-light leading-relaxed">
-            <Link to="/naiadel-lab" className="text-academic-700 underline hover:text-academic-800">Meet the NAIADEL Lab</Link>
+            <a href="https://www.naiadel.com" target="_blank" rel="noopener noreferrer" className="text-academic-700 underline hover:text-academic-800">Meet the NAIADEL Lab</a>
           </p>
           <div className="flex flex-wrap gap-2 justify-center mt-4 md:hidden">
                 <span className="text-xs py-1 px-3 bg-slate-100 text-slate-600 rounded-full font-medium">Agency</span>
