@@ -19,7 +19,7 @@ const NAIADELLab: React.FC = () => {
               <div>
                 <h1 className="sr-only">NAIADEL Lab</h1>
                 <h1 aria-hidden="true" className="hidden sm:block font-serif text-4xl md:text-5xl font-bold text-slate-900">NAIADEL Lab</h1>
-                <a href="https://www.naiadel.com" target="_blank" rel="noopener noreferrer" className="text-academic-700 underline hover:text-academic-800 text-lg font-medium inline-block mt-2">www.naiadel.com</a>
+                <a href="https://www.naiadel.com" target="_blank" rel="noopener noreferrer" className="hidden md:inline-block text-academic-700 underline hover:text-academic-800 text-lg font-medium mt-2">www.naiadel.com</a>
               </div>
               <div className="flex flex-col md:flex-row items-start gap-8">
                 <div className="flex-1 space-y-5 text-slate-700 leading-relaxed text-lg order-2 md:order-1">
@@ -40,6 +40,9 @@ const NAIADELLab: React.FC = () => {
                 </div>
                 <div className="w-full md:w-72 lg:w-96 flex-shrink-0 order-1 md:order-2">
                   <img src="/assets/naiadel_logo_transparent.png" alt="NAIADEL logo" className="w-full h-auto" />
+                  <div className="text-center md:hidden mt-4">
+                    <a href="https://www.naiadel.com" target="_blank" rel="noopener noreferrer" className="text-academic-700 underline hover:text-academic-800 text-lg font-medium inline-block">www.naiadel.com</a>
+                  </div>
                 </div>
               </div>
             </div>
